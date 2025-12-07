@@ -8,7 +8,6 @@
     height: 90vh;
     width: 100%;
     background-image: url('https://images.unsplash.com/photo-1596176530529-78163a4f7af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-    /* Placeholder - Vidhana Soudha/Bangalore Palace vibe */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -25,30 +24,32 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.5));
+    /* Lighter gradient for brighter feel, but still dark enough for text */
+    background: linear-gradient(rgba(26, 47, 77, 0.6), rgba(26, 47, 77, 0.4));
     z-index: 1;
 }
 
 .heroContent {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .heroTitle {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.1;
     color: var(--color-white);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .heroSubtitle {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     margin-bottom: 2.5rem;
-    font-weight: 300;
-    opacity: 0.9;
+    font-weight: 400;
+    opacity: 0.95;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .heroCta {
@@ -56,22 +57,24 @@
     align-items: center;
     gap: 0.5rem;
     background-color: var(--color-gold);
-    color: var(--color-navy);
-    padding: 1rem 2rem;
+    color: var(--color-white);
+    padding: 1rem 2.5rem;
     font-size: 1.1rem;
     font-weight: 600;
-    border-radius: 4px;
+    border-radius: 50px;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
 }
 
 .heroCta:hover {
-    background-color: #c5a028;
+    background-color: #d9b345;
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
 }
 
 /* Why Us Section */
 .whyUs {
-    padding: 6rem 0;
+    padding: 8rem 0;
     background-color: var(--color-white);
 }
 
@@ -83,30 +86,34 @@
 
 .sectionHeader {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 .sectionTitle {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--color-navy);
 }
 
 .sectionSubtitle {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--color-gold);
     font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .featuresGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .featureCard {
     text-align: center;
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 12px;
     transition: transform 0.3s ease;
 }
 
@@ -115,123 +122,129 @@
 }
 
 .iconWrapper {
-    width: 80px;
-    height: 80px;
-    background-color: rgba(212, 175, 55, 0.1);
+    width: 90px;
+    height: 90px;
+    background-color: var(--color-cream);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
-    color: var(--color-navy);
+    margin: 0 auto 2rem;
+    color: var(--color-gold);
 }
 
 .featureCard h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
     font-family: var(--font-heading);
+    color: var(--color-navy);
 }
 
 .featureCard p {
-    color: #555;
-    line-height: 1.7;
+    color: #666;
+    line-height: 1.8;
 }
 
 /* Featured Itineraries */
 .featured {
-    padding: 6rem 0;
+    padding: 8rem 0;
     background-color: var(--color-off-white);
 }
 
 .carousel {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
 }
 
 .itineraryCard {
     background-color: var(--color-white);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.02);
 }
 
 .itineraryCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .cardImage {
-    height: 200px;
+    height: 240px;
     background-size: cover;
     background-position: center;
 }
 
 .cardContent {
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .cardContent h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
     font-family: var(--font-heading);
+    color: var(--color-navy);
 }
 
 .cardContent p {
     color: #666;
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .cardLink {
     display: inline-flex;
     align-items: center;
-    gap: 0.3rem;
-    color: var(--color-navy);
+    gap: 0.5rem;
+    color: var(--color-gold);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     transition: gap 0.2s ease;
 }
 
 .cardLink:hover {
-    gap: 0.5rem;
-    color: var(--color-gold);
+    gap: 0.8rem;
 }
 
 /* Testimonials */
 .testimonials {
-    padding: 6rem 0;
-    background-color: var(--color-navy);
-    color: var(--color-white);
+    padding: 8rem 0;
+    background-color: var(--color-cream);
+    /* Changed from Navy to Cream */
+    color: var(--color-navy);
+    /* Changed from White to Navy */
     text-align: center;
+    position: relative;
 }
 
 .testimonialCard {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .quote {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-style: italic;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     line-height: 1.4;
-    color: #f4f4f4;
+    color: var(--color-navy);
 }
 
 .author {
     font-size: 1.1rem;
     color: var(--color-gold);
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
     .heroTitle {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .featuresGrid {
@@ -239,6 +252,6 @@
     }
 
     .quote {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 }

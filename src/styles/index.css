@@ -1,12 +1,24 @@
 :root {
-  /* Color Palette */
-  --color-navy: #0a192f; /* Deep Navy - Trust */
-  --color-gold: #d4af37; /* Gold - Premium */
-  --color-ochre: #cc7722; /* Earthy Ochre - Local Culture */
+  /* Color Palette - Elegant & Brighter */
+  --color-navy: #1a2f4d;
+  /* Softer Navy */
+  --color-gold: #c5a028;
+  /* Classic Gold */
+  --color-ochre: #d98e32;
+  /* Warmer Ochre */
+
+  /* Backgrounds */
   --color-white: #ffffff;
-  --color-off-white: #f8f9fa;
-  --color-text-dark: #333333;
+  --color-off-white: #f9fafb;
+  /* Very light gray/blue tint */
+  --color-cream: #fdfbf7;
+  /* Warm cream for sections */
+
+  /* Text */
+  --color-text-dark: #2d3748;
+  /* Charcoal instead of pure black */
   --color-text-light: #f4f4f4;
+  --color-text-muted: #718096;
 
   /* Typography */
   --font-heading: 'Playfair Display', serif;
@@ -26,9 +38,15 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--color-navy);
+  font-weight: 700;
 }
 
 a {
@@ -38,4 +56,22 @@ a {
 
 ul {
   list-style: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
 }

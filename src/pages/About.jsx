@@ -52,7 +52,7 @@ const About = () => {
             {/* Our DNA */}
             <section className={styles.dna}>
                 <div className={styles.container}>
-                    <h2 className={styles.sectionTitle} style={{ textAlign: 'center', color: 'var(--color-white)' }}>Our DNA</h2>
+                    <h2 className={styles.sectionTitle} style={{ textAlign: 'center' }}>Our DNA</h2>
                     <div className={styles.dnaGrid}>
                         <div className={styles.dnaCard}>
                             <Shield size={40} className={styles.dnaIcon} />
