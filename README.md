@@ -44,8 +44,11 @@ Now that you have the code, you need to install the "parts" that make it work (l
 
 1.  **Open your Terminal/Command Prompt.**
 2.  **Navigate to the project folder.**
-    *   **Mac:** Type `cd ` (with a space) and drag the unzipped folder into the terminal window. It will look something like `cd /Users/yourname/Desktop/trusted-partner-concierge`. Press Enter.
-    *   **Windows:** Type `cd ` (with a space) and paste the path to the folder. Press Enter.
+    *   **Mac / Linux:** Type `cd ` (with a space) and drag the unzipped folder into the terminal window. It will look something like `cd /Users/yourname/Desktop/trusted-partner-concierge`. Press Enter.
+    *   **Windows:** 
+        *   Find the folder in File Explorer.
+        *   Right-click inside the folder and select "Open in Terminal" (or "Git Bash Here" if you installed Git).
+        *   *Alternatively:* In Command Prompt, type `cd ` (with a space), paste the path to the folder, and press Enter.
 3.  **Install the tools:**
     *   Type the following command and press Enter:
         ```bash
