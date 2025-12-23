@@ -1,0 +1,237 @@
+.page {
+    width: 100%;
+}
+
+.hero {
+    background-image: url('/images/corporate_event_hero.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    padding: 10rem 0 6rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+    z-index: 0;
+}
+
+.heroContainer {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.heroSubtitle {
+    font-size: 1.4rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.section {
+    padding: 6rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--color-navy);
+}
+
+.splitSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.splitSection.reversed {
+    direction: rtl;
+    /* Simple way to swap columns visually, ensure standard flow inside */
+}
+
+.splitSection.reversed>* {
+    direction: ltr;
+}
+
+.textContent h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-navy);
+    position: relative;
+    display: inline-block;
+}
+
+.textContent h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-gold);
+    margin-top: 0.5rem;
+}
+
+.featureList {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.featureList li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.featureIcon {
+    color: var(--color-gold);
+}
+
+.imageContent {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.imageContent img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.imageContent:hover img {
+    transform: scale(1.05);
+}
+
+.perfectForSection {
+    background-color: var(--color-off-white);
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 1rem;
+    color: var(--color-navy);
+    font-size: 1.2rem;
+}
+
+.whyChooseSection {
+    background-color: var(--color-navy);
+    color: white;
+    text-align: center;
+}
+
+.whyChooseSection h2 {
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.whyGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.whyItem h3 {
+    font-size: 1.4rem;
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+}
+
+.whyItem p {
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.ctaSection {
+    text-align: center;
+    padding: 8rem 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/images/corporate_event_hero.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.ctaBtn {
+    display: inline-block;
+    background-color: var(--color-navy);
+    color: white;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.ctaBtn:hover {
+    background-color: transparent;
+    border-color: var(--color-navy);
+    color: var(--color-navy);
+}
+
+@media (max-width: 900px) {
+
+    .splitSection,
+    .splitSection.reversed {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        direction: ltr;
+    }
+
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+}
