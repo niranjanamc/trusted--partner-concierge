@@ -3,7 +3,6 @@
 }
 
 .hero {
-    background-image: url('/images/flight_booking_hero.png');
     background-size: cover;
     background-position: center;
     color: var(--color-white);

@@ -2,12 +2,15 @@ import React from 'react';
 import { Music, CheckCircle, Wine, Star, Users, Briefcase, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './CorporateEvents.module.css';
+import heroImage from '../assets/images/corporate_event_hero.png';
+import rnrImage from '../assets/images/rnr_party_event.png';
+import cocktailImage from '../assets/images/cocktail_dinner_setup.png';
 
 const CorporateEvents = () => {
     return (
         <div className={styles.page}>
             {/* Hero Section */}
-            <section className={styles.hero}>
+            <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.heroContainer}>
                     <h1 className={styles.heroTitle}>Corporate Event Arrangements</h1>
                     <p className={styles.heroSubtitle}>
@@ -45,7 +48,7 @@ const CorporateEvents = () => {
                             </ul>
                         </div>
                         <div className={styles.imageContent}>
-                            <img src="/images/rnr_party_event.png" alt="Corporate RNR Party" />
+                            <img src={rnrImage} alt="Corporate RNR Party" />
                         </div>
                     </div>
 
@@ -66,7 +69,7 @@ const CorporateEvents = () => {
                             </ul>
                         </div>
                         <div className={styles.imageContent}>
-                            <img src="/images/cocktail_dinner_setup.png" alt="Elegant Cocktail Dinner" />
+                            <img src={cocktailImage} alt="Elegant Cocktail Dinner" />
                         </div>
                     </div>
                 </div>
@@ -123,7 +126,7 @@ const CorporateEvents = () => {
             </section>
 
             {/* CTA */}
-            <section className={styles.ctaSection}>
+            <section className={styles.ctaSection} style={{ backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(${heroImage})` }}>
                 <div className={styles.container}>
                     <h2 style={{ fontSize: '2.5rem', color: 'var(--color-navy)', marginBottom: '1.5rem' }}>Let’s Create an Unforgettable Experience!!</h2>
                     <p style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.2rem', color: '#555' }}>

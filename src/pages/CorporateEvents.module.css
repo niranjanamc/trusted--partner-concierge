@@ -3,7 +3,6 @@
 }
 
 .hero {
-    background-image: url('/images/corporate_event_hero.png');
     background-size: cover;
     background-position: center;
     color: var(--color-white);
@@ -197,7 +196,7 @@
 .ctaSection {
     text-align: center;
     padding: 8rem 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/images/corporate_event_hero.png');
+    background-size: cover;
     background-size: cover;
     background-attachment: fixed;
 }

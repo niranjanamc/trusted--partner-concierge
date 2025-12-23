@@ -2,12 +2,14 @@ import React from 'react';
 import { Plane, CheckCircle, Clock, Globe, Briefcase, DollarSign, Users, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './FlightBooking.module.css';
+import heroImage from '../assets/images/flight_booking_hero.png';
+import loungeImage from '../assets/images/business_travel_lounge.png';
 
 const FlightBooking = () => {
     return (
         <div className={styles.page}>
             {/* Hero Section */}
-            <section className={styles.hero}>
+            <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.heroContainer}>
                     <h1 className={styles.heroTitle}>Flight Booking Services</h1>
                     <p className={styles.heroSubtitle}>
@@ -50,7 +52,7 @@ const FlightBooking = () => {
                             </ul>
                         </div>
                         <div className={styles.imageContent}>
-                            <img src="/images/business_travel_lounge.png" alt="Business Travel Lounge" />
+                            <img src={loungeImage} alt="Business Travel Lounge" />
                         </div>
                     </div>
                 </div>
