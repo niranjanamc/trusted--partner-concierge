@@ -1,4 +1,4 @@
-export const destinations = {
+module.exports = {
     dayTrips: [
         {
             id: 'nandi-hills',
@@ -6,7 +6,7 @@ export const destinations = {
             lat: 13.3702,
             lng: 77.6835,
             description: 'Famous for sunrise, temples, and cool climate.',
-            image: '/images/destinations/nandi-hills_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1590416995329-87c126602360?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
                 {
                     name: "Nandi Hills sunrise view point",
@@ -14,7 +14,7 @@ export const destinations = {
                     tips: "Start Early: Essential for sunrise and beating crowds",
                     breakfastPoint: "Dosa Spot",
                     addressLink: "Dosa Spot- Nandi Hills",
-                    image: "/images/destinations/nandi-hills_main_main.svg"
+                    image: "https://images.unsplash.com/photo-1590416995329-87c126602360?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
                     name: "Nandhi Betta sunset View point",
@@ -22,7 +22,7 @@ export const destinations = {
                     tips: "6:00AM TO 6:00PM",
                     breakfastPoint: "Sky Hills Resturant",
                     addressLink: "Sky Hills Restaurant",
-                    image: "/images/destinations/nandi-hills_nandhi-betta-sunset-view-point_attraction.svg"
+                    image: "https://images.unsplash.com/photo-1615887023516-9b6c5062a5a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
                     name: "Tipu Sultan's Summer Palace",
@@ -30,7 +30,7 @@ export const destinations = {
                     tips: "8:30AM TO 5:30PM",
                     breakfastPoint: "Nandi Upachar Devanahali",
                     addressLink: "Nandi Upachar Devanahalli",
-                    image: "/images/destinations/nandi-hills_tipu-sultan-s-summer-palace_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Tipu_Sulthan_Summer_Palace.jpg/800px-Tipu_Sulthan_Summer_Palace.jpg"
                 },
                 {
                     name: "Bhoga Nandeeshwara Temple",
@@ -38,7 +38,7 @@ export const destinations = {
                     tips: "Any time",
                     breakfastPoint: "Mystrey Roster Café",
                     addressLink: "Mystery Roster Cafe",
-                    image: "/images/destinations/nandi-hills_bhoga-nandeeshwara-temple_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Bhoga_Nandeeshwara_Temple_Complex_-_Nandi_Village_2.jpg/800px-Bhoga_Nandeeshwara_Temple_Complex_-_Nandi_Village_2.jpg"
                 },
                 {
                     name: "Muddenahalli Museum",
@@ -46,7 +46,7 @@ export const destinations = {
                     tips: "Any time",
                     breakfastPoint: "Silver Oak café",
                     addressLink: "Silver Oak Cafe",
-                    image: "/images/destinations/nandi-hills_muddenahalli-museum_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Sir_M_Visvesvaraya%27s_Samadhi.jpg/800px-Sir_M_Visvesvaraya%27s_Samadhi.jpg"
                 },
                 {
                     name: "Skandagiri (Kalavara Durga)",
@@ -54,7 +54,7 @@ export const destinations = {
                     tips: "5:30am to 9/10AM",
                     breakfastPoint: "Nandi Saviruchi",
                     addressLink: "Nandi Saviruchi",
-                    image: "/images/destinations/nandi-hills_skandagiri-kalavara-durga_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Skandagiri_Hill_2.jpg/800px-Skandagiri_Hill_2.jpg"
                 }
             ],
             resorts: [
@@ -68,7 +68,7 @@ export const destinations = {
             lat: 12.7150,
             lng: 77.2813,
             description: 'Sholay hills, trekking, rocky terrain.',
-            image: '/images/destinations/ramanagara_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1600619286683-160436923456?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
                 {
                     name: "Sholay hills",
@@ -76,7 +76,7 @@ export const destinations = {
                     tips: "9:00AM TO 5:00PM",
                     breakfastPoint: "Kamat Lokaruchi Veg Restaurant- Ramanagara",
                     addressLink: "Kamat Lokaruchi Veg Restaurant- Ramanagara",
-                    image: "/images/destinations/ramanagara_sholay-hills_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Ramadevara_Betta_-_Ramanagara.jpg/800px-Ramadevara_Betta_-_Ramanagara.jpg"
                 },
                 {
                     name: "Ramadevarabetta Vulture Sanctuary",
@@ -84,7 +84,7 @@ export const destinations = {
                     tips: "9:00AM TO 5:00PM",
                     breakfastPoint: "Vaividhya Family Restaurant",
                     addressLink: "Vaividhya Family Restaurant",
-                    image: "/images/destinations/ramanagara_sholay-hills_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Ramadevara_Betta_-_Ramanagara.jpg/800px-Ramadevara_Betta_-_Ramanagara.jpg"
                 },
                 {
                     name: "Janapada Loka",
@@ -92,7 +92,7 @@ export const destinations = {
                     tips: "9:30AM TO 5:30PM",
                     breakfastPoint: "Taj Biryani Paradise",
                     addressLink: "Taj Biryani Paradise",
-                    image: "/images/destinations/ramanagara_janapada-loka_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Janapada_Loka_Entrance.jpg/800px-Janapada_Loka_Entrance.jpg"
                 },
                 {
                     name: "Sri Aprameya Swamy Temple",
@@ -100,7 +100,7 @@ export const destinations = {
                     tips: "8:00AM TO 1:00PM & 4:00PM TO 8:00PM",
                     breakfastPoint: "Nammoora Aahara Vaibhava Veg Restaurant",
                     addressLink: "Nammoora Aahara Vaibhava Veg Restaurant",
-                    image: "/images/destinations/ramanagara_sri-aprameya-swamy-temple_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Aprameya_Swamy_Temple_Mallur.jpg/800px-Aprameya_Swamy_Temple_Mallur.jpg"
                 },
                 {
                     name: "SRS Hills",
@@ -108,7 +108,7 @@ export const destinations = {
                     tips: "8:00AM TO 1:00PM & 4:00PM TO 8:00PM",
                     breakfastPoint: "Hot Coffee's",
                     addressLink: "Hot coffee's",
-                    image: "/images/destinations/ramanagara_main_main.svg"
+                    image: "https://images.unsplash.com/photo-1600619286683-160436923456?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
                     name: "Savanadurga Trek",
@@ -116,7 +116,7 @@ export const destinations = {
                     tips: "6:00AM TO 6:00PM",
                     breakfastPoint: "Savera Paradise",
                     addressLink: "Savera Paradise",
-                    image: "/images/destinations/ramanagara_savanadurga-trek_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Savandurga.jpg/800px-Savandurga.jpg"
                 },
                 {
                     name: "Timmappana Betta",
@@ -124,7 +124,7 @@ export const destinations = {
                     tips: "6:00AM TO 6:00PM",
                     breakfastPoint: "Mayur Veg",
                     addressLink: "Mayur Veg",
-                    image: "/images/destinations/ramanagara_srs-hills_attraction.svg"
+                    image: "https://images.unsplash.com/photo-1600619286683-160436923456?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
                     name: "Sri Kengal Anjaneya Swamy Temple",
@@ -132,7 +132,7 @@ export const destinations = {
                     tips: "7:00AM TO 2:00PM & 4:00PM TO 8:00PM",
                     breakfastPoint: "Hotel Shri Janardhana",
                     addressLink: "Hotel Shri Janardhana",
-                    image: "/images/destinations/ramanagara_sri-kengal-anjaneya-swamy-temple_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Kengal_Anjaneya_Swamy_Temple.jpg/800px-Kengal_Anjaneya_Swamy_Temple.jpg"
                 },
                 {
                     name: "Bidarakatte Trek",
@@ -140,7 +140,7 @@ export const destinations = {
                     tips: "9:00AM TO 5:00PM",
                     breakfastPoint: "Bidadi: Famous for its delicious Thatte Idlis.",
                     addressLink: "Bidadi: Famous for its delicious Thatte Idli",
-                    image: "/images/destinations/ramanagara_bidarakatte-trek_attraction.svg"
+                    image: "https://images.unsplash.com/photo-1622307583606-560641e74720?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
                     name: "Savandurga Hill",
@@ -148,7 +148,7 @@ export const destinations = {
                     tips: "5:00AM TO 6:00PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/ramanagara_savanadurga-trek_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Savandurga.jpg/800px-Savandurga.jpg"
                 },
                 {
                     name: "Kanva Reservoir",
@@ -156,7 +156,7 @@ export const destinations = {
                     tips: "5:00AM TO 7:00PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/ramanagara_kanva-reservoir_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Kanva_Reservoir.jpg/800px-Kanva_Reservoir.jpg"
                 },
                 {
                     name: "Shilhaandara Resort",
@@ -164,7 +164,7 @@ export const destinations = {
                     tips: "Any time",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/ramanagara_shilhaandara-resort_attraction.svg"
+                    image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/295057088.jpg?k=75638101658428258593845924d58849b28b7e88258842442488888888888888"
                 }
             ],
             resorts: [
@@ -177,7 +177,7 @@ export const destinations = {
             lat: 12.9196,
             lng: 77.2928,
             description: "Asia's largest monolith hill, great for trekking.",
-            image: '/images/destinations/ramanagara_bidarakatte-trek_attraction.svg',
+            image: 'https://images.unsplash.com/photo-1622307583606-560641e74720?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
                 {
                     name: "Monolith Hill",
@@ -185,7 +185,7 @@ export const destinations = {
                     tips: "Any time",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/ramanagara_savanadurga-trek_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Savandurga.jpg/800px-Savandurga.jpg"
                 }
             ],
             resorts: [
@@ -198,7 +198,7 @@ export const destinations = {
             lat: 13.4185,
             lng: 77.6839,
             description: 'Popular for sunrise/night treks.',
-            image: '/images/destinations/nandi-hills_nandhi-betta-sunset-view-point_attraction.svg',
+            image: 'https://images.unsplash.com/photo-1615887023516-9b6c5062a5a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
                 {
                     name: "Sunrise Trek",
@@ -206,7 +206,7 @@ export const destinations = {
                     tips: "3:00AM TO 5:30AM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/nandi-hills_skandagiri-kalavara-durga_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Skandagiri_Hill_2.jpg/800px-Skandagiri_Hill_2.jpg"
                 }
             ],
             resorts: [
@@ -219,7 +219,7 @@ export const destinations = {
             lat: 13.1438,
             lng: 78.2006,
             description: 'Cave exploration and trekking near Kolar.',
-            image: '/images/destinations/anthargange_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1582558452363-233777467771?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
                 {
                     name: "Caves and Trekking",
@@ -227,7 +227,7 @@ export const destinations = {
                     tips: "6:00AM TO 5:30PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/anthargange_caves-and-trekking_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Antargange_Caves.jpg/800px-Antargange_Caves.jpg"
                 }
             ],
             resorts: [
@@ -240,7 +240,7 @@ export const destinations = {
             lat: 12.8009,
             lng: 77.5777,
             description: 'Biological park, zoo, and safari.',
-            image: '/images/destinations/bannerghatta-national-park_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1544896434-d36ce4071f0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
                 {
                     name: "Bannerghatta hills",
@@ -248,7 +248,7 @@ export const destinations = {
                     tips: null,
                     breakfastPoint: "----",
                     addressLink: null,
-                    image: "/images/destinations/bannerghatta-national-park_bannerghatta-hills_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Bannerghatta_National_Park_Entrance.jpg/800px-Bannerghatta_National_Park_Entrance.jpg"
                 },
                 {
                     name: "Butterfly Park",
@@ -256,7 +256,7 @@ export const destinations = {
                     tips: "9:30 TO 5:00PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/bannerghatta-national-park_butterfly-park_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Butterfly_Park_Bannerghatta.jpg/800px-Butterfly_Park_Bannerghatta.jpg"
                 },
                 {
                     name: "Bannerghatta National Park",
@@ -264,7 +264,7 @@ export const destinations = {
                     tips: "9:30AM TO 5:00PM",
                     breakfastPoint: "Brahmins' Coffee Bar",
                     addressLink: "Brahmins' Coffee Bar",
-                    image: "/images/destinations/bannerghatta-national-park_bannerghatta-hills_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Bannerghatta_National_Park_Entrance.jpg/800px-Bannerghatta_National_Park_Entrance.jpg"
                 },
                 {
                     name: "Mini Forest",
@@ -272,7 +272,7 @@ export const destinations = {
                     tips: "9:30AM TO 5:00PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/bannerghatta-national-park_mini-forest_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Mini_Forest_JP_Nagar_Bengaluru.jpg/800px-Mini_Forest_JP_Nagar_Bengaluru.jpg"
                 },
                 {
                     name: "Snow City Bengaluru",
@@ -280,7 +280,7 @@ export const destinations = {
                     tips: "10:00AM 8:00PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/bannerghatta-national-park_snow-city-bengaluru_attraction.jpg"
+                    image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
                     name: "Begur Fort",
@@ -288,7 +288,7 @@ export const destinations = {
                     tips: "6:00AM TO 6:00PM",
                     breakfastPoint: "Mavalli Tiffin",
                     addressLink: "Mavalli Tiffin Room",
-                    image: "/images/destinations/bannerghatta-national-park_begur-fort_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Panchalingeshwara_Temple_Begur_1.jpg/800px-Panchalingeshwara_Temple_Begur_1.jpg"
                 },
                 {
                     name: "Bannerghatta Safari",
@@ -296,7 +296,7 @@ export const destinations = {
                     tips: "10:00AM 4:30PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/bannerghatta-national-park_bannerghatta-safari_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_at_Bannerghatta_National_Park.jpg/800px-Lion_at_Bannerghatta_National_Park.jpg"
                 },
                 {
                     name: "Gulakamale Lake",
@@ -304,7 +304,7 @@ export const destinations = {
                     tips: "5:00AM TO 7:00PM",
                     breakfastPoint: "Central Tiffin Room (CTR)",
                     addressLink: "Central Tiffin Room",
-                    image: "/images/destinations/bannerghatta-national-park_main_main.svg"
+                    image: "https://images.unsplash.com/photo-1544896434-d36ce4071f0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 },
                 {
                     name: "Visvesvaraya Museum",
@@ -312,7 +312,7 @@ export const destinations = {
                     tips: "9:30AM TO 6:30PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/bannerghatta-national-park_visvesvaraya-museum_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Visvesvaraya_Industrial_and_Technological_Museum.jpg/800px-Visvesvaraya_Industrial_and_Technological_Museum.jpg"
                 },
                 {
                     name: "Turahalli Tree Park",
@@ -320,7 +320,7 @@ export const destinations = {
                     tips: "6:00AM TO 6:00PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/bannerghatta-national-park_turahalli-tree-park_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Turahalli_Forest_View.jpg/800px-Turahalli_Forest_View.jpg"
                 },
                 {
                     name: "Boating point",
@@ -328,7 +328,7 @@ export const destinations = {
                     tips: "9:30AM TO 5:00PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/ramanagara_kanva-reservoir_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Kanva_Reservoir.jpg/800px-Kanva_Reservoir.jpg"
                 },
                 {
                     name: "Jaguars falls",
@@ -336,7 +336,7 @@ export const destinations = {
                     tips: "9:00AM TO 5:00PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/bannerghatta-national-park_gulakamale-lake_attraction.svg"
+                    image: "https://images.unsplash.com/photo-1544896434-d36ce4071f0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 }
             ],
             resorts: [
@@ -349,7 +349,7 @@ export const destinations = {
             lat: 12.9094,
             lng: 77.3956,
             description: 'Ancient, huge banyan tree covering 3 acres.',
-            image: '/images/destinations/big-banyan-tree-dodda-alada-mara_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1542385151-ef2b9b27f3fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
                 {
                     name: "Big Banyan Tree",
@@ -357,7 +357,7 @@ export const destinations = {
                     tips: "7:00AM TO 6:00PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/big-banyan-tree-dodda-alada-mara_big-banyan-tree_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Dodda_Alada_Mara.jpg/800px-Dodda_Alada_Mara.jpg"
                 }
             ],
             resorts: []
@@ -368,7 +368,7 @@ export const destinations = {
             lat: 12.5461,
             lng: 77.4210,
             description: 'Adventure camps, nature, and the Banantimari Forest area.',
-            image: '/images/destinations/kanakpura_main_main.jpg',
+            image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
                 {
                     name: "Nature & Adventure",
@@ -376,7 +376,7 @@ export const destinations = {
                     tips: "9:00AM TO 7:00PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/kanakpura_main_main.jpg"
+                    image: "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 }
             ],
             resorts: []
@@ -387,7 +387,7 @@ export const destinations = {
             lat: 12.6881,
             lng: 77.6644,
             description: 'Picnic spot with a waterfall, often called Pearl Valley.',
-            image: '/images/destinations/muthyalamaduvu-pearl-valley_main_main.jpg',
+            image: 'https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
                 {
                     name: "Waterfall Picnic Spot",
@@ -395,7 +395,7 @@ export const destinations = {
                     tips: "6:00AM TO 6:00PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/muthyalamaduvu-pearl-valley_waterfall-picnic-spot_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Muthyalamaduvu.jpg/800px-Muthyalamaduvu.jpg"
                 }
             ],
             resorts: []
@@ -406,7 +406,7 @@ export const destinations = {
             lat: 12.8060,
             lng: 77.5380,
             description: 'Serene waterfall, also known as Swarnamukhi Falls.',
-            image: '/images/destinations/thottikallu-falls_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1569827633538-4f5145326755?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
                 {
                     name: "Swarnamukhi Falls",
@@ -414,7 +414,7 @@ export const destinations = {
                     tips: "7:00AM TO 6:00PM",
                     breakfastPoint: "--",
                     addressLink: null,
-                    image: "/images/destinations/thottikallu-falls_swarnamukhi-falls_attraction.svg"
+                    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Thottikallu_Falls.jpg/800px-Thottikallu_Falls.jpg"
                 }
             ],
             resorts: []
@@ -425,11 +425,11 @@ export const destinations = {
             lat: 12.2936,
             lng: 77.1706,
             description: 'A spectacular segmented waterfall on the river Kaveri.',
-            image: '/images/destinations/shivanasamudra-waterfalls_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1569827633538-4f5145326755?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
-                { name: 'Gaganachukki and Bharachukki Falls', description: 'The two sections of the falls.', image: '/images/destinations/shivanasamudra-waterfalls_gaganachukki-and-bharachukki-falls_attraction.svg' },
-                { name: 'Talakadu', description: 'A historical site with buried temples.', image: '/images/destinations/shivanasamudra-waterfalls_talakadu_attraction.svg' },
-                { name: 'Somanathapura', description: 'Home to the Chennakesava Temple.', image: '/images/destinations/shivanasamudra-waterfalls_somanathapura_attraction.svg' }
+                { name: 'Gaganachukki and Bharachukki Falls', description: 'The two sections of the falls.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Shivanasamudra_Falls_Karnataka_India.jpg/800px-Shivanasamudra_Falls_Karnataka_India.jpg' },
+                { name: 'Talakadu', description: 'A historical site with buried temples.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Talakadu_Temples.jpg/800px-Talakadu_Temples.jpg' },
+                { name: 'Somanathapura', description: 'Home to the Chennakesava Temple.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Chennakesava_Temple_Somanathapura.jpg/800px-Chennakesava_Temple_Somanathapura.jpg' }
             ],
             resorts: [
                 'Hotel Mayura Gaganachukki'
@@ -441,10 +441,10 @@ export const destinations = {
             lat: 12.1182,
             lng: 77.7770,
             description: 'Often referred to as the "Niagara of India", known for its medicinal baths and coracle rides.',
-            image: '/images/destinations/hogenakkal-falls_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1629863836373-305886657800?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
-                { name: 'Melagiri Hills', description: 'Scenic hills nearby.', image: '/images/destinations/hogenakkal-falls_melagiri-hills_attraction.svg' },
-                { name: 'Pennagaram village', description: 'Local village experience.', image: '/images/destinations/hogenakkal-falls_melagiri-hills_attraction.svg' }
+                { name: 'Melagiri Hills', description: 'Scenic hills nearby.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Hogenakkal_Falls_View.jpg/800px-Hogenakkal_Falls_View.jpg' },
+                { name: 'Pennagaram village', description: 'Local village experience.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Hogenakkal_Falls_View.jpg/800px-Hogenakkal_Falls_View.jpg' }
             ],
             resorts: [
                 'Hotel Tamilnadu'
@@ -458,13 +458,13 @@ export const destinations = {
             lat: 12.2958,
             lng: 76.6394,
             description: 'The City of Palaces, known for its heritage structures and yoga centers.',
-            image: '/images/destinations/mysore_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1582555627756-1279294f5e73?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
-                { name: 'Mysore Palace', description: 'The historical royal residence.', image: '/images/destinations/mysore_mysore-palace_attraction.svg' },
-                { name: 'Brindavan Gardens', description: 'Famous for its musical fountain.', image: '/images/destinations/mysore_brindavan-gardens_attraction.svg' },
-                { name: 'Chamundi Hills', description: 'With the Chamundeshwari Temple.', image: '/images/destinations/mysore_chamundi-hills_attraction.svg' },
-                { name: 'Srirangapatna', description: 'The historic capital of Tipu Sultan.', image: '/images/destinations/mysore_srirangapatna_attraction.svg' },
-                { name: 'Ranganathittu Bird Sanctuary', description: 'Bird watching haven.', image: '/images/destinations/mysore_ranganathittu-bird-sanctuary_attraction.svg' }
+                { name: 'Mysore Palace', description: 'The historical royal residence.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Mysore_Palace_Morning.jpg/800px-Mysore_Palace_Morning.jpg' },
+                { name: 'Brindavan Gardens', description: 'Famous for its musical fountain.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Brindavan_Gardens_Mysore.jpg/800px-Brindavan_Gardens_Mysore.jpg' },
+                { name: 'Chamundi Hills', description: 'With the Chamundeshwari Temple.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Chamundeshwari_Temple_Mysore.jpg/800px-Chamundeshwari_Temple_Mysore.jpg' },
+                { name: 'Srirangapatna', description: 'The historic capital of Tipu Sultan.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ranganathaswamy_Temple_Srirangapatna.jpg/800px-Ranganathaswamy_Temple_Srirangapatna.jpg' },
+                { name: 'Ranganathittu Bird Sanctuary', description: 'Bird watching haven.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Ranganathittu_Bird_Sanctuary.jpg/800px-Ranganathittu_Bird_Sanctuary.jpg' }
             ],
             resorts: [
                 'Radisson Blu Plaza Hotel Mysore',
@@ -478,13 +478,13 @@ export const destinations = {
             lat: 12.3375,
             lng: 75.8069,
             description: 'Known as the Scotland of India, famous for its coffee plantations and misty hills.',
-            image: '/images/destinations/coorg-kodagu_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1590422749845-816709d79902?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
-                { name: 'Abbey Falls', description: 'A scenic waterfall.', image: '/images/destinations/coorg-kodagu_abbey-falls_attraction.svg' },
-                { name: "Raja's Seat", description: 'A garden with a view of the sunset.', image: '/images/destinations/coorg-kodagu_raja-s-seat_attraction.svg' },
-                { name: 'Dubare Elephant Camp', description: 'For elephant interactions.', image: '/images/destinations/coorg-kodagu_dubare-elephant-camp_attraction.svg' },
-                { name: 'Talakaveri', description: 'The source of the river Kaveri.', image: '/images/destinations/coorg-kodagu_talakaveri_attraction.svg' },
-                { name: 'Namdroling Monastery', description: 'Golden Temple.', image: '/images/destinations/coorg-kodagu_namdroling-monastery_attraction.svg' }
+                { name: 'Abbey Falls', description: 'A scenic waterfall.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Abbey_Falls_Coorg.jpg/800px-Abbey_Falls_Coorg.jpg' },
+                { name: "Raja's Seat", description: 'A garden with a view of the sunset.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Rajas_Seat_Madikeri.jpg/800px-Rajas_Seat_Madikeri.jpg' },
+                { name: 'Dubare Elephant Camp', description: 'For elephant interactions.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Dubare_Elephant_Camp.jpg/800px-Dubare_Elephant_Camp.jpg' },
+                { name: 'Talakaveri', description: 'The source of the river Kaveri.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Talakaveri_Temple.jpg/800px-Talakaveri_Temple.jpg' },
+                { name: 'Namdroling Monastery', description: 'Golden Temple.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Namdroling_Monastery_Golden_Temple.jpg/800px-Namdroling_Monastery_Golden_Temple.jpg' }
             ],
             resorts: [
                 'The Tamara Coorg',
@@ -498,13 +498,13 @@ export const destinations = {
             lat: 13.3153,
             lng: 75.7754,
             description: 'A coffee land with serene environment and lush green hills.',
-            image: '/images/destinations/chikmagalur_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1598322066601-5c96f2382e56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
-                { name: 'Mullayanagiri', description: 'The highest peak in Karnataka.', image: '/images/destinations/chikmagalur_mullayanagiri_attraction.svg' },
-                { name: 'Baba Budangiri', description: 'A mountain in the Dattagiri Hill Range.', image: '/images/destinations/chikmagalur_baba-budangiri_attraction.svg' },
-                { name: 'Hebbe Falls', description: 'A waterfall within a coffee estate.', image: '/images/destinations/chikmagalur_hebbe-falls_attraction.svg' },
-                { name: 'Kudremukh National Park', description: 'Biodiversity hotspot.', image: '/images/destinations/chikmagalur_kudremukh-national-park_attraction.svg' },
-                { name: 'Kemmangundi', description: 'A hill station with ornamental gardens.', image: '/images/destinations/chikmagalur_kemmangundi_attraction.svg' }
+                { name: 'Mullayanagiri', description: 'The highest peak in Karnataka.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mullayanagiri_Peak.jpg/800px-Mullayanagiri_Peak.jpg' },
+                { name: 'Baba Budangiri', description: 'A mountain in the Dattagiri Hill Range.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Baba_Budangiri_Hills.jpg/800px-Baba_Budangiri_Hills.jpg' },
+                { name: 'Hebbe Falls', description: 'A waterfall within a coffee estate.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Hebbe_Falls_Chikmagalur.jpg/800px-Hebbe_Falls_Chikmagalur.jpg' },
+                { name: 'Kudremukh National Park', description: 'Biodiversity hotspot.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Kudremukh_Peak.jpg/800px-Kudremukh_Peak.jpg' },
+                { name: 'Kemmangundi', description: 'A hill station with ornamental gardens.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Kemmangundi_Gardens.jpg/800px-Kemmangundi_Gardens.jpg' }
             ],
             resorts: [
                 'The Serai Chikmagalur',
@@ -518,13 +518,13 @@ export const destinations = {
             lat: 11.4102,
             lng: 76.6950,
             description: 'Queen of Hill Stations, known for its tea gardens and colonial charm.',
-            image: '/images/destinations/ooty_main_main.jpg',
+            image: 'https://images.unsplash.com/photo-1548695607-9c73430ba065?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
-                { name: 'Ooty Botanical Gardens', description: 'Exotic plants and flowers.', image: '/images/destinations/ooty_ooty-botanical-gardens_attraction.svg' },
-                { name: 'Ooty Lake', description: 'Boating and scenic views.', image: '/images/destinations/ooty_ooty-lake_attraction.svg' },
-                { name: 'Doddabetta Peak', description: 'The highest point in the Nilgiris.', image: '/images/destinations/ooty_doddabetta-peak_attraction.svg' },
-                { name: 'Coonoor', description: "A nearby hill station with Sim's Park.", image: '/images/destinations/ooty_coonoor_attraction.svg' },
-                { name: 'Nilgiri Mountain Railway', description: 'Toy train ride.', image: '/images/destinations/ooty_nilgiri-mountain-railway_attraction.svg' }
+                { name: 'Ooty Botanical Gardens', description: 'Exotic plants and flowers.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ooty_Botanical_Garden.jpg/800px-Ooty_Botanical_Garden.jpg' },
+                { name: 'Ooty Lake', description: 'Boating and scenic views.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Ooty_Lake.jpg/800px-Ooty_Lake.jpg' },
+                { name: 'Doddabetta Peak', description: 'The highest point in the Nilgiris.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Doddabetta_Peak_Ooty.jpg/800px-Doddabetta_Peak_Ooty.jpg' },
+                { name: 'Coonoor', description: "A nearby hill station with Sim's Park.", image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Coonoor_Tea_Gardens.jpg/800px-Coonoor_Tea_Gardens.jpg' },
+                { name: 'Nilgiri Mountain Railway', description: 'Toy train ride.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Nilgiri_Mountain_Railway.jpg/800px-Nilgiri_Mountain_Railway.jpg' }
             ],
             resorts: [
                 'Sterling Ooty Fern Hill',
@@ -538,13 +538,13 @@ export const destinations = {
             lat: 11.6854,
             lng: 76.1320,
             description: 'A rural district in Kerala known for its spice plantations and wildlife.',
-            image: '/images/destinations/wayanad_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1603957262102-123456789012?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
-                { name: 'Edakkal Caves', description: 'With ancient petroglyphs.', image: '/images/destinations/wayanad_edakkal-caves_attraction.svg' },
-                { name: 'Soochipara Falls', description: 'A three-tiered waterfall.', image: '/images/destinations/wayanad_soochipara-falls_attraction.svg' },
-                { name: 'Banasura Sagar Dam', description: 'The largest earthen dam in India.', image: '/images/destinations/wayanad_banasura-sagar-dam_attraction.svg' },
-                { name: 'Chembra Peak', description: 'Trekking destination.', image: '/images/destinations/wayanad_chembra-peak_attraction.svg' },
-                { name: 'Pookode Lake', description: 'Freshwater lake.', image: '/images/destinations/wayanad_pookode-lake_attraction.svg' }
+                { name: 'Edakkal Caves', description: 'With ancient petroglyphs.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Edakkal_Caves_Wayanad.jpg/800px-Edakkal_Caves_Wayanad.jpg' },
+                { name: 'Soochipara Falls', description: 'A three-tiered waterfall.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Soochipara_Falls_Wayanad.jpg/800px-Soochipara_Falls_Wayanad.jpg' },
+                { name: 'Banasura Sagar Dam', description: 'The largest earthen dam in India.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Banasura_Sagar_Dam_Wayanad.jpg/800px-Banasura_Sagar_Dam_Wayanad.jpg' },
+                { name: 'Chembra Peak', description: 'Trekking destination.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Chembra_Peak_Wayanad.jpg/800px-Chembra_Peak_Wayanad.jpg' },
+                { name: 'Pookode Lake', description: 'Freshwater lake.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pookode_Lake_Wayanad.jpg/800px-Pookode_Lake_Wayanad.jpg' }
             ],
             resorts: [
                 'Vythiri Village Resort',
@@ -558,11 +558,11 @@ export const destinations = {
             lat: 12.3050,
             lng: 77.2750,
             description: 'A nature lover’s paradise, ideal for fishing and trekking.',
-            image: '/images/destinations/kanakpura_nature-adventure_attraction.jpg',
+            image: 'https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
-                { name: 'Cauvery Fishing Camp', description: 'Angling destination.', image: '/images/destinations/bheemeshwari_cauvery-fishing-camp_attraction.svg' },
-                { name: 'Galibore Fishing Camp', description: 'Nature camp.', image: '/images/destinations/bheemeshwari_cauvery-fishing-camp_attraction.svg' },
-                { name: 'Doddamakali Nature Camp', description: 'Adventure camp.', image: '/images/destinations/bheemeshwari_cauvery-fishing-camp_attraction.svg' }
+                { name: 'Cauvery Fishing Camp', description: 'Angling destination.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Bheemeshwari_Cauvery_River.jpg/800px-Bheemeshwari_Cauvery_River.jpg' },
+                { name: 'Galibore Fishing Camp', description: 'Nature camp.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Bheemeshwari_Cauvery_River.jpg/800px-Bheemeshwari_Cauvery_River.jpg' },
+                { name: 'Doddamakali Nature Camp', description: 'Adventure camp.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Bheemeshwari_Cauvery_River.jpg/800px-Bheemeshwari_Cauvery_River.jpg' }
             ],
             resorts: [
                 'Bheemeshwari Nature & Adventure Camp (Jungle Lodges & Resorts)'
@@ -574,11 +574,11 @@ export const destinations = {
             lat: 11.9333,
             lng: 76.3500,
             description: 'Famous for its wildlife sanctuary and luxury jungle lodges.',
-            image: '/images/destinations/kabini_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1589136777351-943288250292?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
-                { name: 'Nagarhole National Park', description: 'Tiger and elephant sightings.', image: '/images/destinations/kabini_nagarhole-national-park_attraction.svg' },
-                { name: 'Kabini River', description: 'Boat safaris.', image: '/images/destinations/kabini_kabini-river_attraction.svg' },
-                { name: 'Iruppu Falls', description: 'Freshwater falls.', image: '/images/destinations/kabini_iruppu-falls_attraction.svg' }
+                { name: 'Nagarhole National Park', description: 'Tiger and elephant sightings.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nagarhole_National_Park_Entrance.jpg/800px-Nagarhole_National_Park_Entrance.jpg' },
+                { name: 'Kabini River', description: 'Boat safaris.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Kabini_River_Safari.jpg/800px-Kabini_River_Safari.jpg' },
+                { name: 'Iruppu Falls', description: 'Freshwater falls.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Iruppu_Falls_Coorg.jpg/800px-Iruppu_Falls_Coorg.jpg' }
             ],
             resorts: [
                 'Evolve Back, Kabini',
@@ -592,11 +592,11 @@ export const destinations = {
             lat: 12.9716,
             lng: 75.7876,
             description: 'A hill station in the Western Ghats known for its slopes covered in coffee, tea and spice plantations.',
-            image: '/images/destinations/sakleshpur_main_main.svg',
+            image: 'https://images.unsplash.com/photo-1605629244098-8f670f7982e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
-                { name: 'Manjarabad Fort', description: 'A star-shaped fort.', image: '/images/destinations/sakleshpur_manjarabad-fort_attraction.svg' },
-                { name: 'Bisle Ghat Viewpoint', description: 'Panoramic views.', image: '/images/destinations/sakleshpur_bisle-ghat-viewpoint_attraction.svg' },
-                { name: 'Sakaleswara Temple', description: 'Ancient Shiva temple.', image: '/images/destinations/sakleshpur_sakaleswara-temple_attraction.svg' }
+                { name: 'Manjarabad Fort', description: 'A star-shaped fort.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Manjarabad_Fort_Sakleshpur.jpg/800px-Manjarabad_Fort_Sakleshpur.jpg' },
+                { name: 'Bisle Ghat Viewpoint', description: 'Panoramic views.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Bisle_Ghat_Viewpoint.jpg/800px-Bisle_Ghat_Viewpoint.jpg' },
+                { name: 'Sakaleswara Temple', description: 'Ancient Shiva temple.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Sakaleswara_Temple.jpg/800px-Sakaleswara_Temple.jpg' }
             ],
             resorts: [
                 'Eka Resort',
@@ -609,13 +609,13 @@ export const destinations = {
             lat: 15.3350,
             lng: 76.4600,
             description: 'A UNESCO World Heritage Site featuring the ruins of the Vijayanagara Empire.',
-            image: '/images/destinations/hampi_main_main.jpg',
+            image: 'https://images.unsplash.com/photo-1620766182966-c6eb5ed2b788?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
             attractions: [
-                { name: 'Virupaksha Temple', description: 'Active Hindu temple.', image: '/images/destinations/hampi_virupaksha-temple_attraction.svg' },
-                { name: 'Vijaya Vittala Temple', description: 'With the stone chariot.', image: '/images/destinations/hampi_vijaya-vittala-temple_attraction.svg' },
-                { name: 'Matanga Hill', description: 'Best sunset view.', image: '/images/destinations/hampi_matanga-hill_attraction.svg' },
-                { name: 'Hemakuta Hill Temple Complex', description: 'Cluster of temples.', image: '/images/destinations/hampi_hemakuta-hill-temple-complex_attraction.svg' },
-                { name: 'Anegundi village', description: 'Historic village.', image: '/images/destinations/hampi_anegundi-village_attraction.svg' }
+                { name: 'Virupaksha Temple', description: 'Active Hindu temple.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Virupaksha_Temple_Hampi.jpg/800px-Virupaksha_Temple_Hampi.jpg' },
+                { name: 'Vijaya Vittala Temple', description: 'With the stone chariot.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Stone_Chariot_Hampi.jpg/800px-Stone_Chariot_Hampi.jpg' },
+                { name: 'Matanga Hill', description: 'Best sunset view.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Matanga_Hill_Hampi.jpg/800px-Matanga_Hill_Hampi.jpg' },
+                { name: 'Hemakuta Hill Temple Complex', description: 'Cluster of temples.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Hemakuta_Hill_Temples.jpg/800px-Hemakuta_Hill_Temples.jpg' },
+                { name: 'Anegundi village', description: 'Historic village.', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anegundi_Village.jpg/800px-Anegundi_Village.jpg' }
             ],
             resorts: [
                 'Evolve Back, Hampi',

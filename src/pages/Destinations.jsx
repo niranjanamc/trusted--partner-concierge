@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MapPin, Star, Plus, Check, X, GripVertical, Trash2, Calendar, AlertTriangle } from 'lucide-react';
+import { MapPin, Star, Plus, Check, X, GripVertical, Trash2, Calendar, AlertTriangle, Clock, Coffee } from 'lucide-react';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -389,10 +389,47 @@ const Destinations = () => {
                         <div className={styles.modalBody}>
                             <p>{selectedPlace.description}</p>
                             <div className={styles.modalSection}>
-                                <h3>Attractions</h3>
-                                <ul>
-                                    {selectedPlace.attractions.map((a, i) => <li key={i}>{a.name}</li>)}
-                                </ul>
+                                <h3>Attractions & Details</h3>
+                                <div className={styles.attractionsList}>
+                                    {selectedPlace.attractions.map((a, i) => (
+                                        <div key={i} className={styles.attractionItem}>
+                                            {a.image && (
+                                                <div className={styles.attractionImage} style={{ backgroundImage: `url("${a.image}")` }}></div>
+                                            )}
+                                            <h4>{a.name}</h4>
+                                            {a.description && <p className={styles.attractionDesc}>{a.description}</p>}
+
+                                            <div className={styles.attractionMeta}>
+                                                {a.tips && (
+                                                    <div className={styles.metaWithIcon}>
+                                                        <Clock size={14} /> <span>{a.tips}</span>
+                                                    </div>
+                                                )}
+
+                                                <div className={styles.metaWithIcon}>
+                                                    <Coffee size={14} />
+                                                    <span>Breakfast: {a.breakfastPoint && a.breakfastPoint !== '--' && a.breakfastPoint !== '----' ? a.breakfastPoint : 'Not specified'}</span>
+                                                </div>
+
+                                                {a.addressLink ? (
+                                                    <a
+                                                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.addressLink)}`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className={`${styles.metaWithIcon} ${styles.addressLink}`}
+                                                        onClick={(e) => e.stopPropagation()}
+                                                    >
+                                                        <MapPin size={14} /> <span>{a.addressLink}</span>
+                                                    </a>
+                                                ) : (
+                                                    <div className={styles.metaWithIcon}>
+                                                        <MapPin size={14} /> <span>Location details unavailable</span>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                             <div className={styles.modalSection}>
                                 <h3>Resorts</h3>
