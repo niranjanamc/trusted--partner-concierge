@@ -1,0 +1,376 @@
+{
+    "all_pricing_slabs": [
+        {
+            "slab_name": "SLAB-1-BANGALORE LOCAL & AIRPORT TRANSFER",
+            "city_or_region": "Bangalore",
+            "currency": "INR",
+            "pricing_plans": [
+                {
+                    "category": "Dezire/Etois/Xcent",
+                    "base_rates": {
+                        "4_hrs_40_km": 1050,
+                        "8_hrs_80_km": 1950,
+                        "fixed_airport_transfer": 1600
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 17,
+                        "per_ex_hr": 180
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "category": "Honda City/Ciaz",
+                    "base_rates": {
+                        "4_hrs_40_km": 1250,
+                        "8_hrs_80_km": 2700,
+                        "fixed_airport_transfer": 2200
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 20,
+                        "per_ex_hr": 220
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "category": "Innova",
+                    "base_rates": {
+                        "4_hrs_40_km": 1450,
+                        "8_hrs_80_km": 2600,
+                        "fixed_airport_transfer": 2250
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 22,
+                        "per_ex_hr": 250
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "category": "Crysta",
+                    "base_rates": {
+                        "4_hrs_40_km": 1700,
+                        "8_hrs_80_km": 3500,
+                        "fixed_airport_transfer": 2800
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 24,
+                        "per_ex_hr": 350
+                    },
+                    "driver_allowance": 300
+                }
+            ]
+        },
+        {
+            "slab_name": "SLAB-2-CHENNAI LOCAL & AIRPORT TRANSFER",
+            "city_or_region": "Chennai (Inferred)",
+            "currency": "INR",
+            "pricing_plans": [
+                {
+                    "category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": 950,
+                        "8_hrs_80_km": 1850,
+                        "fixed_airport_transfer": 1500
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 15,
+                        "per_ex_hr": 160
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "category": "Honda City/Ciaz",
+                    "base_rates": {
+                        "4_hrs_40_km": 1150,
+                        "8_hrs_80_km": 2600,
+                        "fixed_airport_transfer": 2100
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 18,
+                        "per_ex_hr": 200
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "category": "Crysta",
+                    "base_rates": {
+                        "4_hrs_40_km": 1600,
+                        "8_hrs_80_km": 3400,
+                        "fixed_airport_transfer": 2700
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 22,
+                        "per_ex_hr": 330
+                    },
+                    "driver_allowance": 300
+                }
+            ]
+        },
+        {
+            "slab_name": "SLAB-3-HYDERABAD LOCAL & AIRPORT TRANSFER",
+            "city_or_region": "Hyderabad (Inferred)",
+            "currency": "INR",
+            "pricing_plans": [
+                {
+                    "category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": 900,
+                        "8_hrs_80_km": 1800,
+                        "fixed_airport_transfer": 1450
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 15,
+                        "per_ex_hr": 150
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "category": "Innova",
+                    "base_rates": {
+                        "4_hrs_40_km": 1400,
+                        "8_hrs_80_km": 2550,
+                        "fixed_airport_transfer": 2200
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 20,
+                        "per_ex_hr": 240
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "category": "Crysta",
+                    "base_rates": {
+                        "4_hrs_40_km": 1650,
+                        "8_hrs_80_km": 3450,
+                        "fixed_airport_transfer": 2750
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 22,
+                        "per_ex_hr": 340
+                    },
+                    "driver_allowance": 300
+                }
+            ]
+        },
+        {
+            "slab_name": "SLAB-4-MAJOR CITY LOCAL (NO AIRPORT/4HR SLAB)",
+            "city_or_region": "Multiple Major Cities (Inferred)",
+            "currency": "INR",
+            "pricing_plans": [
+                {
+                    "category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 2000,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 18,
+                        "per_ex_hr": 190
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "category": "Innova",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 2800,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 24,
+                        "per_ex_hr": 270
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "category": "Crysta",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 3700,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 26,
+                        "per_ex_hr": 370
+                    },
+                    "driver_allowance": 300
+                }
+            ]
+        },
+        {
+            "slab_name": "SLAB-5-OTHER CITIES/LOCATION SPECIFIC",
+            "city_or_region": "Various Tier 2/3 Cities",
+            "currency": "INR",
+            "pricing_plans": [
+                {
+                    "location": "Tirupati",
+                    "vehicle_category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 2500,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 22,
+                        "per_ex_hr": 240
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "location": "Salem",
+                    "vehicle_category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 2400,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 21,
+                        "per_ex_hr": 230
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "location": "madhurai",
+                    "vehicle_category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 2300,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 20,
+                        "per_ex_hr": 220
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "location": "coimbatore",
+                    "vehicle_category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 2200,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 19,
+                        "per_ex_hr": 210
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "location": "mangalore",
+                    "vehicle_category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 2100,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 18,
+                        "per_ex_hr": 200
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "location": "mysore",
+                    "vehicle_category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 2000,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 17,
+                        "per_ex_hr": 190
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "location": "goa",
+                    "vehicle_category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 1900,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 16,
+                        "per_ex_hr": 180
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "location": "kochi",
+                    "vehicle_category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 1800,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 15,
+                        "per_ex_hr": 170
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "location": "jaipur",
+                    "vehicle_category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 1700,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 14,
+                        "per_ex_hr": 160
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "location": "pondicherry",
+                    "vehicle_category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 1600,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 13,
+                        "per_ex_hr": 150
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "location": "udaipur",
+                    "vehicle_category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 1500,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 12,
+                        "per_ex_hr": 140
+                    },
+                    "driver_allowance": 300
+                },
+                {
+                    "location": "vijayawada",
+                    "vehicle_category": "Etois/Dezire",
+                    "base_rates": {
+                        "4_hrs_40_km": null,
+                        "8_hrs_80_km": 1400,
+                        "fixed_airport_transfer": null
+                    },
+                    "excess_charges": {
+                        "per_ex_km": 11,
+                        "per_ex_hr": 130
+                    },
+                    "driver_allowance": 300
+                }
+            ]
+        }
+    ]
+}

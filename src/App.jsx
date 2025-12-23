@@ -7,6 +7,7 @@ import './styles/App.css';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
+const PanIndiaCarService = lazy(() => import('./pages/PanIndiaCarService'));
 const Promise = lazy(() => import('./pages/Promise'));
 const Destinations = lazy(() => import('./pages/Destinations'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -33,6 +34,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/pan-india-cabs" element={<PanIndiaCarService />} />
             <Route path="/destinations" element={<Destinations />} />
             <Route path="/promise" element={<Promise />} />
             <Route path="/contact" element={<Contact />} />

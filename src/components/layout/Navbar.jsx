@@ -33,6 +33,7 @@ const Navbar = () => {
                     <Link to="/" className={styles.navLink}>Home</Link>
                     <Link to="/about" className={styles.navLink}>About Us</Link>
                     <Link to="/services" className={styles.navLink}>Services</Link>
+                    <Link to="/pan-india-cabs" className={styles.navLink}>Pan India Cabs</Link>
                     <Link to="/destinations" className={styles.navLink}>Destinations</Link>
                     <Link to="/promise" className={styles.navLink}>The Promise</Link>
                     <Link to="/contact" className={`${styles.navLink} ${styles.cta}`}>Plan My Trip</Link>
@@ -53,6 +54,7 @@ const Navbar = () => {
                         <Link to="/" className={styles.mobileLink}>Home</Link>
                         <Link to="/about" className={styles.mobileLink} onClick={() => setIsOpen(false)}>About Us</Link>
                         <Link to="/services" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Services</Link>
+                        <Link to="/pan-india-cabs" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Pan India Cabs</Link>
                         <Link to="/destinations" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Destinations</Link>
                         <Link to="/promise" className={styles.mobileLink} onClick={() => setIsOpen(false)}>The Promise</Link>
                         <Link to="/contact" className={`${styles.mobileLink} ${styles.mobileCta}`}>Plan My Trip</Link>

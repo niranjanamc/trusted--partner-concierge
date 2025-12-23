@@ -1,0 +1,207 @@
+.panIndia {
+    width: 100%;
+}
+
+.hero {
+    background-color: var(--color-gold);
+    color: var(--color-white);
+    padding: 8rem 0 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 0;
+}
+
+.hero>div {
+    position: relative;
+    z-index: 1;
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.heroSubtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.calculatorSection {
+    background-color: var(--color-white);
+    min-height: 80vh;
+}
+
+.splitLayout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.formCard {
+    background-color: var(--color-off-white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.summaryCard {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    position: sticky;
+    top: 100px;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color-navy);
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-navy);
+}
+
+.select,
+.input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: white;
+    transition: border-color 0.2s;
+}
+
+.select:focus,
+.input:focus {
+    outline: none;
+    border-color: var(--color-gold);
+}
+
+.radioGroup {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    background: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: all 0.2s;
+}
+
+.radioLabel:has(input:checked) {
+    background-color: var(--color-navy);
+    color: white;
+    border-color: var(--color-navy);
+}
+
+.totalPrice {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    margin: 1.5rem 0;
+}
+
+.breakdown {
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.breakdownRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.bookBtn {
+    width: 100%;
+    background-color: var(--color-gold);
+    color: var(--color-navy);
+    border: none;
+    padding: 1.2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.bookBtn:hover {
+    background-color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.slabsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.slabsTable th,
+.slabsTable td {
+    padding: 1rem;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+.slabsTable th {
+    background-color: var(--color-navy);
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .splitLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .summaryCard {
+        position: static;
+    }
+}
