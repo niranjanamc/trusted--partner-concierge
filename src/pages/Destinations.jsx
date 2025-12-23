@@ -32,12 +32,21 @@ const MapUpdater = ({ center }) => {
     return null;
 };
 
+// Helper to resolve image paths correctly for both local dev and GitHub Pages
+const getImagePath = (path) => {
+    if (!path) return '';
+    if (path.startsWith('http')) return path;
+    const baseUrl = import.meta.env.BASE_URL;
+    const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+    return `${baseUrl}${cleanPath}`;
+};
+
 // Custom Icon Generator
 const createCustomIcon = (imageUrl, name) => {
     return L.divIcon({
         className: styles.customMarkerContainer,
         html: `<div class="${styles.customMarker}" style="width: 40px; height: 40px;">
-             <img src="${imageUrl}" class="${styles.markerImage}" alt="marker" />
+             <img src="${getImagePath(imageUrl)}" class="${styles.markerImage}" alt="marker" />
              <div class="${styles.markerLabel}">${name}</div>
            </div>`,
         iconSize: [40, 40],
@@ -175,7 +184,7 @@ const Destinations = () => {
                 <div className={styles.placesList}>
                     {destinations[activeTab].map((place) => (
                         <div key={place.id} className={styles.placeCard} onClick={() => openModal(place)}>
-                            <div className={styles.placeImage} style={{ backgroundImage: `url(${place.image})` }}></div>
+                            <div className={styles.placeImage} style={{ backgroundImage: `url(${getImagePath(place.image)})` }}></div>
                             <div className={styles.placeContent}>
                                 <h3>{place.name}</h3>
                                 <p className={styles.placeDesc}>{place.description}</p>
@@ -383,7 +392,7 @@ const Destinations = () => {
                         <button className={styles.closeBtn} onClick={() => setSelectedPlace(null)}>
                             <X size={24} />
                         </button>
-                        <div className={styles.modalHeader} style={{ backgroundImage: `url(${selectedPlace.image})` }}>
+                        <div className={styles.modalHeader} style={{ backgroundImage: `url(${getImagePath(selectedPlace.image)})` }}>
                             <h2>{selectedPlace.name}</h2>
                         </div>
                         <div className={styles.modalBody}>
@@ -394,7 +403,7 @@ const Destinations = () => {
                                     {selectedPlace.attractions.map((a, i) => (
                                         <div key={i} className={styles.attractionItem}>
                                             {a.image && (
-                                                <div className={styles.attractionImage} style={{ backgroundImage: `url("${a.image}")` }}></div>
+                                                <div className={styles.attractionImage} style={{ backgroundImage: `url("${getImagePath(a.image)}")` }}></div>
                                             )}
                                             <h4>{a.name}</h4>
                                             {a.description && <p className={styles.attractionDesc}>{a.description}</p>}
