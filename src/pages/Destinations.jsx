@@ -55,6 +55,119 @@ const createCustomIcon = (imageUrl, name) => {
     });
 };
 
+// Modal Component
+const DestinationModal = ({ place, onClose, onAdd }) => {
+    const [activeImage, setActiveImage] = useState(place.image);
+
+    // Reset active image if place changes
+    useEffect(() => {
+        setActiveImage(place.image);
+    }, [place]);
+
+    if (!place) return null;
+
+    return (
+        <div className={styles.modalOverlay} onClick={onClose}>
+            <div className={styles.modal} onClick={e => e.stopPropagation()}>
+                <button className={styles.closeBtn} onClick={onClose}>
+                    <X size={24} />
+                </button>
+                <div className={styles.modalHeader} style={{ backgroundImage: `url(${getImagePath(activeImage)})` }}>
+                    <h2>{place.name}</h2>
+                </div>
+                <div className={styles.modalBody}>
+                    <p>{place.description}</p>
+
+                    {/* Gallery Section */}
+                    {place.gallery && place.gallery.length > 0 && (
+                        <div className={styles.gallerySection}>
+                            <h3>Gallery</h3>
+                            <div className={styles.galleryList}>
+                                {place.gallery.map((img, i) => (
+                                    <div
+                                        key={i}
+                                        className={`${styles.galleryItem} ${getImagePath(img) === getImagePath(activeImage) ? styles.galleryItemActive : ''}`}
+                                        style={{ backgroundImage: `url(${getImagePath(img)})` }}
+                                        onClick={() => setActiveImage(img)}
+                                    ></div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    <div className={styles.modalSection}>
+                        <h3>Attractions & Details</h3>
+                        <div className={styles.attractionsList}>
+                            {place.attractions.map((a, i) => (
+                                <div key={i} className={styles.attractionItem}>
+                                    {a.image && (
+                                        <div className={styles.attractionImage} style={{ backgroundImage: `url("${getImagePath(a.image)}")` }}></div>
+                                    )}
+                                    <h4>{a.name}</h4>
+                                    {a.description && <p className={styles.attractionDesc}>{a.description}</p>}
+
+                                    <div className={styles.attractionMeta}>
+                                        {a.tips && (
+                                            <div className={styles.metaWithIcon}>
+                                                <Clock size={14} /> <span>{a.tips}</span>
+                                            </div>
+                                        )}
+
+                                        <div className={styles.metaWithIcon}>
+                                            <Coffee size={14} />
+                                            <span>Breakfast: {a.breakfastPoint && a.breakfastPoint !== '--' && a.breakfastPoint !== '----' ? a.breakfastPoint : 'Not specified'}</span>
+                                        </div>
+
+                                        {a.addressLink ? (
+                                            <a
+                                                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.addressLink)}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={`${styles.metaWithIcon} ${styles.addressLink}`}
+                                                onClick={(e) => e.stopPropagation()}
+                                            >
+                                                <MapPin size={14} /> <span>{a.addressLink}</span>
+                                            </a>
+                                        ) : (
+                                            <div className={styles.metaWithIcon}>
+                                                <MapPin size={14} /> <span>Location details unavailable</span>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* Attraction Gallery (Mini simple version) */}
+                                    {a.gallery && a.gallery.length > 1 && (
+                                        <div style={{ marginTop: '0.5rem', display: 'flex', gap: '4px', overflowX: 'auto', paddingBottom: '4px' }}>
+                                            {a.gallery.map((gImg, gIdx) => (
+                                                <div key={gIdx} style={{
+                                                    width: '40px', height: '40px',
+                                                    borderRadius: '4px',
+                                                    backgroundImage: `url(${getImagePath(gImg)})`,
+                                                    backgroundSize: 'cover',
+                                                    flexShrink: 0
+                                                }} />
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className={styles.modalSection}>
+                        <h3>Resorts</h3>
+                        <ul>
+                            {place.resorts.map((r, i) => <li key={i}>{r}</li>)}
+                        </ul>
+                    </div>
+                    <button className={styles.modalAddBtn} onClick={() => { onAdd(place); onClose(); }}>
+                        Add to Itinerary
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const Destinations = () => {
     const [activeTab, setActiveTab] = useState('dayTrips');
     const [selectedPlace, setSelectedPlace] = useState(null);
@@ -387,72 +500,13 @@ const Destinations = () => {
 
             {/* Modal Detail View */}
             {selectedPlace && (
-                <div className={styles.modalOverlay} onClick={() => setSelectedPlace(null)}>
-                    <div className={styles.modal} onClick={e => e.stopPropagation()}>
-                        <button className={styles.closeBtn} onClick={() => setSelectedPlace(null)}>
-                            <X size={24} />
-                        </button>
-                        <div className={styles.modalHeader} style={{ backgroundImage: `url(${getImagePath(selectedPlace.image)})` }}>
-                            <h2>{selectedPlace.name}</h2>
-                        </div>
-                        <div className={styles.modalBody}>
-                            <p>{selectedPlace.description}</p>
-                            <div className={styles.modalSection}>
-                                <h3>Attractions & Details</h3>
-                                <div className={styles.attractionsList}>
-                                    {selectedPlace.attractions.map((a, i) => (
-                                        <div key={i} className={styles.attractionItem}>
-                                            {a.image && (
-                                                <div className={styles.attractionImage} style={{ backgroundImage: `url("${getImagePath(a.image)}")` }}></div>
-                                            )}
-                                            <h4>{a.name}</h4>
-                                            {a.description && <p className={styles.attractionDesc}>{a.description}</p>}
-
-                                            <div className={styles.attractionMeta}>
-                                                {a.tips && (
-                                                    <div className={styles.metaWithIcon}>
-                                                        <Clock size={14} /> <span>{a.tips}</span>
-                                                    </div>
-                                                )}
-
-                                                <div className={styles.metaWithIcon}>
-                                                    <Coffee size={14} />
-                                                    <span>Breakfast: {a.breakfastPoint && a.breakfastPoint !== '--' && a.breakfastPoint !== '----' ? a.breakfastPoint : 'Not specified'}</span>
-                                                </div>
-
-                                                {a.addressLink ? (
-                                                    <a
-                                                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.addressLink)}`}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className={`${styles.metaWithIcon} ${styles.addressLink}`}
-                                                        onClick={(e) => e.stopPropagation()}
-                                                    >
-                                                        <MapPin size={14} /> <span>{a.addressLink}</span>
-                                                    </a>
-                                                ) : (
-                                                    <div className={styles.metaWithIcon}>
-                                                        <MapPin size={14} /> <span>Location details unavailable</span>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className={styles.modalSection}>
-                                <h3>Resorts</h3>
-                                <ul>
-                                    {selectedPlace.resorts.map((r, i) => <li key={i}>{r}</li>)}
-                                </ul>
-                            </div>
-                            <button className={styles.modalAddBtn} onClick={() => { addToItinerary(selectedPlace); setSelectedPlace(null); }}>
-                                Add to Itinerary
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <DestinationModal
+                    place={selectedPlace}
+                    onClose={() => setSelectedPlace(null)}
+                    onAdd={addToItinerary}
+                />
             )}
+
         </div>
     );
 };

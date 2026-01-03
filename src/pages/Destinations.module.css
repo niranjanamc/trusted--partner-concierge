@@ -614,6 +614,44 @@
     cursor: pointer;
 }
 
-.addressLink:hover {
-    text-decoration: underline;
+.gallerySection {
+    margin-bottom: 1.5rem;
+}
+
+.galleryList {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    scroll-behavior: smooth;
+}
+
+.galleryList::-webkit-scrollbar {
+    height: 6px;
+}
+
+.galleryList::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 3px;
+}
+
+.galleryItem {
+    width: 120px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.galleryItem:hover {
+    transform: translateY(-2px);
+}
+
+.galleryItemActive {
+    border-color: var(--color-navy);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
