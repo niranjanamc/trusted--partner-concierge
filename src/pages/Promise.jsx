@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Clock, Heart, Users, CheckCircle, MessageCircle, Smile } from 'lucide-react';
+import { Shield, Clock, Heart, Users, CheckCircle, MessageCircle, Smile, Car, UserCheck, HeartPulse, MapPin } from 'lucide-react';
 import styles from './Promise.module.css';
 import heroImage from '../assets/images/promise_hero.png';
 
