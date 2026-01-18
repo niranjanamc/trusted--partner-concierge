@@ -30,17 +30,26 @@
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--color-navy);
-    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
 }
 
 .desktopMenu {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 2rem;
+}
+
+.homeLink {
+    font-weight: 700;
+    color: var(--color-navy) !important;
+    border-bottom: 2px solid var(--color-gold);
 }
 
 .navLink {
@@ -102,7 +111,7 @@
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
     .desktopMenu {
         display: none;
     }
