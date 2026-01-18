@@ -203,6 +203,12 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
+.idealCard h3 {
+    color: var(--color-white);
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
 .ctaSection {
     text-align: center;
     padding: 6rem 0;

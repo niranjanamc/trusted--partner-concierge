@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Shield, Clock, Map } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
+import heritageImage from '../assets/images/heritage_walk.png';
 
 const Home = () => {
     return (
@@ -99,7 +100,7 @@ const Home = () => {
 
                         {/* Card 2 */}
                         <div className={styles.itineraryCard}>
-                            <div className={styles.cardImage} style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1590050752117-238cb0fb9d64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80)' }}></div>
+                            <div className={styles.cardImage} style={{ backgroundImage: `url(${heritageImage})` }}></div>
                             <div className={styles.cardContent}>
                                 <h3>The Sunday Heritage Walk</h3>
                                 <p>Ancient temples, flower markets, and silk shopping in Old Bangalore.</p>

@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin, Clock, Coffee, Camera, Sun, Moon } from 'lucide-react';
 import styles from './Services.module.css';
 import heroImage from '../assets/images/services_hero.png';
+import airportImage from '../assets/images/airport_transfers.png';
 
 const Services = () => {
     return (
@@ -55,7 +56,7 @@ const Services = () => {
 
                         {/* C) Airport Transfers */}
                         <div className={styles.card}>
-                            <div className={styles.cardImage} style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1542296332-2e44a99cfef9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80)' }}></div>
+                            <div className={styles.cardImage} style={{ backgroundImage: `url(${airportImage})` }}></div>
                             <div className={styles.cardContent}>
                                 <h3>Airport Transfers</h3>
                                 <p className={styles.description}>
