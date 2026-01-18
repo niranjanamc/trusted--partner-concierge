@@ -31,15 +31,15 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <div className={styles.desktopMenu}>
-                    <Link to="/" className={`${styles.navLink} ${styles.homeLink}`}>Home</Link>
-                    <Link to="/about" className={styles.navLink}>About Us</Link>
-                    <Link to="/services" className={styles.navLink}>Services</Link>
-                    <Link to="/corporate-events" className={styles.navLink}>Corporate Events</Link>
-                    <Link to="/flight-booking" className={styles.navLink}>Flights</Link>
-                    <Link to="/pan-india-cabs" className={styles.navLink}>Pan India Cabs</Link>
-                    <Link to="/destinations" className={styles.navLink}>Destinations</Link>
-                    <Link to="/promise" className={styles.navLink}>The Promise</Link>
-                    <Link to="/contact" className={`${styles.navLink} ${styles.cta}`}>Plan My Trip</Link>
+                    <Link to="/" className={`${styles.navLink} ${location.pathname === '/' ? styles.activeLink : ''}`}>Home</Link>
+                    <Link to="/about" className={`${styles.navLink} ${location.pathname === '/about' ? styles.activeLink : ''}`}>About Us</Link>
+                    <Link to="/services" className={`${styles.navLink} ${location.pathname === '/services' ? styles.activeLink : ''}`}>Services</Link>
+                    <Link to="/corporate-events" className={`${styles.navLink} ${location.pathname === '/corporate-events' ? styles.activeLink : ''}`}>Corporate Events</Link>
+                    <Link to="/flight-booking" className={`${styles.navLink} ${location.pathname === '/flight-booking' ? styles.activeLink : ''}`}>Flights</Link>
+                    <Link to="/pan-india-cabs" className={`${styles.navLink} ${location.pathname === '/pan-india-cabs' ? styles.activeLink : ''}`}>Pan India Cabs</Link>
+                    <Link to="/destinations" className={`${styles.navLink} ${location.pathname === '/destinations' ? styles.activeLink : ''}`}>Destinations</Link>
+                    <Link to="/promise" className={`${styles.navLink} ${location.pathname === '/promise' ? styles.activeLink : ''}`}>The Promise</Link>
+                    <Link to="/contact" className={`${styles.navLink} ${styles.cta} ${location.pathname === '/contact' ? styles.activeLink : ''}`}>Plan My Trip</Link>
                 </div>
 
                 {/* Mobile Menu Button */}

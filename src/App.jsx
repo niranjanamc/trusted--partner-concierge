@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import ScrollToTop from './components/common/ScrollToTop';
 import './styles/App.css';
 
 // Lazy load pages
@@ -30,6 +31,7 @@ const Loading = () => (
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Suspense fallback={<Loading />}>
           <Routes>
