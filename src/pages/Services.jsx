@@ -1,12 +1,13 @@
 import React from 'react';
 import { MapPin, Clock, Coffee, Camera, Sun, Moon } from 'lucide-react';
 import styles from './Services.module.css';
+import heroImage from '../assets/images/services_hero.png';
 
 const Services = () => {
     return (
         <div className={styles.services}>
             {/* Hero */}
-            <section className={styles.hero}>
+            <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
                     <h1 className={styles.heroTitle}>Curated Experiences</h1>
                     <p className={styles.heroSubtitle}>

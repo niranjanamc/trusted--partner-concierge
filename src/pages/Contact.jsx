@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import styles from './Contact.module.css';
+import heroImage from '../assets/images/contact_hero.png';
 
 const Contact = () => {
     const form = useRef();
@@ -37,7 +38,7 @@ const Contact = () => {
     return (
         <div className={styles.contact}>
             {/* Hero */}
-            <section className={styles.hero}>
+            <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
                     <h1 className={styles.heroTitle}>Plan Your Next Travel with Ease</h1>
                     <p className={styles.heroSubtitle}>

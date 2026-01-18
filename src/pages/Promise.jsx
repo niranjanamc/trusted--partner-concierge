@@ -1,12 +1,13 @@
 import React from 'react';
-import { Shield, Car, UserCheck, HeartPulse, MapPin } from 'lucide-react';
+import { Shield, Clock, Heart, Users, CheckCircle, MessageCircle, Smile } from 'lucide-react';
 import styles from './Promise.module.css';
+import heroImage from '../assets/images/promise_hero.png';
 
 const Promise = () => {
     return (
         <div className={styles.promise}>
             {/* Hero */}
-            <section className={styles.hero}>
+            <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
                     <h1 className={styles.heroTitle}>Safety is Not an Option; It is Our Infrastructure.</h1>
                 </div>

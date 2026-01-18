@@ -1,12 +1,13 @@
 import React from 'react';
 import { Shield, Heart, Zap } from 'lucide-react';
 import styles from './About.module.css';
+import heroImage from '../assets/images/about_hero.png';
 
 const About = () => {
     return (
         <div className={styles.about}>
             {/* Hero */}
-            <section className={styles.hero}>
+            <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
                     <h1 className={styles.heroTitle}>Your Trusted Travel Partner</h1>
                 </div>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { MapPin, Car, Clock, Navigation, CheckCircle } from 'lucide-react';
 import prices from '../data/panIndiaCarService_price.json';
 import styles from './PanIndiaCarService.module.css';
+import heroImage from '../assets/images/car_service_hero.png';
 
 const PanIndiaCarService = () => {
     const [selectedSlabIndex, setSelectedSlabIndex] = useState(0);
@@ -71,7 +72,7 @@ const PanIndiaCarService = () => {
     return (
         <div className={styles.panIndia}>
             {/* Hero Section */}
-            <section className={styles.hero}>
+            <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
                     <h1 className={styles.heroTitle}>PAN India Prime Cabs</h1>
                     <p className={styles.heroSubtitle}>
