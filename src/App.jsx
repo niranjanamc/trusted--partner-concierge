@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/common/ScrollToTop';
+import ErrorBoundary from './components/common/ErrorBoundary';
 import './styles/App.css';
 
 // Lazy load pages
@@ -33,19 +34,21 @@ function App() {
     <Router>
       <ScrollToTop />
       <Layout>
-        <Suspense fallback={<Loading />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/corporate-events" element={<CorporateEvents />} />
-            <Route path="/flight-booking" element={<FlightBooking />} />
-            <Route path="/pan-india-cabs" element={<PanIndiaCarService />} />
-            <Route path="/destinations" element={<Destinations />} />
-            <Route path="/promise" element={<Promise />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback={<Loading />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/corporate-events" element={<CorporateEvents />} />
+              <Route path="/flight-booking" element={<FlightBooking />} />
+              <Route path="/pan-india-cabs" element={<PanIndiaCarService />} />
+              <Route path="/destinations" element={<Destinations />} />
+              <Route path="/promise" element={<Promise />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
+        </ErrorBoundary>
       </Layout>
     </Router>
   );
