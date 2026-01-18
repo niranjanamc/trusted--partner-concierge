@@ -25,7 +25,7 @@ const Navbar = () => {
         <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
             <div className={styles.container}>
                 <Link to="/" className={styles.logo}>
-                    Trusted Partner
+                    tripsynchr.com
                 </Link>
 
                 {/* Desktop Menu */}

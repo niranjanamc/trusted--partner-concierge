@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className={styles.grid}>
                     {/* Brand Column */}
                     <div className={styles.column}>
-                        <h3 className={styles.brand}>Trusted Partner</h3>
+                        <h3 className={styles.brand}>tripsynchr.com</h3>
                         <p className={styles.tagline}>
                             Bengaluru’s Premier Travel Concierge for the Global Citizen.
                         </p>
@@ -38,7 +38,7 @@ const Footer = () => {
                         <ul className={styles.contactList}>
                             <li>
                                 <Mail size={16} />
-                                <span>concierge@trustedpartner.com</span>
+                                <span>concierge@tripsynchr.com</span>
                             </li>
                             <li>
                                 <Phone size={16} />
@@ -53,7 +53,7 @@ const Footer = () => {
                 </div>
 
                 <div className={styles.bottom}>
-                    <p>&copy; {new Date().getFullYear()} Trusted Partner Travels Pvt Ltd. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} tripsynchr.com. All rights reserved.</p>
                     <div className={styles.legal}>
                         <Link to="/privacy">Privacy Policy</Link>
                         <Link to="/terms">Terms of Service</Link>

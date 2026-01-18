@@ -39,9 +39,9 @@ const Contact = () => {
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={styles.container}>
-                    <h1 className={styles.heroTitle}>Plan Your Trip</h1>
+                    <h1 className={styles.heroTitle}>Plan Your Next Travel with Ease</h1>
                     <p className={styles.heroSubtitle}>
-                        Tell us about your schedule and preferences. We will design a bespoke itinerary for you.
+                        Whether it’s a family holiday, one-day city tour, corporate offsite, or a pan-India travel requirement tripsynchr.com is here to help.
                     </p>
                 </div>
             </section>

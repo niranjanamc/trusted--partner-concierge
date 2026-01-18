@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, Star, Plus, Check, X, GripVertical, Trash2, Calendar, AlertTriangle, Clock, Coffee } from 'lucide-react';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
-import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { destinations } from '../data/destinations';
@@ -55,7 +55,12 @@ const createCustomIcon = (imageUrl, name) => {
     });
 };
 
-// Modal Component
+// Helper to get colors for different days
+const getDayColor = (index) => {
+    const colors = ['#2563eb', '#16a34a', '#db2777', '#9333ea', '#ea580c'];
+    return colors[index % colors.length];
+};
+
 const DestinationModal = ({ place, onClose, onAdd }) => {
     const [activeImage, setActiveImage] = useState(place.image);
 
@@ -347,6 +352,16 @@ const Destinations = () => {
                     </div>
                 </div>
 
+                {/* Instructional Hint */}
+                <div className={styles.itineraryHint}>
+                    <GripVertical size={20} style={{ flexShrink: 0 }} />
+                    <div>
+                        <strong>Drag & Drop to Reorder</strong>
+                        <br />
+                        Arrange your places to optimize the route. Routes and distances calculate automatically based on the order.
+                    </div>
+                </div>
+
                 <DragDropContext onDragEnd={onDragEnd}>
                     <div className={styles.daysContainer}>
                         {Object.values(itinerary).map((day, index) => {
@@ -446,6 +461,49 @@ const Destinations = () => {
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
                     />
                     <MapUpdater center={mapCenter} />
+
+                    {/* Route Visualizations */}
+                    {Object.values(itinerary).map((day, index) => {
+                        const places = day.items;
+                        if (places.length === 0) return null;
+
+                        // Calculate points including start
+                        let points = [];
+                        let startLoc = { lat: 12.9716, lng: 77.5946 }; // Default Bangalore
+
+                        // If Day 1, Start Bangalore. Day N, start ?? (Simulated logic matches validateDay)
+                        // Ideally, we link form Day N-1 Last Item.
+                        // But for now, let's just draw the line connecting the items in the day.
+                        // Adding start point to the line helps visualize the "Trip".
+
+                        if (index === 0) {
+                            points.push([startLoc.lat, startLoc.lng]);
+                        } else if (places.length > 0) {
+                            // For subsequent days, maybe start from first item? 
+                            // Or imply continuation. Let's just draw the day's route itself.
+                        }
+
+                        places.forEach(p => points.push([p.lat, p.lng]));
+
+                        // Calculate total distance for label
+                        const validation = validateDay(places, index === 0 ? startLoc : { lat: places[0].lat, lng: places[0].lng });
+
+                        return (
+                            <Polyline
+                                key={`route-${day.id}`}
+                                positions={points}
+                                pathOptions={{ color: getDayColor(index), weight: 4, opacity: 0.7, dashArray: index > 0 ? '5, 10' : null }}
+                            >
+                                <Tooltip sticky>
+                                    <div>
+                                        <strong>{day.title}</strong>
+                                        <br />
+                                        Distance: {validation.totalDistance} km
+                                    </div>
+                                </Tooltip>
+                            </Polyline>
+                        );
+                    })}
 
                     {/* Markers for all places in current tab */}
                     {destinations[activeTab].map((place) => (

@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { MapPin, Car, Clock, Navigation, CheckCircle } from 'lucide-react';
 import prices from '../data/panIndiaCarService_price.json';
 import styles from './PanIndiaCarService.module.css';
@@ -244,41 +245,19 @@ const PanIndiaCarService = () => {
                         </div>
                     </div>
 
-                    {/* Full Pricing Table for Transparency */}
-                    <div style={{ marginTop: '4rem' }}>
-                        <h3 className={styles.sectionTitle}>Full Pricing Rate Card</h3>
-                        <div style={{ overflowX: 'auto' }}>
-                            <table className={styles.slabsTable}>
-                                <thead>
-                                    <tr>
-                                        <th>Category</th>
-                                        <th>4 Hrs / 40 Km</th>
-                                        <th>8 Hrs / 80 Km</th>
-                                        <th>Airport Transfer</th>
-                                        <th>Extra Km</th>
-                                        <th>Extra Hr</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {currentSlab.pricing_plans.map((plan, idx) => (
-                                        <tr key={idx}>
-                                            <td>
-                                                <strong>{plan.location || plan.category}</strong>
-                                                <br />
-                                                <span style={{ fontSize: '0.8rem', color: '#666' }}>
-                                                    {plan.location ? plan.vehicle_category : ''}
-                                                </span>
-                                            </td>
-                                            <td>{plan.base_rates['4_hrs_40_km'] || '-'}</td>
-                                            <td>{plan.base_rates['8_hrs_80_km'] || '-'}</td>
-                                            <td>{plan.base_rates['fixed_airport_transfer'] || '-'}</td>
-                                            <td>{plan.excess_charges.per_ex_km}</td>
-                                            <td>{plan.excess_charges.per_ex_hr}</td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
+                    {/* Outstation Request CTA */}
+                    <div className={styles.outstationCta} style={{ marginTop: '3rem', padding: '2rem', backgroundColor: '#f8f9fa', borderRadius: '12px', textAlign: 'center' }}>
+                        <h3>Planning an Outstation Trip?</h3>
+                        <p style={{ marginBottom: '1.5rem', color: '#666' }}>
+                            We offer premium outstation services with transparent pricing.
+                        </p>
+                        <Link to="/contact" className={styles.bookBtn} style={{ display: 'inline-block', maxWidth: '300px' }}>
+                            Request Outstation Quote
+                        </Link>
+                    </div>
+
+                    <div style={{ marginTop: '2rem', fontSize: '0.9rem', color: '#666', fontStyle: 'italic' }}>
+                        <p><strong>Note:</strong> Driver allowances are applicable for pickups before 6 AM or drops after 10 PM, irrespective of Local or Outstation trips.</p>
                     </div>
 
                 </div>

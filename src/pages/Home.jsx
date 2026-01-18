@@ -11,11 +11,12 @@ const Home = () => {
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
                     <h1 className={styles.heroTitle}>
-                        Bengaluru’s Premier Travel Concierge for the Global Citizen
+                        Experience Safe, Comfortable & Customised Holidays in Karnataka
                     </h1>
                     <p className={styles.heroSubtitle}>
-                        Bespoke local experiences, seamless logistics, and 17 years of corporate trust.
-                        Explore the Silicon Valley of India with a partner who speaks your language.
+                        Discover curated tours, seamless travel services, corporate offsites, and event solutions — all delivered by seasoned travel & hospitality professionals.
+                        <br />
+                        Your trusted travel tripsynchr.com Always.
                     </p>
                     <Link to="/services" className={styles.heroCta}>
                         Explore Experiences <ArrowRight size={20} />
@@ -27,42 +28,51 @@ const Home = () => {
             <section className={styles.whyUs}>
                 <div className={styles.container}>
                     <div className={styles.sectionHeader}>
-                        <h2 className={styles.sectionTitle}>Why Choose Trusted Partner?</h2>
-                        <p className={styles.sectionSubtitle}>Bridging the Boardroom and the Bazaar</p>
+                        <h2 className={styles.sectionTitle}>Why Choose tripsynchr.com?</h2>
+                        <p className={styles.sectionSubtitle}>
+                            At tripsynchr.com, we go beyond packages — we understand your inherent needs and design experiences that feel personal, safe, and truly comfortable.
+                        </p>
                     </div>
 
                     <div className={styles.featuresGrid}>
                         <div className={styles.featureCard}>
                             <div className={styles.iconWrapper}>
+                                <Clock size={32} />
+                            </div>
+                            <h3>Professionally Curated</h3>
+                            <p>Professionally curated holidays & breaks designed for your unique needs.</p>
+                        </div>
+
+                        <div className={styles.featureCard}>
+                            <div className={styles.iconWrapper}>
                                 <Shield size={32} />
                             </div>
-                            <h3>17 Years of Corporate Mastery</h3>
-                            <p>
-                                Managed travel for Fortune 500 executives? We have done it for nearly two decades.
-                                We apply the same rigor to your leisure travel as we do to your business logistics.
-                            </p>
+                            <h3>Trusted</h3>
+                            <p>Trusted by families, groups & corporates for reliable service.</p>
+                        </div>
+
+                        <div className={styles.featureCard}>
+                            <div className={styles.iconWrapper}>
+                                <Shield size={32} />
+                            </div>
+                            <h3>Safety First</h3>
+                            <p>Safe, verified drivers & guides to ensure a secure journey.</p>
                         </div>
 
                         <div className={styles.featureCard}>
                             <div className={styles.iconWrapper}>
                                 <Map size={32} />
                             </div>
-                            <h3>Born & Raised Bengaluru</h3>
-                            <p>
-                                We don't rely on Google Maps. We know the shortcuts, the hidden gems, and the local legends.
-                                Our Kannada heritage opens doors that remain closed to the average tourist.
-                            </p>
+                            <h3>Custom Itineraries</h3>
+                            <p>Custom-made itineraries across Karnataka tailored to your interests.</p>
                         </div>
 
                         <div className={styles.featureCard}>
                             <div className={styles.iconWrapper}>
                                 <Clock size={32} />
                             </div>
-                            <h3>The "Bleisure" Specialist</h3>
-                            <p>
-                                Your time is currency. Our itineraries are optimized for the busy professional—maximizing
-                                experience while minimizing traffic exposure.
-                            </p>
+                            <h3>24/7 Support</h3>
+                            <p>24/7 travel assistance & end-to-end management for peace of mind.</p>
                         </div>
                     </div>
                 </div>
