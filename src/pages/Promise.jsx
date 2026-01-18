@@ -2,6 +2,7 @@ import React from 'react';
 import { Shield, Clock, Heart, Users, CheckCircle, MessageCircle, Smile, Car, UserCheck, HeartPulse, MapPin } from 'lucide-react';
 import styles from './Promise.module.css';
 import heroImage from '../assets/images/promise_hero.png';
+import womanSafetyImage from '../assets/images/safe_travel_women.png';
 
 const Promise = () => {
     return (
@@ -81,8 +82,8 @@ const Promise = () => {
                         </div>
                         <div className={styles.imageWrapper}>
                             <img
-                                src="https://images.unsplash.com/photo-1593693401530-81638967f37f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Safe Travel"
+                                src={womanSafetyImage}
+                                alt="Safe Travel for Women"
                             />
                         </div>
                     </div>
