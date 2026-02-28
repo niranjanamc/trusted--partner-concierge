@@ -9,7 +9,7 @@ const About = () => {
             {/* Hero */}
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
-                    <h1 className={styles.heroTitle}>Your Trusted Travel Partner</h1>
+                    <h1 className={styles.heroTitle}>Voyage Monk</h1>
                 </div>
             </section>
 
@@ -20,7 +20,7 @@ const About = () => {
                         <div className={styles.storyText}>
                             <h2 className={styles.sectionTitle}>About Us</h2>
                             <p>
-                                TripSynchr.com is a Bengaluru-based travel solutions company founded and led by seasoned professionals with over 17 years of experience in the travel and hospitality industry.
+                                VoyageMonk.com is a Bengaluru-based travel solutions company founded and led by seasoned professionals with over 17 years of experience in the travel and hospitality industry.
                                 We combine deep industry expertise with a friendly, “buddy-like” approach to make every journey effortless, safe, and truly memorable.
                             </p>
 

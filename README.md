@@ -1,6 +1,6 @@
-# Trusted Partner Concierge Website
+# Voyage Monk Website
 
-Welcome! This guide will help you set up and run the **Trusted Partner Concierge** website on your local computer. You don't need to be a coding expert to get this running—just follow the steps below.
+Welcome! This guide will help you set up and run the **Voyage Monk** website on your local computer. You don't need to be a coding expert to get this running—just follow the steps below.
 
 ---
 
@@ -106,4 +106,4 @@ To change where the contact forms are sent:
 
 ---
 
-*Created for Trusted Partner Concierge.*
+*Created for Voyage Monk.*

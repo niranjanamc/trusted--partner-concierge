@@ -17,7 +17,7 @@ const Home = () => {
                     <p className={styles.heroSubtitle}>
                         Discover curated tours, seamless travel services, corporate offsites, and event solutions — all delivered by seasoned travel & hospitality professionals.
                         <br />
-                        Your trusted travel tripsynchr.com Always.
+                        Your trusted travel voyagemonk.com Always.
                     </p>
                     <Link to="/services" className={styles.heroCta}>
                         Explore Experiences <ArrowRight size={20} />
@@ -29,9 +29,9 @@ const Home = () => {
             <section className={styles.whyUs}>
                 <div className={styles.container}>
                     <div className={styles.sectionHeader}>
-                        <h2 className={styles.sectionTitle}>Why Choose tripsynchr.com?</h2>
+                        <h2 className={styles.sectionTitle}>Why Choose voyagemonk.com?</h2>
                         <p className={styles.sectionSubtitle}>
-                            At tripsynchr.com, we go beyond packages — we understand your inherent needs and design experiences that feel personal, safe, and truly comfortable.
+                            At voyagemonk.com, we go beyond packages — we understand your inherent needs and design experiences that feel personal, safe, and truly comfortable.
                         </p>
                     </div>
 

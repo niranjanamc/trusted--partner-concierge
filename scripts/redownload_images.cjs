@@ -23,7 +23,7 @@ async function downloadFile(url, dest) {
         const request = https.get(url, {
             headers: {
                 // Slightly randomized UA or just standard one
-                'User-Agent': 'TrustedPartnerConcierge/1.0 (contact@trustedpartner.com)',
+                'User-Agent': 'VoyageMonk/1.0 (contact@voyagemonk.com)',
                 'Accept': 'image/avif,image/webp,*/*'
             }
         }, (response) => {

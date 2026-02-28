@@ -42,7 +42,7 @@ const Contact = () => {
                 <div className={styles.container}>
                     <h1 className={styles.heroTitle}>Plan Your Next Travel with Ease</h1>
                     <p className={styles.heroSubtitle}>
-                        Whether it’s a family holiday, one-day city tour, corporate offsite, or a pan-India travel requirement tripsynchr.com is here to help.
+                        Whether it’s a family holiday, one-day city tour, corporate offsite, or a pan-India travel requirement voyagemonk.com is here to help.
                     </p>
                 </div>
             </section>

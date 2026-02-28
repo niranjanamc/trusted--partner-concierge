@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
-import logoImage from '../../assets/images/tripsynchr_logo.png';
+import logoImage from '../../assets/images/voyage_monk_logo.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ const Navbar = () => {
         <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
             <div className={styles.container}>
                 <Link to="/" className={styles.logo}>
-                    <img src={logoImage} alt="TripSynchr.com" />
+                    <img src={logoImage} alt="VoyageMonk.com" />
                 </Link>
 
                 {/* Desktop Menu */}
