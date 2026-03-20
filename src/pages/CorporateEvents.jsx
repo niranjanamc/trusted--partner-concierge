@@ -5,6 +5,11 @@ import styles from './CorporateEvents.module.css';
 import heroImage from '../assets/images/corporate_event_hero.png';
 import rnrImage from '../assets/images/rnr_party_event.png';
 import cocktailImage from '../assets/images/cocktail_dinner_setup.png';
+import iconParties from '../assets/images/icon_ce_parties.png';
+import iconRnr from '../assets/images/icon_ce_rnr.png';
+import iconNetworking from '../assets/images/icon_ce_networking_1.png';
+import iconProduct from '../assets/images/icon_ce_product.png';
+import iconVip from '../assets/images/icon_ce_vip.png';
 
 const CorporateEvents = () => {
     return (
@@ -81,24 +86,19 @@ const CorporateEvents = () => {
                     <h2 style={{ fontSize: '2.5rem', color: 'var(--color-navy)', marginBottom: '2rem' }}>Perfect For</h2>
                     <div className={styles.grid}>
                         <div className={styles.card}>
-                            <Users size={40} color="var(--color-gold)" />
-                            <h3>Corporate Parties & Annual Celebrations</h3>
+                            <img src={iconParties} alt="Corporate Parties & Annual Celebrations" className={styles.categoryIcon} />
                         </div>
                         <div className={styles.card}>
-                            <Award size={40} color="var(--color-gold)" />
-                            <h3>Team Outings & RNR Nights</h3>
+                            <img src={iconRnr} alt="Team Outings & RNR Nights" className={styles.categoryIcon} />
                         </div>
                         <div className={styles.card}>
-                            <Briefcase size={40} color="var(--color-gold)" />
-                            <h3>Client Entertainment & Networking Events</h3>
+                            <img src={iconNetworking} alt="Client Entertainment & Networking Events" className={styles.categoryIcon} />
                         </div>
                         <div className={styles.card}>
-                            <Star size={40} color="var(--color-gold)" />
-                            <h3>Product Launches & Brand Events</h3>
+                            <img src={iconProduct} alt="Product Launches & Brand Events" className={styles.categoryIcon} />
                         </div>
                         <div className={styles.card}>
-                            <Wine size={40} color="var(--color-gold)" />
-                            <h3>Executive Dinners & VIP Gatherings</h3>
+                            <img src={iconVip} alt="Executive Dinners & VIP Gatherings" className={styles.categoryIcon} />
                         </div>
                     </div>
                 </div>

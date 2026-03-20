@@ -156,21 +156,24 @@
 }
 
 .card {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: transparent;
+    padding: 1rem;
     transition: transform 0.3s;
+    text-align: center;
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
 
-.card h3 {
-    margin-top: 1rem;
-    color: var(--color-navy);
-    font-size: 1.2rem;
+.categoryIcon {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
 }
 
 .whyChooseSection {
