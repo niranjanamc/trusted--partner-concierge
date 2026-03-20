@@ -1,7 +1,11 @@
 import React from 'react';
-import { Shield, Heart, Zap } from 'lucide-react';
 import styles from './About.module.css';
 import heroImage from '../assets/images/about_hero.png';
+import iconSafety from '../assets/images/icon_safety.png';
+import iconPersonalisation from '../assets/images/icon_personalisation.png';
+import iconComfort from '../assets/images/icon_comfort.png';
+import iconTrust from '../assets/images/icon_trust.png';
+import iconDelight from '../assets/images/icon_delight.png';
 
 const About = () => {
     return (
@@ -53,27 +57,27 @@ const About = () => {
                     <h2 className={styles.sectionTitle} style={{ textAlign: 'center' }}>Our Values</h2>
                     <div className={styles.dnaGrid}>
                         <div className={styles.dnaCard}>
-                            <Shield size={40} className={styles.dnaIcon} />
+                            <div className={styles.iconWrapper}><img src={iconSafety} alt="Safety First" className={styles.customIcon} /></div>
                             <h3>Safety First</h3>
                             <p>Verified drivers, well-maintained vehicles, and transparent processes.</p>
                         </div>
                         <div className={styles.dnaCard}>
-                            <Heart size={40} className={styles.dnaIcon} />
+                            <div className={styles.iconWrapper}><img src={iconPersonalisation} alt="Personalisation" className={styles.customIcon} /></div>
                             <h3>Personalisation</h3>
                             <p>Every trip tailored to your unique preferences.</p>
                         </div>
                         <div className={styles.dnaCard}>
-                            <Zap size={40} className={styles.dnaIcon} />
+                            <div className={styles.iconWrapper}><img src={iconComfort} alt="Comfort & Convenience" className={styles.customIcon} /></div>
                             <h3>Comfort & Convenience</h3>
                             <p>Thoughtfully designed experiences end-to-end.</p>
                         </div>
                         <div className={styles.dnaCard}>
-                            <Shield size={40} className={styles.dnaIcon} />
+                            <div className={styles.iconWrapper}><img src={iconTrust} alt="Trust & Reliability" className={styles.customIcon} /></div>
                             <h3>Trust & Reliability</h3>
                             <p>Professional expertise with a friendly touch.</p>
                         </div>
                         <div className={styles.dnaCard}>
-                            <Heart size={40} className={styles.dnaIcon} />
+                            <div className={styles.iconWrapper}><img src={iconDelight} alt="Customer Delight" className={styles.customIcon} /></div>
                             <h3>Customer Delight</h3>
                             <p>We don’t just serve — we care like a buddy.</p>
                         </div>

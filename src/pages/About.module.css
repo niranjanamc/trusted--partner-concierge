@@ -139,14 +139,21 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
 }
 
-.dnaIcon {
-    color: var(--color-gold);
-    margin-bottom: 1.5rem;
-    background-color: rgba(212, 175, 55, 0.1);
-    padding: 1rem;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
+.iconWrapper {
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.customIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1.3);
 }
 
 .dnaCard h3 {
