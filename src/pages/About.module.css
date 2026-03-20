@@ -14,7 +14,7 @@
     flex-direction: column;
     text-align: center;
     color: var(--color-white);
-    padding: 4rem 2rem 0;
+    padding: 2.5rem 2rem 0;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -67,14 +67,14 @@
 
 .sectionTitle {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: var(--color-navy);
     text-align: center;
 }
 
 /* Story Section */
 .story {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
     background-color: var(--color-white);
 }
 
@@ -111,7 +111,7 @@
 
 /* DNA Section - Completely Revamped */
 .dna {
-    padding: 5rem 0;
+    padding: 3.5rem 0;
     background-color: var(--color-off-white);
     /* Light background */
     color: var(--color-text-dark);

@@ -14,7 +14,7 @@
     flex-direction: column;
     text-align: center;
     color: var(--color-white);
-    padding: 4rem 2rem 0;
+    padding: 2.5rem 2rem 0;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -50,12 +50,12 @@
     font-size: 1.4rem;
     opacity: 0.95;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-weight: 300;
 }
 
 .section {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
 }
 
 .container {
@@ -78,7 +78,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
     align-items: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .splitSection.reversed {
@@ -190,7 +190,7 @@
 
 .whyChooseSection h2 {
     color: white;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .whyGrid {
@@ -212,7 +212,7 @@
 
 .ctaSection {
     text-align: center;
-    padding: 5rem 0;
+    padding: 3.5rem 0;
     background-size: cover;
     background-size: cover;
     background-attachment: fixed;
