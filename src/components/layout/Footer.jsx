@@ -38,15 +38,7 @@ const Footer = () => {
                         <ul className={styles.contactList}>
                             <li>
                                 <Mail size={16} />
-                                <span>contact@voyagemonk.com</span>
-                            </li>
-                            <li>
-                                <Phone size={16} />
-                                <span>+91 98765 43210</span>
-                            </li>
-                            <li>
-                                <MapPin size={16} />
-                                <span>UB City, Vittal Mallya Rd, Bengaluru</span>
+                                <span>info@voyagemonk.com</span>
                             </li>
                         </ul>
                     </div>

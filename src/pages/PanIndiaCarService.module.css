@@ -207,3 +207,67 @@
         position: static;
     }
 }
+
+.tabsContainer {
+    margin-bottom: 1.5rem;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #eee;
+}
+
+.tabBtn {
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.tabBtn:hover {
+    color: var(--color-navy);
+}
+
+.tabBtn.activeTab {
+    color: var(--color-navy);
+}
+
+.tabBtn.activeTab::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-gold);
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.statusMessage {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.success {
+    background-color: #e6f4ea;
+    color: #1e8e3e;
+}
+
+.error {
+    background-color: #fce8e6;
+    color: #d93025;
+}

@@ -1,11 +1,61 @@
-import React from 'react';
-import { Plane, CheckCircle, Clock, Globe, Briefcase, DollarSign, Users, Calendar } from 'lucide-react';
+import React, { useState, useRef, useMemo } from 'react';
+import emailjs from '@emailjs/browser';
+import { Plane, CheckCircle, Clock, Globe, Briefcase, DollarSign, Users, Calendar, Send, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './FlightBooking.module.css';
 import heroImage from '../assets/images/flight_booking_hero.png';
 import loungeImage from '../assets/images/business_travel_lounge.png';
 
 const FlightBooking = () => {
+    const [activeTab, setActiveTab] = useState('One Way'); // 'One Way', 'Round Trip'
+    const [status, setStatus] = useState('idle');
+    const form = useRef();
+
+    const [formData, setFormData] = useState({
+        user_name: '', user_email: '', phone: '',
+        from_city: '', to_city: '', depart_date: '', return_date: '',
+        passengers: '1', class_type: 'Economy'
+    });
+
+    const handleTabChange = (tab) => {
+        setActiveTab(tab);
+        setStatus('idle');
+    };
+
+    const handleInputChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const summaryText = useMemo(() => {
+        let text = `New Flight Booking Request: ${activeTab}\n\n`;
+        text += `Name: ${formData.user_name}\nEmail: ${formData.user_email}\nPhone: ${formData.phone}\n`;
+        text += `From: ${formData.from_city}\nTo: ${formData.to_city}\n`;
+        text += `Depart Date: ${formData.depart_date}\n`;
+        if (activeTab === 'Round Trip') {
+            text += `Return Date: ${formData.return_date}\n`;
+        }
+        text += `Passengers: ${formData.passengers}\nClass: ${formData.class_type}\n`;
+        return text;
+    }, [activeTab, formData]);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setStatus('sending');
+
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+        if (!serviceId || serviceId === 'service_placeholder') {
+            setTimeout(() => setStatus('success'), 1500);
+            return;
+        }
+
+        emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+            .then(() => setStatus('success'))
+            .catch(() => setStatus('error'));
+    };
+
     return (
         <div className={styles.page}>
             {/* Hero Section */}
@@ -15,6 +65,110 @@ const FlightBooking = () => {
                     <p className={styles.heroSubtitle}>
                         Seamless connectivity for business and leisure. Experience premium air travel coordination.
                     </p>
+                </div>
+            </section>
+
+            {/* Flight Booking Form Section */}
+            <section className={styles.formSection}>
+                <div className={styles.container}>
+                    <div className={styles.formCard}>
+                        <div className={styles.tabsContainer}>
+                            <div className={styles.tabs}>
+                                <button
+                                    type="button"
+                                    className={`${styles.tabBtn} ${activeTab === 'One Way' ? styles.activeTab : ''}`}
+                                    onClick={() => handleTabChange('One Way')}
+                                >One Way</button>
+                                <button
+                                    type="button"
+                                    className={`${styles.tabBtn} ${activeTab === 'Round Trip' ? styles.activeTab : ''}`}
+                                    onClick={() => handleTabChange('Round Trip')}
+                                >Round Trip</button>
+                            </div>
+                        </div>
+
+                        {status === 'success' ? (
+                            <div className={`${styles.statusMessage} ${styles.success}`}>
+                                <CheckCircle size={40} style={{ margin: '0 auto 1rem', display: 'block' }} />
+                                Flight Request Sent! Our concierge will provide ticket options shortly.
+                                <button className={styles.submitBtn} style={{ marginTop: '1.5rem', width: 'auto' }} onClick={() => setStatus('idle')}>Book Another Flight</button>
+                            </div>
+                        ) : (
+                            <form ref={form} onSubmit={handleSubmit}>
+                                <textarea name="message" value={summaryText} readOnly style={{ display: 'none' }} />
+
+                                <div className={styles.formGrid}>
+                                    <div className={styles.formGroup}>
+                                        <label className={styles.label}>From City / Airport</label>
+                                        <input type="text" className={styles.input} name="from_city" required onChange={handleInputChange} placeholder="e.g. BLR" />
+                                    </div>
+                                    <div className={styles.formGroup}>
+                                        <label className={styles.label}>To City / Airport</label>
+                                        <input type="text" className={styles.input} name="to_city" required onChange={handleInputChange} placeholder="e.g. DEL" />
+                                    </div>
+
+                                    <div className={styles.formGroup}>
+                                        <label className={styles.label}>Depart Date</label>
+                                        <input type="date" className={styles.input} name="depart_date" required onChange={handleInputChange} />
+                                    </div>
+
+                                    {activeTab === 'Round Trip' && (
+                                        <div className={styles.formGroup}>
+                                            <label className={styles.label}>Return Date</label>
+                                            <input type="date" className={styles.input} name="return_date" required onChange={handleInputChange} />
+                                        </div>
+                                    )}
+                                </div>
+
+                                <div className={styles.formGrid}>
+                                    <div className={styles.formGroup}>
+                                        <label className={styles.label}>Passengers</label>
+                                        <select className={styles.select} name="passengers" onChange={handleInputChange} value={formData.passengers}>
+                                            <option value="1">1 Passenger</option>
+                                            <option value="2">2 Passengers</option>
+                                            <option value="3">3 Passengers</option>
+                                            <option value="4">4 Passengers</option>
+                                            <option value="5+">5+ Passengers</option>
+                                        </select>
+                                    </div>
+                                    <div className={styles.formGroup}>
+                                        <label className={styles.label}>Class</label>
+                                        <select className={styles.select} name="class_type" onChange={handleInputChange} value={formData.class_type}>
+                                            <option value="Economy">Economy</option>
+                                            <option value="Premium Economy">Premium Economy</option>
+                                            <option value="Business">Business</option>
+                                            <option value="First Class">First Class</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div className={styles.formGrid} style={{ marginTop: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid #eee' }}>
+                                    <div className={styles.formGroup}>
+                                        <label className={styles.label}>Full Name</label>
+                                        <input type="text" className={styles.input} name="user_name" required onChange={handleInputChange} />
+                                    </div>
+                                    <div className={styles.formGroup}>
+                                        <label className={styles.label}>Email</label>
+                                        <input type="email" className={styles.input} name="user_email" required onChange={handleInputChange} />
+                                    </div>
+                                    <div className={styles.formGroup}>
+                                        <label className={styles.label}>Phone Number</label>
+                                        <input type="tel" className={styles.input} name="phone" required onChange={handleInputChange} />
+                                    </div>
+                                </div>
+
+                                {status === 'error' && (
+                                    <div className={`${styles.statusMessage} ${styles.error}`}>
+                                        <AlertCircle size={20} style={{ verticalAlign: 'middle', marginRight: '0.5rem' }} /> Error submitting request. Please try again.
+                                    </div>
+                                )}
+
+                                <button type="submit" className={styles.submitBtn} disabled={status === 'sending'}>
+                                    {status === 'sending' ? 'Sending Request...' : 'Get Flight Options'} <Plane size={20} style={{ marginLeft: '0.5rem' }} />
+                                </button>
+                            </form>
+                        )}
+                    </div>
                 </div>
             </section>
 
@@ -120,15 +274,6 @@ const FlightBooking = () => {
                             <h3>Group Offsites</h3>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className={styles.ctaSection}>
-                <div className={styles.container}>
-                    <h2 style={{ fontSize: '2rem', color: 'var(--color-navy)', marginBottom: '1rem' }}>Ready to Take Off?</h2>
-                    <p style={{ color: '#666', fontSize: '1.2rem' }}>Contact us for a quote or to discuss your corporate travel needs.</p>
-                    <Link to="/contact" className={styles.ctaBtn}>Request a Quote</Link>
                 </div>
             </section>
         </div>
