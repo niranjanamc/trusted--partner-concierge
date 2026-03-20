@@ -231,27 +231,27 @@ const FlightBooking = () => {
                         <div className={styles.card}>
                             <div className={styles.iconWrapper}><img src={iconFares} alt="Best Fares" className={styles.customFlightIcon} /></div>
                             <h3>Best Fares</h3>
-                            <p>Access to the best available airline fares for both domestic and international routes.</p>
+                            <p>Travel smart without stretching your budget. We work behind the scenes to find the best fares and deals, so you enjoy great savings along with a seamless travel experience.</p>
                         </div>
                         <div className={styles.card}>
                             <div className={styles.iconWrapper}><img src={iconSupport} alt="Dedicated Support" className={styles.customFlightIcon} /></div>
                             <h3>Dedicated Support</h3>
-                            <p>Specialized assistance for corporate accounts and large group bookings.</p>
+                            <p>We’re always here when you need us. Whether it’s a last-minute change or on-trip assistance, our team ensures you’re supported with care, speed, and attention.</p>
                         </div>
                         <div className={styles.card}>
                             <div className={styles.iconWrapper}><img src={iconQuick} alt="Quick Turnaround" className={styles.customFlightIcon} /></div>
                             <h3>Quick Turnaround</h3>
-                            <p>Fast response times and hassle-free coordination for urgent travel.</p>
+                            <p>Time matters in travel planning. Our team ensures fast, efficient responses and swift execution—from quotations to bookings—so your plans move forward without delays.</p>
                         </div>
                         <div className={styles.card}>
                             <div className={styles.iconWrapper}><img src={iconPricing} alt="Transparent Pricing" className={styles.customFlightIcon} /></div>
                             <h3>Transparent Pricing</h3>
-                            <p>Clear costs with absolutely no hidden charges or surprise fees.</p>
+                            <p>At Voyage Monk, transparency is at the core of our approach. We offer clear, detailed pricing with no hidden costs—ensuring you always know exactly what you’re paying for, while receiving the best value for your journey.</p>
                         </div>
                         <div className={styles.card}>
                             <div className={styles.iconWrapper}><img src={iconTeam} alt="Experienced Team" className={styles.customFlightIcon} /></div>
                             <h3>Experienced Team</h3>
-                            <p>Professionals ensuring every detail of your smooth travel arrangement.</p>
+                            <p>At VoyageMonk, our experienced team is the foundation of every successful journey. With deep industry expertise and a hands-on approach, we deliver thoughtfully planned, seamlessly executed travel experiences you can rely on.</p>
                         </div>
                     </div>
                 </div>
