@@ -22,33 +22,19 @@ const Promise = () => {
                         <div className={styles.card}>
                             <Car size={40} className={styles.icon} />
                             <h3>Fleet Standards</h3>
-                            <ul className={styles.list}>
-                                <li>Toyota Innova Crysta & Premium Sedans only</li>
-                                <li>Vehicles less than 3 years old</li>
-                                <li>Daily safety checks (brakes, tires, fluids)</li>
-                                <li>Interiors sanitized before every trip</li>
-                            </ul>
+                            <p style={{ marginTop: '1rem', color: '#555', lineHeight: '1.6' }}>We maintain the highest standards across our fleet to ensure safety, comfort, and reliability. Our vehicles are modern, well-maintained, and regularly inspected—delivering a smooth and secure travel experience every time.</p>
                         </div>
 
                         <div className={styles.card}>
                             <UserCheck size={40} className={styles.icon} />
                             <h3>Chauffeur Vetting</h3>
-                            <ul className={styles.list}>
-                                <li>Police verification (background check)</li>
-                                <li>Defensive driving certification</li>
-                                <li>"Silent Service" training</li>
-                                <li>Basic English proficiency</li>
-                            </ul>
+                            <p style={{ marginTop: '1rem', color: '#555', lineHeight: '1.6' }}>We don’t just assign drivers—we select professionals you can trust. Each chauffeur is carefully screened, trained, and evaluated to meet the highest standards of safety and service.</p>
                         </div>
 
                         <div className={styles.card}>
                             <HeartPulse size={40} className={styles.icon} />
                             <h3>Medical Preparedness</h3>
-                            <ul className={styles.list}>
-                                <li>Standardized First Aid Kit in every car</li>
-                                <li>Drivers trained in basic CPR</li>
-                                <li>Direct line to top hospitals (Manipal, Apollo)</li>
-                            </ul>
+                            <p style={{ marginTop: '1rem', color: '#555', lineHeight: '1.6' }}>At VoyageMonk, we go the extra mile to ensure your safety. With first-aid–equipped vehicles, trained staff, and access to emergency support, we are prepared to handle unforeseen situations—so you can travel with confidence and peace of mind.</p>
                         </div>
                     </div>
                 </div>
@@ -60,25 +46,9 @@ const Promise = () => {
                     <div className={styles.split}>
                         <div className={styles.textContent}>
                             <h2 className={styles.sectionTitle} style={{ textAlign: 'left' }}>Women's Travel Safety</h2>
-                            <p className={styles.lead}>For solo female travelers, we implement the "Secure Chaperone" protocol:</p>
-                            <ul className={styles.checkList}>
-                                <li>
-                                    <Shield size={20} />
-                                    <span>Only married drivers with 10+ years of experience.</span>
-                                </li>
-                                <li>
-                                    <MapPin size={20} />
-                                    <span>Live GPS link shared with your designated contact.</span>
-                                </li>
-                                <li>
-                                    <UserCheck size={20} />
-                                    <span>Ops Desk calls driver every 2 hours for status updates.</span>
-                                </li>
-                                <li>
-                                    <Shield size={20} />
-                                    <span>No "Dark Stops" - Restroom breaks only at approved facilities.</span>
-                                </li>
-                            </ul>
+                            <p className={styles.lead} style={{ fontSize: '1.2rem', lineHeight: '1.8', color: '#555' }}>
+                                We are committed to providing a safe and secure travel environment for women at every step. With verified chauffeurs, real-time support, and strict safety protocols, we ensure every journey is handled with the highest level of care, respect, and professionalism.
+                            </p>
                         </div>
                         <div className={styles.imageWrapper}>
                             <img
