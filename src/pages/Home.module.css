@@ -16,7 +16,7 @@
     flex-direction: column;
     text-align: center;
     color: var(--color-white);
-    padding: 6rem 2rem 0;
+    padding: 4rem 2rem 0;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -78,7 +78,7 @@
 
 /* Why Us Section */
 .whyUs {
-    padding: 8rem 0;
+    padding: 5rem 0;
     background-color: var(--color-white);
 }
 
@@ -90,7 +90,7 @@
 
 .sectionHeader {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 .sectionTitle {
@@ -111,7 +111,7 @@
 .featuresGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 4rem;
+    gap: 2.5rem;
 }
 
 .featureCard {
@@ -156,7 +156,7 @@
 
 /* Featured Itineraries */
 .featured {
-    padding: 8rem 0;
+    padding: 5rem 0;
     background-color: var(--color-off-white);
 }
 
@@ -220,7 +220,7 @@
 
 /* Testimonials */
 .testimonials {
-    padding: 8rem 0;
+    padding: 5rem 0;
     background-color: var(--color-cream);
     /* Changed from Navy to Cream */
     color: var(--color-navy);

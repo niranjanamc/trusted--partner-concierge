@@ -14,7 +14,7 @@
     flex-direction: column;
     text-align: center;
     color: var(--color-white);
-    padding: 6rem 2rem 0;
+    padding: 4rem 2rem 0;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -74,14 +74,14 @@
 
 /* Story Section */
 .story {
-    padding: 6rem 0;
+    padding: 4rem 0;
     background-color: var(--color-white);
 }
 
 .storyContent {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    gap: 1.5rem;
     align-items: center;
 }
 
@@ -111,7 +111,7 @@
 
 /* DNA Section - Completely Revamped */
 .dna {
-    padding: 8rem 0;
+    padding: 5rem 0;
     background-color: var(--color-off-white);
     /* Light background */
     color: var(--color-text-dark);
@@ -120,7 +120,7 @@
 .dnaGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+    gap: 1.5rem;
     margin-top: 4rem;
 }
 
@@ -175,6 +175,6 @@
 
     .storyContent {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 1.5rem;
     }
 }

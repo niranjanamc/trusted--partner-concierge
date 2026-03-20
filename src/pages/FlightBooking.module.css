@@ -14,7 +14,7 @@
     flex-direction: column;
     text-align: center;
     color: var(--color-white);
-    padding: 6rem 2rem 0;
+    padding: 4rem 2rem 0;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -55,7 +55,7 @@
 }
 
 .section {
-    padding: 6rem 0;
+    padding: 4rem 0;
 }
 
 .container {
@@ -67,9 +67,9 @@
 .splitSection {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 2.5rem;
     align-items: center;
-    margin-bottom: 6rem;
+    margin-bottom: 2.5rem;
 }
 
 .textContent h2 {
@@ -131,7 +131,7 @@
 
 .whyChooseSection {
     background-color: var(--color-off-white);
-    padding: 6rem 0;
+    padding: 4rem 0;
 }
 
 .grid {
@@ -187,19 +187,19 @@
 .idealSection {
     background-color: var(--color-navy);
     color: white;
-    padding: 6rem 0;
+    padding: 4rem 0;
     text-align: center;
 }
 
 .idealSection h2 {
     color: white;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .idealGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -224,7 +224,7 @@
 
 .ctaSection {
     text-align: center;
-    padding: 6rem 0;
+    padding: 4rem 0;
 }
 
 .ctaBtn {
