@@ -16,7 +16,8 @@
     flex-direction: column;
     text-align: center;
     color: var(--color-white);
-    padding: 0 2rem;
+    padding: 6rem 2rem 0;
+    box-sizing: border-box;
     overflow: hidden;
 }
 
