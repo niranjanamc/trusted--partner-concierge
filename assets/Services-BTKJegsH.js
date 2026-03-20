@@ -1,4 +1,4 @@
-import{c as t,j as s,M as a}from"./index-CXxoMJjX.js";import{C as i}from"./clock-CHuZtF1Q.js";import{C as r}from"./coffee-4-vnDbi-.js";/**
+import{c as t,j as s,M as a}from"./index-CPE5z012.js";import{C as i}from"./clock-CSwifQug.js";import{C as r}from"./coffee-CDF-EerK.js";/**
  * @license lucide-react v0.556.0 - ISC
  *
  * This source code is licensed under the ISC license.
