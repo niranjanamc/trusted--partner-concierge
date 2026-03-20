@@ -166,6 +166,12 @@
     transform: translateY(-5px);
 }
 
+.card h3 {
+    margin-top: 1rem;
+    color: var(--color-navy);
+    font-size: 1.2rem;
+}
+
 .categoryIcon {
     width: 100%;
     max-width: 250px;

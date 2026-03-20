@@ -87,18 +87,23 @@ const CorporateEvents = () => {
                     <div className={styles.grid}>
                         <div className={styles.card}>
                             <img src={iconParties} alt="Corporate Parties & Annual Celebrations" className={styles.categoryIcon} />
+                            <h3>Corporate Parties & Annual Celebrations</h3>
                         </div>
                         <div className={styles.card}>
                             <img src={iconRnr} alt="Team Outings & RNR Nights" className={styles.categoryIcon} />
+                            <h3>Team Outings & RNR Nights</h3>
                         </div>
                         <div className={styles.card}>
                             <img src={iconNetworking} alt="Client Entertainment & Networking Events" className={styles.categoryIcon} />
+                            <h3>Client Entertainment & Networking Events</h3>
                         </div>
                         <div className={styles.card}>
                             <img src={iconProduct} alt="Product Launches & Brand Events" className={styles.categoryIcon} />
+                            <h3>Product Launches & Brand Events</h3>
                         </div>
                         <div className={styles.card}>
                             <img src={iconVip} alt="Executive Dinners & VIP Gatherings" className={styles.categoryIcon} />
+                            <h3>Executive Dinners & VIP Gatherings</h3>
                         </div>
                     </div>
                 </div>
