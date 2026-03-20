@@ -3,6 +3,9 @@ import { Shield, Clock, Heart, Users, CheckCircle, MessageCircle, Smile, Car, Us
 import styles from './Promise.module.css';
 import heroImage from '../assets/images/promise_hero.png';
 import womanSafetyImage from '../assets/images/safe_travel_women.png';
+import iconFleet from '../assets/images/icon_promise_fleet.png';
+import iconChauffeur from '../assets/images/icon_promise_chauffeur.png';
+import iconMedical from '../assets/images/icon_promise_medical.png';
 
 const Promise = () => {
     return (
@@ -20,21 +23,21 @@ const Promise = () => {
                     <h2 className={styles.sectionTitle}>The Safety Protocol</h2>
                     <div className={styles.grid}>
                         <div className={styles.card}>
-                            <Car size={40} className={styles.icon} />
-                            <h3>Fleet Standards</h3>
-                            <p style={{ marginTop: '1rem', color: '#555', lineHeight: '1.6' }}>We maintain the highest standards across our fleet to ensure safety, comfort, and reliability. Our vehicles are modern, well-maintained, and regularly inspected—delivering a smooth and secure travel experience every time.</p>
+                            <div className={styles.iconWrapper}><img src={iconFleet} alt="Fleet Standards" className={styles.customPromiseIcon} /></div>
+                            <h3 style={{ textAlign: 'center' }}>Fleet Standards</h3>
+                            <p style={{ marginTop: '1rem', color: '#555', lineHeight: '1.6', textAlign: 'center' }}>We maintain the highest standards across our fleet to ensure safety, comfort, and reliability. Our vehicles are modern, well-maintained, and regularly inspected—delivering a smooth and secure travel experience every time.</p>
                         </div>
 
                         <div className={styles.card}>
-                            <UserCheck size={40} className={styles.icon} />
-                            <h3>Chauffeur Vetting</h3>
-                            <p style={{ marginTop: '1rem', color: '#555', lineHeight: '1.6' }}>We don’t just assign drivers—we select professionals you can trust. Each chauffeur is carefully screened, trained, and evaluated to meet the highest standards of safety and service.</p>
+                            <div className={styles.iconWrapper}><img src={iconChauffeur} alt="Chauffeur Vetting" className={styles.customPromiseIcon} /></div>
+                            <h3 style={{ textAlign: 'center' }}>Chauffeur Vetting</h3>
+                            <p style={{ marginTop: '1rem', color: '#555', lineHeight: '1.6', textAlign: 'center' }}>We don’t just assign drivers—we select professionals you can trust. Each chauffeur is carefully screened, trained, and evaluated to meet the highest standards of safety and service.</p>
                         </div>
 
                         <div className={styles.card}>
-                            <HeartPulse size={40} className={styles.icon} />
-                            <h3>Medical Preparedness</h3>
-                            <p style={{ marginTop: '1rem', color: '#555', lineHeight: '1.6' }}>At VoyageMonk, we go the extra mile to ensure your safety. With first-aid–equipped vehicles, trained staff, and access to emergency support, we are prepared to handle unforeseen situations—so you can travel with confidence and peace of mind.</p>
+                            <div className={styles.iconWrapper}><img src={iconMedical} alt="Medical Preparedness" className={styles.customPromiseIcon} /></div>
+                            <h3 style={{ textAlign: 'center' }}>Medical Preparedness</h3>
+                            <p style={{ marginTop: '1rem', color: '#555', lineHeight: '1.6', textAlign: 'center' }}>At VoyageMonk, we go the extra mile to ensure your safety. With first-aid–equipped vehicles, trained staff, and access to emergency support, we are prepared to handle unforeseen situations—so you can travel with confidence and peace of mind.</p>
                         </div>
                     </div>
                 </div>
