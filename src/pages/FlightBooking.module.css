@@ -3,12 +3,18 @@
 }
 
 .hero {
+    position: relative;
+    height: 50vh;
+    width: 100%;
     background-size: cover;
     background-position: center;
-    color: var(--color-white);
-    padding: 10rem 0 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
-    position: relative;
+    color: var(--color-white);
+    padding: 0 2rem;
     overflow: hidden;
 }
 
