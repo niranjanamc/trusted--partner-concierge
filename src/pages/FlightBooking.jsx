@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom';
 import styles from './FlightBooking.module.css';
 import heroImage from '../assets/images/flight_booking_hero.png';
 import loungeImage from '../assets/images/business_travel_lounge.png';
+import iconFares from '../assets/images/icon_flight_fares.png';
+import iconPricing from '../assets/images/icon_flight_pricing.png';
+import iconSupport from '../assets/images/icon_flight_support.png';
+import iconQuick from '../assets/images/icon_flight_quick.png';
+import iconTeam from '../assets/images/icon_flight_team.png';
 
 const FlightBooking = () => {
     const [activeTab, setActiveTab] = useState('One Way'); // 'One Way', 'Round Trip'
@@ -224,27 +229,27 @@ const FlightBooking = () => {
 
                     <div className={styles.grid}>
                         <div className={styles.card}>
-                            <div className={styles.cardIcon}><DollarSign size={32} /></div>
+                            <div className={styles.iconWrapper}><img src={iconFares} alt="Best Fares" className={styles.customFlightIcon} /></div>
                             <h3>Best Fares</h3>
                             <p>Access to the best available airline fares for both domestic and international routes.</p>
                         </div>
                         <div className={styles.card}>
-                            <div className={styles.cardIcon}><Users size={32} /></div>
+                            <div className={styles.iconWrapper}><img src={iconSupport} alt="Dedicated Support" className={styles.customFlightIcon} /></div>
                             <h3>Dedicated Support</h3>
                             <p>Specialized assistance for corporate accounts and large group bookings.</p>
                         </div>
                         <div className={styles.card}>
-                            <div className={styles.cardIcon}><Clock size={32} /></div>
+                            <div className={styles.iconWrapper}><img src={iconQuick} alt="Quick Turnaround" className={styles.customFlightIcon} /></div>
                             <h3>Quick Turnaround</h3>
                             <p>Fast response times and hassle-free coordination for urgent travel.</p>
                         </div>
                         <div className={styles.card}>
-                            <div className={styles.cardIcon}><CheckCircle size={32} /></div>
+                            <div className={styles.iconWrapper}><img src={iconPricing} alt="Transparent Pricing" className={styles.customFlightIcon} /></div>
                             <h3>Transparent Pricing</h3>
                             <p>Clear costs with absolutely no hidden charges or surprise fees.</p>
                         </div>
                         <div className={styles.card}>
-                            <div className={styles.cardIcon}><Briefcase size={32} /></div>
+                            <div className={styles.iconWrapper}><img src={iconTeam} alt="Experienced Team" className={styles.customFlightIcon} /></div>
                             <h3>Experienced Team</h3>
                             <p>Professionals ensuring every detail of your smooth travel arrangement.</p>
                         </div>
