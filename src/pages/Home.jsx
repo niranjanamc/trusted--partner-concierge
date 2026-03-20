@@ -12,12 +12,10 @@ const Home = () => {
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
                     <h1 className={styles.heroTitle}>
-                        Experience Safe, Comfortable & Customised Holidays in Karnataka
+                        Bespoke Travel & Corporate Events in Karnataka
                     </h1>
                     <p className={styles.heroSubtitle}>
-                        Discover curated tours, seamless travel services, corporate offsites, and event solutions — all delivered by seasoned travel & hospitality professionals.
-                        <br />
-                        Your trusted travel voyagemonk.com Always.
+                        Curated tours and seamless logistics delivered by seasoned hospitality professionals. Your trusted travel partner.
                     </p>
                     <Link to="/services" className={styles.heroCta}>
                         Explore Experiences <ArrowRight size={20} />
