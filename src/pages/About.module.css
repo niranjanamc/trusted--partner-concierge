@@ -4,7 +4,7 @@
 
 .hero {
     position: relative;
-    height: 50vh;
+    min-height: 50vh;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -14,7 +14,7 @@
     flex-direction: column;
     text-align: center;
     color: var(--color-white);
-    padding: 6rem 2rem 0;
+    padding: 8rem 2rem 4rem;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -37,7 +37,17 @@
     z-index: 1;
 }
 
-
+.heroSubtitle {
+    font-size: 1.4rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+    font-weight: 300;
+    color: var(--color-white);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .heroTitle {
     font-size: 3.5rem;

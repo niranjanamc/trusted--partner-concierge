@@ -9,7 +9,10 @@ const About = () => {
             {/* Hero */}
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
-                    <h1 className={styles.heroTitle}>Voyage Monk</h1>
+                    <h1 className={styles.heroTitle}>About Us</h1>
+                    <p className={styles.heroSubtitle}>
+                        Your Trusted Travel Partner in Karnataka. Delivering safe, comfortable, and personalized journeys for over 17 years.
+                    </p>
                 </div>
             </section>
 
