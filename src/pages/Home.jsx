@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Shield, Clock, Map } from 'lucide-react';
+import { ArrowRight, Shield, Clock, Map, CheckCircle, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 import heritageImage from '../assets/images/heritage_walk.png';
@@ -29,49 +29,39 @@ const Home = () => {
                     <div className={styles.sectionHeader}>
                         <h2 className={styles.sectionTitle}>Why Choose voyagemonk.com?</h2>
                         <p className={styles.sectionSubtitle}>
-                            At voyagemonk.com, we go beyond packages — we understand your inherent needs and design experiences that feel personal, safe, and truly comfortable.
+                            We deliver professionally curated travel experiences backed by trusted services, 24/7 support, and a strong commitment to safety, reliability, and customer satisfaction
                         </p>
                     </div>
 
                     <div className={styles.featuresGrid}>
                         <div className={styles.featureCard}>
-                            <div className={styles.iconWrapper}>
-                                <Clock size={32} />
-                            </div>
-                            <h3>Professionally Curated</h3>
-                            <p>Professionally curated holidays & breaks designed for your unique needs.</p>
-                        </div>
-
-                        <div className={styles.featureCard}>
-                            <div className={styles.iconWrapper}>
-                                <Shield size={32} />
-                            </div>
-                            <h3>Trusted</h3>
-                            <p>Trusted by families, groups & corporates for reliable service.</p>
-                        </div>
-
-                        <div className={styles.featureCard}>
-                            <div className={styles.iconWrapper}>
-                                <Shield size={32} />
-                            </div>
+                            <div className={styles.iconWrapper}><Shield size={32} /></div>
                             <h3>Safety First</h3>
-                            <p>Safe, verified drivers & guides to ensure a secure journey.</p>
+                            <p>We deliver safe and secure travel experiences with thoroughly vetted drivers and professionally trained guides</p>
                         </div>
 
                         <div className={styles.featureCard}>
-                            <div className={styles.iconWrapper}>
-                                <Map size={32} />
-                            </div>
-                            <h3>Custom Itineraries</h3>
-                            <p>Custom-made itineraries across Karnataka tailored to your interests.</p>
+                            <div className={styles.iconWrapper}><CheckCircle size={32} /></div>
+                            <h3>Trusted</h3>
+                            <p>We earn your trust by delivering dependable services, transparent processes, and exceptional customer care.</p>
                         </div>
 
                         <div className={styles.featureCard}>
-                            <div className={styles.iconWrapper}>
-                                <Clock size={32} />
-                            </div>
+                            <div className={styles.iconWrapper}><Briefcase size={32} /></div>
+                            <h3>Professionally Curated</h3>
+                            <p>Every journey is thoughtfully curated by experts, ensuring personalized experiences and flawless execution.</p>
+                        </div>
+
+                        <div className={styles.featureCard}>
+                            <div className={styles.iconWrapper}><Clock size={32} /></div>
                             <h3>24/7 Support</h3>
-                            <p>24/7 travel assistance & end-to-end management for peace of mind.</p>
+                            <p>Enjoy peace of mind with our 24/7 concierge support, always available to assist you throughout your journey.</p>
+                        </div>
+
+                        <div className={styles.featureCard}>
+                            <div className={styles.iconWrapper}><Map size={32} /></div>
+                            <h3>Custom Itineraries</h3>
+                            <p>We design bespoke itineraries based on client requirements, ensuring flexibility, efficiency, and a superior travel experience</p>
                         </div>
                     </div>
                 </div>

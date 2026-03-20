@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className={styles.column}>
                         <h3 className={styles.brand}>voyagemonk.com</h3>
                         <p className={styles.tagline}>
-                            Bengaluru’s Premier Travel Concierge for the Global Citizen.
+                            We don’t Just transport passengers, we deliver trust, comfort, and operational excellence.
                         </p>
                         <div className={styles.socials}>
                             <a href="#" aria-label="LinkedIn"><Linkedin size={20} /></a>
@@ -39,6 +39,14 @@ const Footer = () => {
                             <li>
                                 <Mail size={16} />
                                 <span>info@voyagemonk.com</span>
+                            </li>
+                            <li>
+                                <Phone size={16} />
+                                <span>+91 96637 11398</span>
+                            </li>
+                            <li>
+                                <MapPin size={16} />
+                                <span>5th Sector HSR Layout Bangalore 560034</span>
                             </li>
                         </ul>
                     </div>
