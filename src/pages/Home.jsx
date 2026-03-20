@@ -1,8 +1,13 @@
 import React from 'react';
-import { ArrowRight, Shield, Clock, Map, CheckCircle, Briefcase } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 import heritageImage from '../assets/images/heritage_walk.png';
+import iconSafety from '../assets/images/icon_safety.png';
+import iconTrusted from '../assets/images/icon_trusted.png';
+import iconCurated from '../assets/images/icon_curated.png';
+import iconSupport from '../assets/images/icon_support.png';
+import iconCustom from '../assets/images/icon_custom.png';
 
 const Home = () => {
     return (
@@ -35,31 +40,31 @@ const Home = () => {
 
                     <div className={styles.featuresGrid}>
                         <div className={styles.featureCard}>
-                            <div className={styles.iconWrapper}><Shield size={32} /></div>
+                            <div className={styles.iconWrapper}><img src={iconSafety} alt="Safety First" className={styles.customIcon} /></div>
                             <h3>Safety First</h3>
                             <p>We deliver safe and secure travel experiences with thoroughly vetted drivers and professionally trained guides</p>
                         </div>
 
                         <div className={styles.featureCard}>
-                            <div className={styles.iconWrapper}><CheckCircle size={32} /></div>
+                            <div className={styles.iconWrapper}><img src={iconTrusted} alt="Trusted" className={styles.customIcon} /></div>
                             <h3>Trusted</h3>
                             <p>We earn your trust by delivering dependable services, transparent processes, and exceptional customer care.</p>
                         </div>
 
                         <div className={styles.featureCard}>
-                            <div className={styles.iconWrapper}><Briefcase size={32} /></div>
+                            <div className={styles.iconWrapper}><img src={iconCurated} alt="Curated" className={styles.customIcon} /></div>
                             <h3>Professionally Curated</h3>
                             <p>Every journey is thoughtfully curated by experts, ensuring personalized experiences and flawless execution.</p>
                         </div>
 
                         <div className={styles.featureCard}>
-                            <div className={styles.iconWrapper}><Clock size={32} /></div>
+                            <div className={styles.iconWrapper}><img src={iconSupport} alt="24/7 Support" className={styles.customIcon} /></div>
                             <h3>24/7 Support</h3>
                             <p>Enjoy peace of mind with our 24/7 concierge support, always available to assist you throughout your journey.</p>
                         </div>
 
                         <div className={styles.featureCard}>
-                            <div className={styles.iconWrapper}><Map size={32} /></div>
+                            <div className={styles.iconWrapper}><img src={iconCustom} alt="Custom Itineraries" className={styles.customIcon} /></div>
                             <h3>Custom Itineraries</h3>
                             <p>We design bespoke itineraries based on client requirements, ensuring flexibility, efficiency, and a superior travel experience</p>
                         </div>
