@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './About.module.css';
 import heroImage from '../assets/images/about_hero.png';
-import iconSafety from '../assets/images/icon_safety.png';
 import iconPersonalisation from '../assets/images/icon_personalisation.png';
 import iconComfort from '../assets/images/icon_comfort.png';
 import iconTrust from '../assets/images/icon_trust.png';
@@ -57,29 +56,24 @@ const About = () => {
                     <h2 className={styles.sectionTitle} style={{ textAlign: 'center' }}>Our Values</h2>
                     <div className={styles.dnaGrid}>
                         <div className={styles.dnaCard}>
-                            <div className={styles.iconWrapper}><img src={iconSafety} alt="Safety First" className={styles.customIcon} /></div>
-                            <h3>Safety First</h3>
-                            <p>Verified drivers, well-maintained vehicles, and transparent processes.</p>
-                        </div>
-                        <div className={styles.dnaCard}>
                             <div className={styles.iconWrapper}><img src={iconPersonalisation} alt="Personalisation" className={styles.customIcon} /></div>
                             <h3>Personalisation</h3>
-                            <p>Every trip tailored to your unique preferences.</p>
+                            <p>We take the time to understand what matters most to you. Whether it’s comfort, exploration, or a perfect balance of both, we craft journeys that feel personal, effortless, and truly yours.</p>
                         </div>
                         <div className={styles.dnaCard}>
                             <div className={styles.iconWrapper}><img src={iconComfort} alt="Comfort & Convenience" className={styles.customIcon} /></div>
                             <h3>Comfort & Convenience</h3>
-                            <p>Thoughtfully designed experiences end-to-end.</p>
+                            <p>Travel should feel effortless. We simplify every step—from bookings to on-ground coordination—ensuring a smooth, comfortable, and hassle-free journey from start to finish.</p>
                         </div>
                         <div className={styles.dnaCard}>
                             <div className={styles.iconWrapper}><img src={iconTrust} alt="Trust & Reliability" className={styles.customIcon} /></div>
                             <h3>Trust & Reliability</h3>
-                            <p>Professional expertise with a friendly touch.</p>
+                            <p>You deserve a travel partner you can rely on without hesitation. We prioritize your safety, comfort, and peace of mind by delivering consistent, dependable service at every stage of your journey.</p>
                         </div>
                         <div className={styles.dnaCard}>
                             <div className={styles.iconWrapper}><img src={iconDelight} alt="Customer Delight" className={styles.customIcon} /></div>
                             <h3>Customer Delight</h3>
-                            <p>We don’t just serve — we care like a buddy.</p>
+                            <p>We go beyond delivering services—we create experiences that leave a lasting impression. Every journey is thoughtfully designed to exceed expectations, with attention to detail, personalized touches, and a commitment to making every moment truly special.</p>
                         </div>
                     </div>
                 </div>
