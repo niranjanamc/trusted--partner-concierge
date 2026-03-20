@@ -46,7 +46,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <MapPin size={16} />
-                                <span>5th Sector HSR Layout Bangalore 560034</span>
+                                <span>5th Sector HSR Layout Bangalore 560102</span>
                             </li>
                         </ul>
                     </div>
