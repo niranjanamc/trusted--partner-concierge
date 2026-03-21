@@ -22,9 +22,6 @@ const Home = () => {
                     <p className={styles.heroSubtitle}>
                         Curated tours and seamless logistics delivered by seasoned hospitality professionals. Your trusted travel partner.
                     </p>
-                    <Link to="/services" className={styles.heroCta}>
-                        Explore Experiences <ArrowRight size={20} />
-                    </Link>
                 </div>
             </section>
 
