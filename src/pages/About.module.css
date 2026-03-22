@@ -50,7 +50,7 @@
 }
 
 .heroTitle {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
     max-width: 900px;
     margin: 0 auto;
     line-height: 1.2;
@@ -66,7 +66,7 @@
 }
 
 .sectionTitle {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 1.5rem;
     color: var(--color-navy);
     text-align: center;
