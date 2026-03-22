@@ -11,9 +11,7 @@ const Services = () => {
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
                     <h1 className={styles.heroTitle}>Expertly planned travel experiences tailored to meet the unique needs of businesses and discerning travelers.</h1>
-                    <p className={styles.heroSubtitle}>
-                        Explore the journey from a historic mud fort to vibrant IT corridors—where the city’s spirit is defined by tradition and transformation.
-                    </p>
+
                 </div>
             </section>
 
