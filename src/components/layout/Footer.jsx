@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Instagram, MessageCircle } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className={styles.column}>
                         <h3 className={styles.brand}>voyagemonk.com</h3>
                         <p className={styles.tagline}>
-                            We don’t Just transport passengers, we deliver trust, comfort, and operational excellence.
+                            Smart travel. Trusted service. Seamless execution.
                         </p>
                         <div className={styles.socials}>
                             <a href="#" aria-label="LinkedIn"><Linkedin size={20} /></a>
@@ -38,15 +38,19 @@ const Footer = () => {
                         <ul className={styles.contactList}>
                             <li>
                                 <Mail size={16} />
-                                <span>info@voyagemonk.com</span>
+                                <span><a href="mailto:info@voyagemonk.com" style={{color: 'inherit', textDecoration: 'none'}}>info@voyagemonk.com</a></span>
                             </li>
                             <li>
                                 <Phone size={16} />
-                                <span>+91 96637 11398</span>
+                                <span><a href="tel:+919663711398" style={{color: 'inherit', textDecoration: 'none'}}>+91 96637 11398</a></span>
+                            </li>
+                            <li>
+                                <MessageCircle size={16} />
+                                <span><a href="https://wa.me/919663711398" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'none'}}>Chat on WhatsApp</a></span>
                             </li>
                             <li>
                                 <MapPin size={16} />
-                                <span>5th Sector HSR Layout Bangalore 560102</span>
+                                <span>HSR Layout 5th Sector Bangalore 560102</span>
                             </li>
                         </ul>
                     </div>

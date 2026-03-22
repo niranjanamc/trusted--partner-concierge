@@ -14,7 +14,7 @@ const About = () => {
                 <div className={styles.container}>
                     <h1 className={styles.heroTitle}>About Us</h1>
                     <p className={styles.heroSubtitle}>
-                        Your Trusted Travel Partner in Karnataka. Delivering safe, comfortable, and personalized journeys for over 17 years.
+                        Across India, delivering journeys defined by trust, comfort, and personalized service for over 17 years.
                     </p>
                 </div>
             </section>
@@ -26,18 +26,17 @@ const About = () => {
                         <div className={styles.storyText}>
                             <h2 className={styles.sectionTitle}>About Us</h2>
                             <p>
-                                VoyageMonk.com is a Bengaluru-based travel solutions company founded and led by seasoned professionals with over 17 years of experience in the travel and hospitality industry.
-                                We combine deep industry expertise with a friendly, “buddy-like” approach to make every journey effortless, safe, and truly memorable.
+                                VoyageMonk is a Bengaluru-based corporate travel specialist with 17+ years of experience—where professionalism meets personalized service to create seamless and secure journeys.
                             </p>
 
                             <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Our Mission</h3>
                             <p>
-                                To create safe, comfortable, and personalised travel experiences that help people explore Karnataka with joy, ease, and complete peace of mind.
+                                To empower corporates travel businesses with reliable, efficient, and well-managed travel solutions that optimize time, cost, and traveler experience.
                             </p>
 
                             <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Our Vision</h3>
                             <p>
-                                To emerge as Karnataka’s most trusted travel partner, serving families, groups, and corporates through dependable services, thoughtfully curated experiences, and a strong customer-first philosophy.
+                                To lead in corporate travel by delivering dependable, thoughtfully curated, and customer-centric experiences for businesses and corporate events.
                             </p>
                         </div>
                         <div className={styles.storyImage}>

@@ -10,9 +10,9 @@ const Services = () => {
             {/* Hero */}
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
-                    <h1 className={styles.heroTitle}>Curated Experiences</h1>
+                    <h1 className={styles.heroTitle}>Expertly planned travel experiences tailored to meet the unique needs of businesses and discerning travelers.</h1>
                     <p className={styles.heroSubtitle}>
-                        From the 16th-century mud fort of Kempegowda to the glass facades of the IT corridor.
+                        Explore the journey from a historic mud fort to vibrant IT corridors—where the city’s spirit is defined by tradition and transformation.
                     </p>
                 </div>
             </section>
@@ -28,7 +28,7 @@ const Services = () => {
                             <div className={styles.cardContent}>
                                 <h3>Tours & Experiences</h3>
                                 <p className={styles.description}>
-                                    Explore the best of Bengaluru and Karnataka with private AC vehicles, dedicated guides, and custom itineraries based on your interests.
+                                    From Bengaluru to the most sought-after destinations across Karnataka—experience refined travel with private vehicles, luxury cars, tempo travellers, dedicated guides, and fully personalized itineraries.
                                 </p>
                                 <ul className={styles.features}>
                                     <li><MapPin size={16} /> Bangalore Full-Day Local Tours</li>
@@ -44,7 +44,7 @@ const Services = () => {
                             <div className={styles.cardContent}>
                                 <h3>Travel & Transport Services</h3>
                                 <p className={styles.description}>
-                                    Reliable cab services for local sightseeing, outstation trips, and corporate transport with professional chauffeurs.
+                                    Delivering efficient and dependable transport for local and outstation journeys—backed by vetted chauffeurs, premium vehicles, and precise execution.
                                 </p>
                                 <ul className={styles.features}>
                                     <li><Clock size={16} /> Local & Outstation</li>
@@ -60,7 +60,7 @@ const Services = () => {
                             <div className={styles.cardContent}>
                                 <h3>Airport Transfers</h3>
                                 <p className={styles.description}>
-                                    Reliable, on-time airport pickup and drops. 24x7 pan-India vehicle availability tailored to your schedule.
+                                    Delivering efficient airport transfers for business travelers—powered by punctual service, trained chauffeurs, and precision execution across India.
                                 </p>
                                 <ul className={styles.features}>
                                     <li><Clock size={16} /> On-time Guarantee</li>
@@ -76,7 +76,7 @@ const Services = () => {
                             <div className={styles.cardContent}>
                                 <h3>Corporate Offsites & Events</h3>
                                 <p className={styles.description}>
-                                    End-to-end management for corporate team offsites, family day events, and annual gatherings.
+                                    End-to-end planning and execution of corporate offsites and events—covering travel, accommodation, logistics, and on-ground coordination for a seamless experience.
                                 </p>
                                 <ul className={styles.features}>
                                     <li><Coffee size={16} /> Venue & Hotel Booking</li>
@@ -92,7 +92,7 @@ const Services = () => {
                             <div className={styles.cardContent}>
                                 <h3>Group Hotel Bookings</h3>
                                 <p className={styles.description}>
-                                    Perfect for family groups, corporate teams, and outings. Includes stay, meals, and transport.
+                                    Reliable hotel booking services for corporate teams, events, and large groups—ensuring quality stays, cost efficiency, and seamless coordination.
                                 </p>
                                 <ul className={styles.features}>
                                     <li><Sun size={16} /> Resorts & Hotels</li>
@@ -108,7 +108,7 @@ const Services = () => {
                             <div className={styles.cardContent}>
                                 <h3>Travel Documentation</h3>
                                 <p className={styles.description}>
-                                    Hassle-free support for flights, visas, and international packages.
+                                    Smart, reliable travel documentation support—covering visas, permits, and compliance for both domestic and international journeys.
                                 </p>
                                 <ul className={styles.features}>
                                     <li><MapPin size={16} /> Flight Bookings</li>

@@ -1,9 +1,8 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 import heritageImage from '../assets/images/heritage_walk.png';
-import iconSafety from '../assets/images/icon_safety.png';
 import iconTrusted from '../assets/images/icon_trusted.png';
 import iconCurated from '../assets/images/icon_curated.png';
 import iconSupport from '../assets/images/icon_support.png';
@@ -37,7 +36,9 @@ const Home = () => {
 
                     <div className={styles.featuresGrid}>
                         <div className={styles.featureCard}>
-                            <div className={styles.iconWrapper}><img src={iconSafety} alt="Safety First" className={styles.customIcon} /></div>
+                            <div className={styles.iconWrapper}>
+                                <ShieldCheck size={72} color="var(--color-gold)" strokeWidth={1.2} />
+                            </div>
                             <h3>Safety First</h3>
                             <p>We deliver safe and secure travel experiences with thoroughly vetted drivers and professionally trained guides</p>
                         </div>
@@ -73,8 +74,8 @@ const Home = () => {
             <section className={styles.featured}>
                 <div className={styles.container}>
                     <div className={styles.sectionHeader}>
-                        <h2 className={styles.sectionTitle}>Curated Micro-Itineraries</h2>
-                        <p className={styles.sectionSubtitle}>Designed for the time-poor executive</p>
+                        <h2 className={styles.sectionTitle}>Efficient travel plans crafted by experts for seamless, time-smart experiences.</h2>
+                        <p className={styles.sectionSubtitle}>Thoughtfully designed for professionals who want to make the most of every moment away.</p>
                     </div>
 
                     <div className={styles.carousel}>

@@ -68,7 +68,7 @@ const FlightBooking = () => {
                 <div className={styles.heroContainer}>
                     <h1 className={styles.heroTitle}>Flight Booking Services</h1>
                     <p className={styles.heroSubtitle}>
-                        Seamless connectivity for business and leisure. Experience premium air travel coordination.
+                        Best fares. Smart bookings. Seamless travel.
                     </p>
                 </div>
             </section>
@@ -183,6 +183,9 @@ const FlightBooking = () => {
                     <div className={styles.splitSection}>
                         <div className={styles.textContent}>
                             <h2>Our Services Include</h2>
+                            <p style={{ marginBottom: '1.5rem', color: '#555', fontSize: '1.1rem', lineHeight: '1.6' }}>
+                                Reliable air travel solutions for business and leisure—backed by seamless coordination and expert support.
+                            </p>
                             <ul className={styles.serviceList}>
                                 <li>
                                     <Globe size={24} className={styles.serviceIcon} />

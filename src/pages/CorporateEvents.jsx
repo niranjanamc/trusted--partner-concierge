@@ -19,7 +19,7 @@ const CorporateEvents = () => {
                 <div className={styles.heroContainer}>
                     <h1 className={styles.heroTitle}>Corporate Event Arrangements</h1>
                     <p className={styles.heroSubtitle}>
-                        RNR Nights & Cocktail Dinners designed to impress.
+                        Professional corporate event services covering venue selection, travel, accommodation, logistics, and on-site coordination—executed with precision.
                     </p>
                 </div>
             </section>
@@ -29,10 +29,7 @@ const CorporateEvents = () => {
                 <div className={styles.container}>
                     <div className={styles.intro}>
                         <p>
-                            We specialize in planning and executing memorable corporate events, including RNR evenings and elegant cocktail dinners,
-                            designed to impress your guests and reflect your brand’s personality. Whether it’s a team celebration,
-                            client meet, product launch, or executive gathering, we take care of every detail, from concept to execution.
-                            Available across Bangalore with dedicated guides.
+                            We curate and execute premium corporate team offsites, including bespoke R&R nights and elegant cocktail dinners—designed to leave a lasting impression. From concept to completion, every detail is managed with precision across Bengaluru, supported by experienced on-ground teams.
                         </p>
                     </div>
 
