@@ -3,6 +3,7 @@ import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 import heritageImage from '../assets/images/heritage_walk.png';
+import iconSafety from '../assets/images/icon_safety.png';
 import iconTrusted from '../assets/images/icon_trusted.png';
 import iconCurated from '../assets/images/icon_curated.png';
 import iconSupport from '../assets/images/icon_support.png';
@@ -36,9 +37,7 @@ const Home = () => {
 
                     <div className={styles.featuresGrid}>
                         <div className={styles.featureCard}>
-                            <div className={styles.iconWrapper}>
-                                <ShieldCheck size={72} color="var(--color-gold)" strokeWidth={1.2} />
-                            </div>
+                            <div className={styles.iconWrapper}><img src={iconSafety} alt="Safety First" className={styles.customIcon} /></div>
                             <h3>Safety First</h3>
                             <p>We deliver safe and secure travel experiences with thoroughly vetted drivers and professionally trained guides</p>
                         </div>
