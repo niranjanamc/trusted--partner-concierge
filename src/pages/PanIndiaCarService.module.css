@@ -4,7 +4,7 @@
 
 .hero {
     position: relative;
-    height: 60vh;
+    min-height: 60vh;
     width: 100%;
     background-color: var(--color-navy);
     display: flex;
@@ -13,7 +13,7 @@
     flex-direction: column;
     text-align: center;
     color: var(--color-white);
-    padding: 2.5rem 2rem 0;
+    padding: 6rem 1rem 3rem;
     box-sizing: border-box;
     overflow: hidden;
 }
