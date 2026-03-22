@@ -5,7 +5,7 @@
 /* Hero Section */
 .hero {
     position: relative;
-    min-height: 60vh;
+    min-height: 70vh;
     width: 100%;
     background-image: url('https://images.unsplash.com/photo-1596176530529-78163a4f7af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
@@ -16,7 +16,7 @@
     flex-direction: column;
     text-align: center;
     color: var(--color-white);
-    padding: 6rem 1rem 3rem;
+    padding: 12rem 1rem 6rem;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -42,7 +42,7 @@
     font-size: clamp(1.8rem, 4vw, 2.2rem);
     font-weight: 700;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.4;
     color: var(--color-white);
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
