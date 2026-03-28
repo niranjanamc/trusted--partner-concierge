@@ -15,6 +15,8 @@ const PanIndiaCarService = lazy(() => import('./pages/PanIndiaCarService'));
 const Promise = lazy(() => import('./pages/Promise'));
 const Destinations = lazy(() => import('./pages/Destinations'));
 const Contact = lazy(() => import('./pages/Contact'));
+const Terms = lazy(() => import('./pages/Terms'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 
 // Loading component
 const Loading = () => (
@@ -46,6 +48,8 @@ function App() {
               <Route path="/destinations" element={<Destinations />} />
               <Route path="/promise" element={<Promise />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/privacy" element={<PrivacyPolicy />} />
             </Routes>
           </Suspense>
         </ErrorBoundary>

@@ -1,38 +1,53 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
-import emailjs from '@emailjs/browser';
 import styles from './Contact.module.css';
 import heroImage from '../assets/images/contact_hero.png';
 
 const Contact = () => {
-    const form = useRef();
     const [status, setStatus] = useState('idle'); // idle, sending, success, error
+    const [formData, setFormData] = useState({
+        name: '', email: '', arrival_date: '', departure_date: '',
+        interest: 'city', message: ''
+    });
 
-    const handleSubmit = (e) => {
+    const handleChange = (e) => {
+        setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('sending');
 
-        // These are placeholders. The user needs to replace them in .env
-        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+        try {
+            const payload = {
+                access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+                subject: `New Enquiry from ${formData.name} — VoyageMonk`,
+                from_name: 'VoyageMonk Website',
+                name: formData.name,
+                email: formData.email,
+                arrival_date: formData.arrival_date || 'Not specified',
+                departure_date: formData.departure_date || 'Not specified',
+                interest: formData.interest,
+                message: formData.message || 'No additional notes',
+                botcheck: '',
+            };
 
-        if (serviceId === 'service_placeholder') {
-            // Simulate success for demo purposes if keys are not set
-            setTimeout(() => {
-                setStatus('success');
-            }, 1500);
-            return;
-        }
-
-        emailjs.sendForm(serviceId, templateId, form.current, publicKey)
-            .then((result) => {
-                console.log(result.text);
-                setStatus('success');
-            }, (error) => {
-                console.log(error.text);
-                setStatus('error');
+            const res = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                body: JSON.stringify(payload),
             });
+
+            const data = await res.json();
+            if (data.success) {
+                setStatus('success');
+                setFormData({ name: '', email: '', arrival_date: '', departure_date: '', interest: 'city', message: '' });
+            } else {
+                setStatus('error');
+            }
+        } catch {
+            setStatus('error');
+        }
     };
 
     return (
@@ -64,31 +79,35 @@ const Contact = () => {
                                 </button>
                             </div>
                         ) : (
-                            <form className={styles.form} ref={form} onSubmit={handleSubmit}>
+                            <form className={styles.form} onSubmit={handleSubmit}>
                                 <div className={styles.formGroup}>
-                                    <label htmlFor="user_name">Full Name</label>
-                                    <input type="text" name="user_name" id="user_name" required placeholder="e.g. John Doe" />
+                                    <label htmlFor="name">Full Name</label>
+                                    <input type="text" name="name" id="name" required placeholder="e.g. John Doe"
+                                        value={formData.name} onChange={handleChange} />
                                 </div>
 
                                 <div className={styles.formGroup}>
-                                    <label htmlFor="user_email">Work Email</label>
-                                    <input type="email" name="user_email" id="user_email" required placeholder="e.g. john.doe@company.com" />
+                                    <label htmlFor="email">Work Email</label>
+                                    <input type="email" name="email" id="email" required placeholder="e.g. john.doe@company.com"
+                                        value={formData.email} onChange={handleChange} />
                                 </div>
 
                                 <div className={styles.formRow}>
                                     <div className={styles.formGroup}>
                                         <label htmlFor="arrival_date">Arrival Date</label>
-                                        <input type="date" name="arrival_date" id="arrival_date" />
+                                        <input type="date" name="arrival_date" id="arrival_date"
+                                            value={formData.arrival_date} onChange={handleChange} />
                                     </div>
                                     <div className={styles.formGroup}>
                                         <label htmlFor="departure_date">Departure Date</label>
-                                        <input type="date" name="departure_date" id="departure_date" />
+                                        <input type="date" name="departure_date" id="departure_date"
+                                            value={formData.departure_date} onChange={handleChange} />
                                     </div>
                                 </div>
 
                                 <div className={styles.formGroup}>
                                     <label htmlFor="interest">Primary Interest</label>
-                                    <select name="interest" id="interest">
+                                    <select name="interest" id="interest" value={formData.interest} onChange={handleChange}>
                                         <option value="city">City Immersion</option>
                                         <option value="weekend">Weekend Escape</option>
                                         <option value="golf">Golf Package</option>
@@ -98,7 +117,8 @@ const Contact = () => {
 
                                 <div className={styles.formGroup}>
                                     <label htmlFor="message">Special Requirements / Notes</label>
-                                    <textarea name="message" id="message" rows="5" placeholder="Dietary restrictions, specific interests, etc."></textarea>
+                                    <textarea name="message" id="message" rows="5" placeholder="Dietary restrictions, specific interests, etc."
+                                        value={formData.message} onChange={handleChange}></textarea>
                                 </div>
 
                                 {status === 'error' && (
