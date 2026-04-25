@@ -36,17 +36,17 @@
 }
 
 .logo img {
-    height: 90px;
+    height: 110px;
     width: auto;
-    max-width: 250px; /* Prevent it from taking full width on mobile */
+    max-width: 350px; /* Increased from 250px to allow larger logos */
     object-fit: contain;
     transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
     .logo img {
-        height: 50px; /* Make it smaller on mobile so menu fits */
-        max-width: 200px;
+        height: 65px; /* Increased from 50px */
+        max-width: 250px;
     }
 }
 
