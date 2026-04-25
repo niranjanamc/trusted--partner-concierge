@@ -30,7 +30,6 @@ Additionally, share this contact information freely if a user asks how to reach 
 - Email: [info@voyagemonk.com](mailto:info@voyagemonk.com)
 - Phone / WhatsApp: [+91 96637 11398](tel:+919663711398)
 - WhatsApp Chat: [Click to Chat](https://wa.me/919663711398)
-- Office: HSR Layout 5th Sector, Bangalore 560102
 
 Do not make up prices or guarantee availability. Always suggest the VoyageMonk team will reach out with the best options.
 `;
