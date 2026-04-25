@@ -29,12 +29,19 @@ const ChatWidget = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    // Auto-scroll when messages change or chat is opened
     useEffect(() => {
         if (isOpen) {
             scrollToBottom();
-            initChat();
         }
     }, [isOpen, messages]);
+
+    // Initialize chat session only once when chat is opened for the first time
+    useEffect(() => {
+        if (isOpen) {
+            initChat();
+        }
+    }, [isOpen]);
 
     // Handle tool call triggered by Gemini to send email
     const handleReportInquiry = async (args) => {
