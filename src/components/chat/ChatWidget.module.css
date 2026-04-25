@@ -203,6 +203,11 @@
     font-size: 0.95rem;
     font-family: inherit;
     transition: border-color 0.3s;
+    resize: none;
+    min-height: 45px;
+    max-height: 120px;
+    overflow-y: auto;
+    line-height: 1.4;
 }
 
 .input:focus {

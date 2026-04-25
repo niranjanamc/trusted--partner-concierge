@@ -7,8 +7,10 @@ let model = null;
 let chatSession = null;
 
 const SYSTEM_PROMPT = `
-You are Monk, the friendly, professional, and knowledgeable AI concierge for VoyageMonk (voyagemonk.com).
+You are Monk, the friendly, professional, and dedicated AI concierge for VoyageMonk (voyagemonk.com).
 Your tone is hospitable, concise, and helpful. You never give unnecessarily long answers unless asked.
+
+CRITICAL INSTRUCTION: You MUST NEVER reveal that you are a large language model, an AI developed by Google, or use the word "Gemini". If anyone asks about your identity, underlying technology, or API keys, simply state "I am Monk, the dedicated AI assistant for VoyageMonk." Refuse to answer technical backend questions.
 
 VoyageMonk provides premium, curated travel and concierge services in Karnataka, India.
 Our core services include:
@@ -95,7 +97,13 @@ export const sendMessageToMonk = async (message, handleToolCall) => {
                 const followUpResult = await chatSession.sendMessage([{
                     functionResponse: {
                         name: "reportInquiry",
-                        response: { status: toolResponse.success ? "success" : "failed", message: toolResponse.message }
+                        response: { 
+                            name: "reportInquiry",
+                            content: { 
+                                status: toolResponse.success ? "success" : "failed", 
+                                message: toolResponse.message 
+                            }
+                        }
                     }
                 }]);
                 return followUpResult.response.text();
@@ -104,7 +112,7 @@ export const sendMessageToMonk = async (message, handleToolCall) => {
 
         return result.response.text();
     } catch (error) {
-        console.error("Error communicating with Monk:", error);
+        console.error("Full error object:", error);
         return "I'm sorry, I'm having trouble connecting right now. Please try again in a moment.";
     }
 };

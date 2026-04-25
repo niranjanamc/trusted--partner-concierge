@@ -126,13 +126,23 @@ const ChatWidget = () => {
                     </div>
 
                     <form className={styles.chatFooter} onSubmit={handleSendMessage}>
-                        <input
-                            type="text"
+                        <textarea
                             className={styles.input}
                             value={inputValue}
-                            onChange={(e) => setInputValue(e.target.value)}
+                            onChange={(e) => {
+                                setInputValue(e.target.value);
+                                e.target.style.height = 'inherit';
+                                e.target.style.height = `${Math.min(e.target.scrollHeight, 120)}px`;
+                            }}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' && !e.shiftKey) {
+                                    e.preventDefault();
+                                    handleSendMessage(e);
+                                }
+                            }}
                             placeholder="Type your message..."
                             disabled={isLoading}
+                            rows={1}
                         />
                         <button 
                             type="submit" 
