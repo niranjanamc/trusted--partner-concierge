@@ -98,11 +98,8 @@ export const sendMessageToMonk = async (message, handleToolCall) => {
                     functionResponse: {
                         name: "reportInquiry",
                         response: { 
-                            name: "reportInquiry",
-                            content: { 
-                                status: toolResponse.success ? "success" : "failed", 
-                                message: toolResponse.message 
-                            }
+                            status: toolResponse.success ? "success" : "failed", 
+                            message: toolResponse.message 
                         }
                     }
                 }]);
@@ -113,6 +110,15 @@ export const sendMessageToMonk = async (message, handleToolCall) => {
         return result.response.text();
     } catch (error) {
         console.error("Full error object:", error);
+        
+        // If the error is related to history corruption (e.g., 400 function response sequence),
+        // we must completely reset the chat session so the user isn't permanently stuck.
+        if (error.message && error.message.includes("400")) {
+            console.log("Resetting chat session to recover from sequence error.");
+            chatSession = null; 
+            initChat();
+        }
+
         return "I'm sorry, I'm having trouble connecting right now. Please try again in a moment.";
     }
 };
