@@ -35,6 +35,7 @@ const Navbar = () => {
                     <Link to="/about" className={`${styles.navLink} ${location.pathname === '/about' ? styles.activeLink : ''}`}>About Us</Link>
                     <Link to="/corporate-events" className={`${styles.navLink} ${location.pathname === '/corporate-events' ? styles.activeLink : ''}`}>MICE</Link>
                     <Link to="/flight-booking" className={`${styles.navLink} ${location.pathname === '/flight-booking' ? styles.activeLink : ''}`}>Flights</Link>
+                    <Link to="/hotels" className={`${styles.navLink} ${location.pathname === '/hotels' ? styles.activeLink : ''}`}>Hotels</Link>
                     <Link to="/car-rental" className={`${styles.navLink} ${location.pathname === '/car-rental' ? styles.activeLink : ''}`}>Car Rental</Link>
                     {/* DEPRECATED: Destinations page temporarily disabled
                     <Link to="/destinations" className={`${styles.navLink} ${location.pathname === '/destinations' ? styles.activeLink : ''}`}>Destinations</Link>
@@ -59,6 +60,7 @@ const Navbar = () => {
                         <Link to="/about" className={styles.mobileLink} onClick={() => setIsOpen(false)}>About Us</Link>
                         <Link to="/corporate-events" className={styles.mobileLink} onClick={() => setIsOpen(false)}>MICE</Link>
                         <Link to="/flight-booking" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Flights</Link>
+                        <Link to="/hotels" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Hotels</Link>
                         <Link to="/car-rental" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Car Rental</Link>
                         {/* DEPRECATED: Destinations page temporarily disabled
                         <Link to="/destinations" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Destinations</Link>
