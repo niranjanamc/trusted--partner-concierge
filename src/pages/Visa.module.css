@@ -65,7 +65,7 @@
 }
 
 .sectionHeader p {
-    color: var(--color-text-light);
+    color: var(--color-text-dark);
     font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto;
@@ -128,7 +128,7 @@
 }
 
 .cardText {
-    color: var(--color-text-light);
+    color: var(--color-text-dark);
     line-height: 1.6;
     font-size: 1rem;
 }
@@ -174,7 +174,7 @@
 }
 
 .processStep p {
-    color: var(--color-text-light);
+    color: var(--color-text-dark);
     font-size: 0.95rem;
     line-height: 1.6;
 }
