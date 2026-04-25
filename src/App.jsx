@@ -12,7 +12,7 @@ const About = lazy(() => import('./pages/About'));
 // const Services = lazy(() => import('./pages/Services'));
 const CorporateEvents = lazy(() => import('./pages/CorporateEvents'));
 const FlightBooking = lazy(() => import('./pages/FlightBooking'));
-const PanIndiaCarService = lazy(() => import('./pages/PanIndiaCarService'));
+const CarRental = lazy(() => import('./pages/CarRental'));
 const Promise = lazy(() => import('./pages/Promise'));
 // DEPRECATED: Destinations page temporarily disabled
 // const Destinations = lazy(() => import('./pages/Destinations'));
@@ -48,7 +48,7 @@ function App() {
               */}
               <Route path="/corporate-events" element={<CorporateEvents />} />
               <Route path="/flight-booking" element={<FlightBooking />} />
-              <Route path="/pan-india-cabs" element={<PanIndiaCarService />} />
+              <Route path="/car-rental" element={<CarRental />} />
               {/* DEPRECATED: Destinations page temporarily disabled
               <Route path="/destinations" element={<Destinations />} />
               */}

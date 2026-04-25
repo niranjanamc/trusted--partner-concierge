@@ -2,11 +2,11 @@ import React, { useState, useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Car, Clock, Navigation, CheckCircle, Send, AlertCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
-import prices from '../data/panIndiaCarService_price.json';
-import styles from './PanIndiaCarService.module.css';
+import prices from '../data/carRental_price.json';
+import styles from './CarRental.module.css';
 import heroImage from '../assets/images/car_service_hero.png';
 
-const PanIndiaCarService = () => {
+const CarRental = () => {
     const [activeTab, setActiveTab] = useState('Outstation'); // 'Outstation', 'Local', 'Airport'
     const [selectedSlabIndex, setSelectedSlabIndex] = useState(0);
     const [selectedPlanIndex, setSelectedPlanIndex] = useState(0);
@@ -359,4 +359,4 @@ const PanIndiaCarService = () => {
     );
 };
 
-export default PanIndiaCarService;
+export default CarRental;
