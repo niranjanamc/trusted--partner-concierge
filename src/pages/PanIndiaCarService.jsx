@@ -127,9 +127,9 @@ const PanIndiaCarService = () => {
             {/* Hero Section */}
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
-                    <h1 className={styles.heroTitle}>PAN India Prime Cabs</h1>
+                    <h1 className={styles.heroTitle}>Car Rental Services</h1>
                     <p className={styles.heroSubtitle}>
-                        Seamless, transparent, and premium chauffeur services across major Indian cities.
+                        Reliable, transparent, and premium chauffeur-driven car rentals for local, outstation, and airport transfers across India.
                     </p>
                 </div>
             </section>
