@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Home, Plane, Building2, Car, Briefcase, ShieldCheck, Info, CalendarDays } from 'lucide-react';
+import { Menu, X, Home, Plane, Building2, Car, Briefcase, ShieldCheck, Info } from 'lucide-react';
 import styles from './Navbar.module.css';
 import logoImage from '../../assets/images/voyage_monk_logo_transparent.png';
 
@@ -41,7 +41,6 @@ const Navbar = () => {
                     */}
                     <Link to="/promise" className={`${styles.navLink} ${location.pathname === '/promise' ? styles.activeLink : ''}`}><ShieldCheck size={16} /> The Promise</Link>
                     <Link to="/about" className={`${styles.navLink} ${location.pathname === '/about' ? styles.activeLink : ''}`}><Info size={16} /> About Us</Link>
-                    <Link to="/contact" className={`${styles.navLink} ${styles.cta} ${location.pathname === '/contact' ? styles.activeLink : ''}`}><CalendarDays size={16} /> Plan My Trip</Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -66,7 +65,6 @@ const Navbar = () => {
                         */}
                         <Link to="/promise" className={styles.mobileLink} onClick={() => setIsOpen(false)}><ShieldCheck size={18} /> The Promise</Link>
                         <Link to="/about" className={styles.mobileLink} onClick={() => setIsOpen(false)}><Info size={18} /> About Us</Link>
-                        <Link to="/contact" className={`${styles.mobileLink} ${styles.mobileCta}`}><CalendarDays size={18} /> Plan My Trip</Link>
                     </div>
                 )}
             </div>
