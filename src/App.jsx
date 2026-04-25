@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/common/ScrollToTop';
 import ErrorBoundary from './components/common/ErrorBoundary';
+import ChatWidget from './components/chat/ChatWidget';
 import './styles/App.css';
 
 // Lazy load pages
@@ -61,6 +62,7 @@ function App() {
           </Suspense>
         </ErrorBoundary>
       </Layout>
+      <ChatWidget />
     </Router>
   );
 }
