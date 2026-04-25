@@ -13,7 +13,8 @@ const CorporateEvents = lazy(() => import('./pages/CorporateEvents'));
 const FlightBooking = lazy(() => import('./pages/FlightBooking'));
 const PanIndiaCarService = lazy(() => import('./pages/PanIndiaCarService'));
 const Promise = lazy(() => import('./pages/Promise'));
-const Destinations = lazy(() => import('./pages/Destinations'));
+// DEPRECATED: Destinations page temporarily disabled
+// const Destinations = lazy(() => import('./pages/Destinations'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Terms = lazy(() => import('./pages/Terms'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
@@ -45,7 +46,9 @@ function App() {
               <Route path="/corporate-events" element={<CorporateEvents />} />
               <Route path="/flight-booking" element={<FlightBooking />} />
               <Route path="/pan-india-cabs" element={<PanIndiaCarService />} />
+              {/* DEPRECATED: Destinations page temporarily disabled
               <Route path="/destinations" element={<Destinations />} />
+              */}
               <Route path="/promise" element={<Promise />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/terms" element={<Terms />} />

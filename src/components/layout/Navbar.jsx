@@ -37,7 +37,9 @@ const Navbar = () => {
                     <Link to="/corporate-events" className={`${styles.navLink} ${location.pathname === '/corporate-events' ? styles.activeLink : ''}`}>Corporate Events</Link>
                     <Link to="/flight-booking" className={`${styles.navLink} ${location.pathname === '/flight-booking' ? styles.activeLink : ''}`}>Flights</Link>
                     <Link to="/pan-india-cabs" className={`${styles.navLink} ${location.pathname === '/pan-india-cabs' ? styles.activeLink : ''}`}>Pan India Cabs</Link>
+                    {/* DEPRECATED: Destinations page temporarily disabled
                     <Link to="/destinations" className={`${styles.navLink} ${location.pathname === '/destinations' ? styles.activeLink : ''}`}>Destinations</Link>
+                    */}
                     <Link to="/promise" className={`${styles.navLink} ${location.pathname === '/promise' ? styles.activeLink : ''}`}>The Promise</Link>
                     <Link to="/contact" className={`${styles.navLink} ${styles.cta} ${location.pathname === '/contact' ? styles.activeLink : ''}`}>Plan My Trip</Link>
                 </div>
@@ -60,7 +62,9 @@ const Navbar = () => {
                         <Link to="/corporate-events" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Corporate Events</Link>
                         <Link to="/flight-booking" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Flights</Link>
                         <Link to="/pan-india-cabs" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Pan India Cabs</Link>
+                        {/* DEPRECATED: Destinations page temporarily disabled
                         <Link to="/destinations" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Destinations</Link>
+                        */}
                         <Link to="/promise" className={styles.mobileLink} onClick={() => setIsOpen(false)}>The Promise</Link>
                         <Link to="/contact" className={`${styles.mobileLink} ${styles.mobileCta}`}>Plan My Trip</Link>
                     </div>
