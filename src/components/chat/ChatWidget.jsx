@@ -10,6 +10,9 @@ const formatMessage = (text) => {
     let formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     // Replace *text* with <em>text</em>
     formattedText = formattedText.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    // Replace [text](url) with <a href="url">text</a>
+    formattedText = formattedText.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color: var(--color-navy); text-decoration: underline;">$1</a>');
+    
     // Handle newlines
     const paragraphs = formattedText.split('\n').filter(p => p.trim() !== '');
     
