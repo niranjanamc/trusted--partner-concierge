@@ -17,9 +17,9 @@ const CorporateEvents = () => {
             {/* Hero Section */}
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.heroContainer}>
-                    <h1 className={styles.heroTitle}>Corporate Event Arrangements</h1>
+                    <h1 className={styles.heroTitle}>MICE — Meetings, Incentives, Conferences & Exhibitions</h1>
                     <p className={styles.heroSubtitle}>
-                        Professional corporate event services covering venue selection, travel, accommodation, logistics, and on-site coordination—executed with precision.
+                        End-to-end MICE solutions covering venue selection, travel, accommodation, logistics, and on-site coordination—executed with precision for corporates across India.
                     </p>
                 </div>
             </section>
@@ -132,7 +132,7 @@ const CorporateEvents = () => {
                 <div className={styles.container}>
                     <h2 style={{ fontSize: '2.5rem', color: 'var(--color-navy)', marginBottom: '1.5rem' }}>Let’s Create an Unforgettable Experience!!</h2>
                     <p style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.2rem', color: '#555' }}>
-                        From lively RNR nights to classy cocktail dinners, we turn your corporate events into experiences your guests will remember.
+                        From lively RNR nights to classy cocktail dinners, we turn your MICE events into experiences your guests will remember.
                     </p>
                     <Link to="/contact" className={styles.ctaBtn}>Plan Your Event Today</Link>
                 </div>

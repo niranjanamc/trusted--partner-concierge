@@ -17,7 +17,7 @@ const Home = () => {
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
                     <h1 className={styles.heroTitle}>
-                        Bespoke Travel & Corporate Events in Karnataka
+                        Bespoke Travel & MICE Services in Karnataka
                     </h1>
                     <p className={styles.heroSubtitle}>
                         Curated tours and seamless logistics delivered by seasoned hospitality professionals. Your trusted travel partner.
