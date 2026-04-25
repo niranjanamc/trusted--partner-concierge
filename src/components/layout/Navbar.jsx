@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, Plane, Building2, Car, Briefcase, ShieldCheck, Info, FileText } from 'lucide-react';
 import styles from './Navbar.module.css';
-import logoImage from '../../assets/images/voyage_monk_logo_v2.jpg';
+import logoImage from '../../assets/images/voyage_monk_logo_v2.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
