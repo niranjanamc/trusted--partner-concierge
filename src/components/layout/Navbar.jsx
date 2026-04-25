@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Home, Plane, Building2, Car, Briefcase, ShieldCheck, Info } from 'lucide-react';
+import { Menu, X, Home, Plane, Building2, Car, Briefcase, ShieldCheck, Info, FileText } from 'lucide-react';
 import styles from './Navbar.module.css';
 import logoImage from '../../assets/images/voyage_monk_logo_transparent.png';
 
@@ -36,6 +36,7 @@ const Navbar = () => {
                     <Link to="/hotels" className={`${styles.navLink} ${location.pathname === '/hotels' ? styles.activeLink : ''}`}><Building2 size={16} /> Hotels</Link>
                     <Link to="/car-rental" className={`${styles.navLink} ${location.pathname === '/car-rental' ? styles.activeLink : ''}`}><Car size={16} /> Car Rental</Link>
                     <Link to="/corporate-events" className={`${styles.navLink} ${location.pathname === '/corporate-events' ? styles.activeLink : ''}`}><Briefcase size={16} /> MICE</Link>
+                    <Link to="/visa" className={`${styles.navLink} ${location.pathname === '/visa' ? styles.activeLink : ''}`}><FileText size={16} /> Visa</Link>
                     {/* DEPRECATED: Destinations page temporarily disabled
                     <Link to="/destinations" className={`${styles.navLink} ${location.pathname === '/destinations' ? styles.activeLink : ''}`}>Destinations</Link>
                     */}
@@ -60,6 +61,7 @@ const Navbar = () => {
                         <Link to="/hotels" className={styles.mobileLink} onClick={() => setIsOpen(false)}><Building2 size={18} /> Hotels</Link>
                         <Link to="/car-rental" className={styles.mobileLink} onClick={() => setIsOpen(false)}><Car size={18} /> Car Rental</Link>
                         <Link to="/corporate-events" className={styles.mobileLink} onClick={() => setIsOpen(false)}><Briefcase size={18} /> MICE</Link>
+                        <Link to="/visa" className={styles.mobileLink} onClick={() => setIsOpen(false)}><FileText size={18} /> Visa</Link>
                         {/* DEPRECATED: Destinations page temporarily disabled
                         <Link to="/destinations" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Destinations</Link>
                         */}

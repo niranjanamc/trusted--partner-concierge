@@ -14,6 +14,7 @@ const CorporateEvents = lazy(() => import('./pages/CorporateEvents'));
 const FlightBooking = lazy(() => import('./pages/FlightBooking'));
 const Hotels = lazy(() => import('./pages/Hotels'));
 const CarRental = lazy(() => import('./pages/CarRental'));
+const Visa = lazy(() => import('./pages/Visa'));
 const Promise = lazy(() => import('./pages/Promise'));
 // DEPRECATED: Destinations page temporarily disabled
 const Terms = lazy(() => import('./pages/Terms'));
@@ -49,6 +50,7 @@ function App() {
               <Route path="/flight-booking" element={<FlightBooking />} />
               <Route path="/hotels" element={<Hotels />} />
               <Route path="/car-rental" element={<CarRental />} />
+              <Route path="/visa" element={<Visa />} />
               {/* DEPRECATED: Destinations page temporarily disabled
               <Route path="/destinations" element={<Destinations />} />
               */}
