@@ -8,7 +8,8 @@ import './styles/App.css';
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
+// REMOVED: Services page merged into About page
+// const Services = lazy(() => import('./pages/Services'));
 const CorporateEvents = lazy(() => import('./pages/CorporateEvents'));
 const FlightBooking = lazy(() => import('./pages/FlightBooking'));
 const PanIndiaCarService = lazy(() => import('./pages/PanIndiaCarService'));
@@ -42,7 +43,9 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              {/* REMOVED: Services page merged into About page
               <Route path="/services" element={<Services />} />
+              */}
               <Route path="/corporate-events" element={<CorporateEvents />} />
               <Route path="/flight-booking" element={<FlightBooking />} />
               <Route path="/pan-india-cabs" element={<PanIndiaCarService />} />

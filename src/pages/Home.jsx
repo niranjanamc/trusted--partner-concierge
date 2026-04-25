@@ -84,7 +84,7 @@ const Home = () => {
                             <div className={styles.cardContent}>
                                 <h3>The Saturday Tech-Detox</h3>
                                 <p>A sunrise drive to Nandi Hills followed by a private vineyard lunch.</p>
-                                <Link to="/services" className={styles.cardLink}>View Details <ArrowRight size={16} /></Link>
+                                <Link to="/about" className={styles.cardLink}>View Details <ArrowRight size={16} /></Link>
                             </div>
                         </div>
 
@@ -94,7 +94,7 @@ const Home = () => {
                             <div className={styles.cardContent}>
                                 <h3>The Sunday Heritage Walk</h3>
                                 <p>Ancient temples, flower markets, and silk shopping in Old Bangalore.</p>
-                                <Link to="/services" className={styles.cardLink}>View Details <ArrowRight size={16} /></Link>
+                                <Link to="/about" className={styles.cardLink}>View Details <ArrowRight size={16} /></Link>
                             </div>
                         </div>
 
@@ -104,7 +104,7 @@ const Home = () => {
                             <div className={styles.cardContent}>
                                 <h3>The Executive Golf Morning</h3>
                                 <p>Tee off at Prestige Golfshire with full equipment rental and luxury transfer.</p>
-                                <Link to="/services" className={styles.cardLink}>View Details <ArrowRight size={16} /></Link>
+                                <Link to="/about" className={styles.cardLink}>View Details <ArrowRight size={16} /></Link>
                             </div>
                         </div>
                     </div>
