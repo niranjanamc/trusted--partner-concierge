@@ -4,11 +4,11 @@
 }
 
 .hero {
-    height: 60vh;
-    min-height: 400px;
+    position: relative;
+    min-height: 70vh;
+    width: 100%;
     background-size: cover;
     background-position: center;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
