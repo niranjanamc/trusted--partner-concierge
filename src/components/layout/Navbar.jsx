@@ -32,15 +32,15 @@ const Navbar = () => {
                 {/* Desktop Menu */}
                 <div className={styles.desktopMenu}>
                     <Link to="/" className={`${styles.navLink} ${location.pathname === '/' ? styles.activeLink : ''}`}>Home</Link>
-                    <Link to="/about" className={`${styles.navLink} ${location.pathname === '/about' ? styles.activeLink : ''}`}>About Us</Link>
-                    <Link to="/corporate-events" className={`${styles.navLink} ${location.pathname === '/corporate-events' ? styles.activeLink : ''}`}>MICE</Link>
                     <Link to="/flight-booking" className={`${styles.navLink} ${location.pathname === '/flight-booking' ? styles.activeLink : ''}`}>Flights</Link>
                     <Link to="/hotels" className={`${styles.navLink} ${location.pathname === '/hotels' ? styles.activeLink : ''}`}>Hotels</Link>
                     <Link to="/car-rental" className={`${styles.navLink} ${location.pathname === '/car-rental' ? styles.activeLink : ''}`}>Car Rental</Link>
+                    <Link to="/corporate-events" className={`${styles.navLink} ${location.pathname === '/corporate-events' ? styles.activeLink : ''}`}>MICE</Link>
                     {/* DEPRECATED: Destinations page temporarily disabled
                     <Link to="/destinations" className={`${styles.navLink} ${location.pathname === '/destinations' ? styles.activeLink : ''}`}>Destinations</Link>
                     */}
                     <Link to="/promise" className={`${styles.navLink} ${location.pathname === '/promise' ? styles.activeLink : ''}`}>The Promise</Link>
+                    <Link to="/about" className={`${styles.navLink} ${location.pathname === '/about' ? styles.activeLink : ''}`}>About Us</Link>
                     <Link to="/contact" className={`${styles.navLink} ${styles.cta} ${location.pathname === '/contact' ? styles.activeLink : ''}`}>Plan My Trip</Link>
                 </div>
 
@@ -57,15 +57,15 @@ const Navbar = () => {
                 {isOpen && (
                     <div className={styles.mobileMenu}>
                         <Link to="/" className={styles.mobileLink}>Home</Link>
-                        <Link to="/about" className={styles.mobileLink} onClick={() => setIsOpen(false)}>About Us</Link>
-                        <Link to="/corporate-events" className={styles.mobileLink} onClick={() => setIsOpen(false)}>MICE</Link>
                         <Link to="/flight-booking" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Flights</Link>
                         <Link to="/hotels" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Hotels</Link>
                         <Link to="/car-rental" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Car Rental</Link>
+                        <Link to="/corporate-events" className={styles.mobileLink} onClick={() => setIsOpen(false)}>MICE</Link>
                         {/* DEPRECATED: Destinations page temporarily disabled
                         <Link to="/destinations" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Destinations</Link>
                         */}
                         <Link to="/promise" className={styles.mobileLink} onClick={() => setIsOpen(false)}>The Promise</Link>
+                        <Link to="/about" className={styles.mobileLink} onClick={() => setIsOpen(false)}>About Us</Link>
                         <Link to="/contact" className={`${styles.mobileLink} ${styles.mobileCta}`}>Plan My Trip</Link>
                     </div>
                 )}
