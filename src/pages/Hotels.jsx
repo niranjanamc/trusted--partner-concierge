@@ -1,214 +1,163 @@
-import React, { useState, useRef } from 'react';
-import { Building2, Users, Calendar, Briefcase, MapPin, CheckCircle, Send, AlertCircle, ShieldCheck, Star } from 'lucide-react';
-import emailjs from '@emailjs/browser';
-import styles from './Hotels.module.css';
+import React from 'react';
+import { AlertTriangle, CheckCircle, Users, Star, Shield, Heart, Building2, MessageSquare } from 'lucide-react';
+import styles from './Visa.module.css';
 import heroImage from '../assets/images/hotel_hero.png';
 
 const Hotels = () => {
-    const [status, setStatus] = useState('idle');
-    const form = useRef();
-
-    const [formData, setFormData] = useState({
-        destination: '',
-        checkin_date: '',
-        checkout_date: '',
-        rooms: '1',
-        adults: '1',
-        children: '0',
-        stay_type: 'Leisure',
-        user_name: '',
-        user_email: '',
-        phone: '',
-        special_requests: ''
-    });
-
-    const handleInputChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const summaryText = `New Hotel Booking Inquiry:
-
-Destination/Hotel: ${formData.destination}
-Check-in: ${formData.checkin_date}
-Check-out: ${formData.checkout_date}
-
-Rooms: ${formData.rooms}
-Adults: ${formData.adults}
-Children: ${formData.children}
-Stay Type: ${formData.stay_type}
-
-Name: ${formData.user_name}
-Email: ${formData.user_email}
-Phone: ${formData.phone}
-Special Requests: ${formData.special_requests || 'None'}
-`;
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setStatus('sending');
-
-        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-        if (!serviceId || serviceId === 'service_placeholder') {
-            setTimeout(() => setStatus('success'), 1500);
-            return;
-        }
-
-        emailjs.sendForm(serviceId, templateId, form.current, publicKey)
-            .then(() => setStatus('success'))
-            .catch(() => setStatus('error'));
-    };
-
     return (
-        <div className={styles.hotelsPage}>
+        <div className={styles.visaPage}>
             {/* Hero Section */}
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
-                    <h1 className={styles.heroTitle}>Curated Stays & Business Accommodation</h1>
-                    <p className={styles.heroSubtitle}>
-                        Discover premium hotel bookings, corporate stay solutions, and bespoke group accommodations with exclusive rates.
-                    </p>
+                    <h1 className={styles.heroTitle}>Curated Stays.<br />Premium Comfort.</h1>
                 </div>
             </section>
 
-            {/* Form Section */}
-            <section className={`${styles.section} ${styles.calculatorSection}`}>
+            {/* Pain Points vs Solutions */}
+            <section className={styles.comparisonSection}>
                 <div className={styles.container}>
-                    <div className={styles.splitLayout}>
-                        
-                        {/* Left: Configuration Form */}
-                        <div className={styles.formCard}>
-                            <h2 className={styles.sectionTitle}>Request a Booking</h2>
-
-                            {status === 'success' ? (
-                                <div className={`${styles.statusMessage} ${styles.success}`}>
-                                    <CheckCircle size={40} style={{ margin: '0 auto 1rem', display: 'block' }} />
-                                    Request Sent Successfully! 
-                                    <p style={{ marginTop: '0.5rem', fontWeight: 'normal' }}>Our concierge team will share curated hotel options within 2 hours.</p>
-                                    <button className={styles.bookBtn} style={{ marginTop: '1.5rem' }} onClick={() => { setStatus('idle'); setFormData({...formData}); }}>
-                                        New Inquiry
-                                    </button>
-                                </div>
-                            ) : (
-                                <form ref={form} onSubmit={handleSubmit}>
-                                    <textarea name="message" value={summaryText} readOnly style={{ display: 'none' }} />
-
-                                    <div className={styles.formGroup} style={{ marginBottom: '1.5rem' }}>
-                                        <label className={styles.label}><MapPin size={16} /> Destination or Hotel Name</label>
-                                        <input type="text" className={styles.input} name="destination" required onChange={handleInputChange} placeholder="e.g. Goa, Mumbai, Taj Lands End..." />
-                                    </div>
-
-                                    <div className={styles.formGrid}>
-                                        <div className={styles.formGroup}>
-                                            <label className={styles.label}><Calendar size={16} /> Check-in</label>
-                                            <input type="date" className={styles.input} name="checkin_date" required onChange={handleInputChange} />
-                                        </div>
-                                        <div className={styles.formGroup}>
-                                            <label className={styles.label}><Calendar size={16} /> Check-out</label>
-                                            <input type="date" className={styles.input} name="checkout_date" required onChange={handleInputChange} />
-                                        </div>
-                                    </div>
-
-                                    <div className={styles.formGrid}>
-                                        <div className={styles.formGroup}>
-                                            <label className={styles.label}><Building2 size={16} /> Rooms</label>
-                                            <select className={styles.select} name="rooms" value={formData.rooms} onChange={handleInputChange}>
-                                                {[1,2,3,4,5,6,7,8,9,'10+'].map(num => <option key={num} value={num}>{num}</option>)}
-                                            </select>
-                                        </div>
-                                        <div className={styles.formGroup}>
-                                            <label className={styles.label}><Briefcase size={16} /> Stay Type</label>
-                                            <select className={styles.select} name="stay_type" value={formData.stay_type} onChange={handleInputChange}>
-                                                <option value="Leisure">Leisure / Holiday</option>
-                                                <option value="Business">Business Travel</option>
-                                                <option value="Group">Group Booking / Event</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div className={styles.formGrid}>
-                                        <div className={styles.formGroup}>
-                                            <label className={styles.label}><Users size={16} /> Adults</label>
-                                            <select className={styles.select} name="adults" value={formData.adults} onChange={handleInputChange}>
-                                                {[1,2,3,4,5,6,7,8,9,'10+'].map(num => <option key={num} value={num}>{num}</option>)}
-                                            </select>
-                                        </div>
-                                        <div className={styles.formGroup}>
-                                            <label className={styles.label}>Children (0-12 yrs)</label>
-                                            <select className={styles.select} name="children" value={formData.children} onChange={handleInputChange}>
-                                                {[0,1,2,3,4,5,6].map(num => <option key={num} value={num}>{num}</option>)}
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div className={styles.formGrid} style={{ marginTop: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid #eee' }}>
-                                        <div className={styles.formGroupFull}>
-                                            <label className={styles.label}>Full Name</label>
-                                            <input type="text" className={styles.input} name="user_name" required onChange={handleInputChange} placeholder="John Doe" />
-                                        </div>
-                                        <div className={styles.formGroup}>
-                                            <label className={styles.label}>Email</label>
-                                            <input type="email" className={styles.input} name="user_email" required onChange={handleInputChange} placeholder="john@example.com" />
-                                        </div>
-                                        <div className={styles.formGroup}>
-                                            <label className={styles.label}>Phone Number</label>
-                                            <input type="tel" className={styles.input} name="phone" required onChange={handleInputChange} placeholder="+91 XXXXX XXXXX" />
-                                        </div>
-                                    </div>
-
-                                    <div className={styles.formGroupFull} style={{ marginTop: '1.5rem' }}>
-                                        <label className={styles.label}>Special Requests / Itinerary Details</label>
-                                        <textarea className={styles.textarea} name="special_requests" onChange={handleInputChange} placeholder="Dietary needs, preferred view, late check-in, or specific itinerary notes..." />
-                                    </div>
-
-                                    {status === 'error' && (
-                                        <div className={styles.errorMessage}>
-                                            <AlertCircle size={20} /> Error submitting request. Please try again.
-                                        </div>
-                                    )}
-
-                                    <button type="submit" className={styles.bookBtn} style={{ marginTop: '2rem' }} disabled={status === 'sending'}>
-                                        {status === 'sending' ? 'Sending...' : 'Get Curated Options'} <Send size={18} />
-                                    </button>
-                                </form>
-                            )}
-                        </div>
-
-                        {/* Right: Summary / Value Prop */}
-                        <div className={styles.summaryCard}>
-                            <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>Why Book With Us?</h2>
-                            <p style={{ opacity: 0.9, lineHeight: 1.6, marginBottom: '2rem' }}>
-                                From intimate boutique hotels to sprawling luxury resorts, we secure the best properties for your travel itinerary.
-                            </p>
-
-                            <div className={styles.valueProps}>
-                                <div className={styles.propItem}>
-                                    <Star className={styles.propIcon} size={40} />
-                                    <div className={styles.propContent}>
-                                        <h3>Negotiated Rates</h3>
-                                        <p>Access exclusive corporate and B2B pricing not available on regular booking platforms.</p>
-                                    </div>
-                                </div>
-                                <div className={styles.propItem}>
-                                    <Building2 className={styles.propIcon} size={40} />
-                                    <div className={styles.propContent}>
-                                        <h3>Corporate & Group Stays</h3>
-                                        <p>Seamless management for multi-room bookings, offsites, and business travel itineraries.</p>
-                                    </div>
-                                </div>
-                                <div className={styles.propItem}>
-                                    <ShieldCheck className={styles.propIcon} size={40} />
-                                    <div className={styles.propContent}>
-                                        <h3>Verified Quality</h3>
-                                        <p>Every recommended property is thoroughly vetted for safety, hygiene, and premium service.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div className={styles.sectionHeader}>
+                        <h2>The Hidden Complexity of Hotel Booking</h2>
+                        <p>Finding the right stay goes far beyond searching a platform. We manage every detail so your accommodation is the last thing on your mind.</p>
                     </div>
+
+                    <div className={styles.comparisonGrid}>
+                        {/* Pain Point 1 */}
+                        <div className={styles.painPointCard}>
+                            <div className={styles.iconWrapper}>
+                                <AlertTriangle size={32} />
+                            </div>
+                            <h3 className={styles.cardTitle}>Overwhelming, Unreliable Options</h3>
+                            <p className={styles.cardText}>Sifting through thousands of listings with inflated ratings, misleading photos, and hidden service charges makes finding a genuinely great property an exhausting gamble.</p>
+                        </div>
+
+                        {/* Solution 1 */}
+                        <div className={styles.solutionCard}>
+                            <div className={styles.iconWrapper}>
+                                <Shield size={32} />
+                            </div>
+                            <h3 className={styles.cardTitle}>Vetted Premium Properties</h3>
+                            <p className={styles.cardText}>Every property we recommend is personally vetted for hygiene, safety, service quality, and location suitability—giving you a curated shortlist you can trust without the guesswork.</p>
+                        </div>
+
+                        {/* Pain Point 2 */}
+                        <div className={styles.painPointCard}>
+                            <div className={styles.iconWrapper}>
+                                <Users size={32} />
+                            </div>
+                            <h3 className={styles.cardTitle}>Group & Corporate Logistics</h3>
+                            <p className={styles.cardText}>Coordinating multi-room blocks, negotiating corporate billing arrangements, managing varied check-in times, and ensuring rooming consistency across a team is a logistical nightmare.</p>
+                        </div>
+
+                        {/* Solution 2 */}
+                        <div className={styles.solutionCard}>
+                            <div className={styles.iconWrapper}>
+                                <Building2 size={32} />
+                            </div>
+                            <h3 className={styles.cardTitle}>End-to-End Corporate & Group Stays</h3>
+                            <p className={styles.cardText}>We handle B2B pricing, rooming lists, billing coordination, and pre-arrival communication with the property—so your entire team arrives to a seamlessly organized stay.</p>
+                        </div>
+
+                        {/* Pain Point 3 */}
+                        <div className={styles.painPointCard}>
+                            <div className={styles.iconWrapper}>
+                                <AlertTriangle size={32} />
+                            </div>
+                            <h3 className={styles.cardTitle}>Impersonal, Unfulfilled Experiences</h3>
+                            <p className={styles.cardText}>Special requests, dietary needs, anniversary surprises, or accessibility requirements get lost in the system—leaving guests feeling like just another booking number.</p>
+                        </div>
+
+                        {/* Solution 3 */}
+                        <div className={styles.solutionCard}>
+                            <div className={styles.iconWrapper}>
+                                <Heart size={32} />
+                            </div>
+                            <h3 className={styles.cardTitle}>VIP Personalization</h3>
+                            <p className={styles.cardText}>We liaise directly with hotel management before your arrival—ensuring room preferences, dietary needs, celebrations, and special touches are arranged with genuine attention to detail.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* What We Offer */}
+            <section className={styles.processSection}>
+                <div className={styles.container}>
+                    <div className={styles.sectionHeader}>
+                        <h2>What We Offer</h2>
+                        <p>From boutique properties to large corporate blocks—our hotel concierge service covers every scenario.</p>
+                    </div>
+                    <div className={styles.processGrid}>
+                        <div className={styles.processStep}>
+                            <div className={styles.stepNumber}><Star size={20} /></div>
+                            <h3>Negotiated Rates</h3>
+                            <p>Access exclusive corporate and B2B pricing not available on regular booking platforms—saving significantly on multi-night stays.</p>
+                        </div>
+                        <div className={styles.processStep}>
+                            <div className={styles.stepNumber}><Building2 size={20} /></div>
+                            <h3>Corporate & Group Stays</h3>
+                            <p>Seamless management for multi-room bookings, offsites, conferences, and extended business travel itineraries.</p>
+                        </div>
+                        <div className={styles.processStep}>
+                            <div className={styles.stepNumber}><Shield size={20} /></div>
+                            <h3>Verified Quality</h3>
+                            <p>Every recommended property is thoroughly vetted for safety, hygiene, and premium service before we ever suggest it to you.</p>
+                        </div>
+                        <div className={styles.processStep}>
+                            <div className={styles.stepNumber}><Heart size={20} /></div>
+                            <h3>VIP Touches</h3>
+                            <p>Room upgrades, welcome amenities, special occasion arrangements—handled proactively as part of every booking we make.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* End-to-End Process Flow */}
+            <section className={styles.comparisonSection}>
+                <div className={styles.container}>
+                    <div className={styles.sectionHeader}>
+                        <h2>Our Booking Process</h2>
+                        <p>A transparent, four-step workflow designed to match you with the perfect stay every time.</p>
+                    </div>
+                    <div className={styles.processGrid}>
+                        <div className={styles.processStep}>
+                            <div className={styles.stepNumber}>1</div>
+                            <h3>Share Your Requirements</h3>
+                            <p>Tell Monk your destination, dates, number of guests, stay type, and any special preferences through the chatbot.</p>
+                        </div>
+                        <div className={styles.processStep}>
+                            <div className={styles.stepNumber}>2</div>
+                            <h3>We Select Properties</h3>
+                            <p>Our team curates a shortlist of verified properties that match your budget, style, and requirements—no generic search results.</p>
+                        </div>
+                        <div className={styles.processStep}>
+                            <div className={styles.stepNumber}>3</div>
+                            <h3>Confirm & Pre-Arrange</h3>
+                            <p>Once you choose, we handle all booking formalities and coordinate directly with the hotel for your special requests.</p>
+                        </div>
+                        <div className={styles.processStep}>
+                            <div className={styles.stepNumber}>4</div>
+                            <h3>Arrive to Perfection</h3>
+                            <p>Walk into a stay that's been set up exactly as you envisioned—with no surprises, no friction, and nothing left to chance.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Call to Action */}
+            <section className={styles.ctaSection}>
+                <div className={styles.container}>
+                    <h2>Ready to find your perfect stay?</h2>
+                    <p>Stop scrolling through endless listings. Tell Monk where you're going and let us curate the ideal property for you.</p>
+                    <button
+                        className={styles.ctaButton}
+                        onClick={() => {
+                            const chatBtn = document.querySelector('[aria-label="Open chat"]');
+                            if (chatBtn) chatBtn.click();
+                        }}
+                    >
+                        <MessageSquare size={20} />
+                        Chat with Monk
+                    </button>
                 </div>
             </section>
         </div>
