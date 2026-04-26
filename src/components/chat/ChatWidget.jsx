@@ -27,6 +27,7 @@ const ChatWidget = () => {
     const [inputValue, setInputValue] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef(null);
+    const lastMessageTime = useRef(0);
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -75,6 +76,21 @@ const ChatWidget = () => {
         if (!inputValue.trim()) return;
         
         const userMsg = inputValue.trim();
+
+        // 1. Length Validation
+        if (userMsg.length > 1200) {
+            setMessages(prev => [...prev, { role: 'bot', text: 'Please keep your message under 1200 characters.' }]);
+            return;
+        }
+
+        // 2. Rate Limiting (Cooldown)
+        const now = Date.now();
+        if (now - lastMessageTime.current < 3000) { // 3 seconds cooldown
+            setMessages(prev => [...prev, { role: 'bot', text: 'You are sending messages too quickly. Please wait a few seconds and try again.' }]);
+            return;
+        }
+        lastMessageTime.current = now;
+
         setInputValue('');
         setMessages(prev => [...prev, { role: 'user', text: userMsg }]);
         setIsLoading(true);
@@ -153,6 +169,7 @@ const ChatWidget = () => {
                             placeholder="Type your message..."
                             disabled={isLoading}
                             rows={1}
+                            maxLength={1200}
                         />
                         <button 
                             type="submit" 
