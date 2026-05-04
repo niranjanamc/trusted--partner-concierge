@@ -1,6 +1,6 @@
 .navbar {
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     width: 100%;
     z-index: 1000;
@@ -15,6 +15,7 @@
 }
 
 .navbar.scrolled {
+    top: 0;
     padding: 0.8rem 0;
     background-color: rgba(255, 255, 255, 0.98);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
