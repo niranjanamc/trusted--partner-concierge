@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from './TopBanner.module.css';
 
+const Spacer = () => <span className={styles.spacer}>•</span>;
+
 const TopBanner = () => {
     const [scrolled, setScrolled] = useState(false);
 
@@ -13,7 +15,6 @@ const TopBanner = () => {
     }, []);
 
     const text = "For Enquiries & Bookings | Email: info@voyagemonk.com | Phone: +91 96637 11398";
-    const Spacer = () => <span className={styles.spacer}>•</span>;
 
     return (
         <div className={`${styles.bannerContainer} ${scrolled ? styles.scrolled : ''}`}>

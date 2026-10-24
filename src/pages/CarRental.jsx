@@ -1,15 +1,23 @@
 import React from 'react';
 import { AlertTriangle, CheckCircle, Shield, DollarSign, Car, Clock, MapPin, Users, MessageSquare } from 'lucide-react';
 import styles from './Visa.module.css';
+import SEO from '../components/common/SEO';
+import { serviceSchemas } from '../data/seoSchemas';
 import heroImage from '../assets/images/car_service_hero.png';
 
 const CarRental = () => {
     return (
         <div className={styles.visaPage}>
+            <SEO
+                title="Chauffeur Driven Car Rental & Airport Transfers Bangalore"
+                description="Executive car rental with verified professional chauffeurs in Bangalore. Luxury airport transfers, corporate delegate transit, and outstation trips with transparent pricing."
+                canonicalPath="/car-rental"
+                schema={serviceSchemas.carRental}
+            />
             {/* Hero Section */}
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
-                    <h1 className={styles.heroTitle}>Reliable Chauffeurs.<br />Premium Fleet.</h1>
+                    <h1 className={styles.heroTitle}>Executive Chauffeur Services &<br />Premium Car Rental Bangalore</h1>
                 </div>
             </section>
 

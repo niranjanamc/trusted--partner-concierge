@@ -1,15 +1,23 @@
 import React from 'react';
 import { AlertTriangle, CheckCircle, Users, Star, Shield, Heart, Building2, MessageSquare } from 'lucide-react';
 import styles from './Visa.module.css';
+import SEO from '../components/common/SEO';
+import { serviceSchemas } from '../data/seoSchemas';
 import heroImage from '../assets/images/hotel_hero.png';
 
 const Hotels = () => {
     return (
         <div className={styles.visaPage}>
+            <SEO
+                title="Corporate Hotel Booking & Luxury Stays Concierge"
+                description="Curated 4-star and 5-star corporate hotel accommodations, boutique executive retreats, and business stays across India with negotiated rates."
+                canonicalPath="/hotels"
+                schema={serviceSchemas.hotels}
+            />
             {/* Hero Section */}
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
-                    <h1 className={styles.heroTitle}>Curated Stays.<br />Premium Comfort.</h1>
+                    <h1 className={styles.heroTitle}>Curated Corporate Stays &<br />Luxury Hotel Accommodations</h1>
                 </div>
             </section>
 

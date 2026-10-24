@@ -1,6 +1,8 @@
 import React from 'react';
 import { MapPin, Clock, Coffee, Sun } from 'lucide-react';
 import styles from './About.module.css';
+import SEO from '../components/common/SEO';
+import { organizationSchema } from '../data/seoSchemas';
 import heroImage from '../assets/images/about_hero.png';
 import iconPersonalisation from '../assets/images/icon_personalisation.png';
 import iconComfort from '../assets/images/icon_comfort.png';
@@ -11,6 +13,12 @@ import airportImage from '../assets/images/airport_transfers.png';
 const About = () => {
     return (
         <div className={styles.about}>
+            <SEO
+                title="About VoyageMonk | 17+ Years in Corporate Travel & Hospitality Bangalore"
+                description="Learn about VoyageMonk: 17+ years of expertise in corporate travel management, MICE event logistics, and executive concierge services in Bangalore, India."
+                canonicalPath="/about"
+                schema={organizationSchema}
+            />
             {/* Hero */}
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
@@ -41,7 +49,8 @@ const About = () => {
                         <div className={styles.storyImage}>
                             <img
                                 src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                                alt="Travel Professional"
+                                alt="VoyageMonk corporate hospitality and travel specialist reviewing business itinerary"
+                                loading="lazy"
                             />
                         </div>
                     </div>

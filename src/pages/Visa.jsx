@@ -1,15 +1,23 @@
 import React from 'react';
 import { FileWarning, CheckCircle, Clock, ShieldCheck, Mail, FileText, CalendarCheck, MapPin } from 'lucide-react';
 import styles from './Visa.module.css';
+import SEO from '../components/common/SEO';
+import { serviceSchemas } from '../data/seoSchemas';
 import heroImage from '../assets/images/visa_hero.png';
 
 const Visa = () => {
     return (
         <div className={styles.visaPage}>
+            <SEO
+                title="Corporate Visa Assistance & Travel Documentation Concierge"
+                description="Comprehensive corporate and business visa assistance in Bangalore. Expert document verification, biometric appointment scheduling, and fast-track processing."
+                canonicalPath="/visa"
+                schema={serviceSchemas.visa}
+            />
             {/* Hero Section */}
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
-                    <h1 className={styles.heroTitle}>Seamless Global Access.<br />Zero Friction.</h1>
+                    <h1 className={styles.heroTitle}>Corporate Visa Assistance &<br />Seamless Travel Documentation</h1>
                 </div>
             </section>
 

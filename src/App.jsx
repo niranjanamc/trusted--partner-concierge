@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/common/ScrollToTop';
 import ErrorBoundary from './components/common/ErrorBoundary';
@@ -36,34 +37,36 @@ const Loading = () => (
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Layout>
-        <ErrorBoundary>
-          <Suspense fallback={<Loading />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              {/* REMOVED: Services page merged into About page
-              <Route path="/services" element={<Services />} />
-              */}
-              <Route path="/corporate-events" element={<CorporateEvents />} />
-              <Route path="/flight-booking" element={<FlightBooking />} />
-              <Route path="/hotels" element={<Hotels />} />
-              <Route path="/car-rental" element={<CarRental />} />
-              <Route path="/visa" element={<Visa />} />
-              {/* DEPRECATED: Destinations page temporarily disabled
-              <Route path="/destinations" element={<Destinations />} />
-              */}
-              <Route path="/promise" element={<Promise />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/privacy" element={<PrivacyPolicy />} />
-            </Routes>
-          </Suspense>
-        </ErrorBoundary>
-      </Layout>
-      <ChatWidget />
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <Layout>
+          <ErrorBoundary>
+            <Suspense fallback={<Loading />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                {/* REMOVED: Services page merged into About page
+                <Route path="/services" element={<Services />} />
+                */}
+                <Route path="/corporate-events" element={<CorporateEvents />} />
+                <Route path="/flight-booking" element={<FlightBooking />} />
+                <Route path="/hotels" element={<Hotels />} />
+                <Route path="/car-rental" element={<CarRental />} />
+                <Route path="/visa" element={<Visa />} />
+                {/* DEPRECATED: Destinations page temporarily disabled
+                <Route path="/destinations" element={<Destinations />} />
+                */}
+                <Route path="/promise" element={<Promise />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+              </Routes>
+            </Suspense>
+          </ErrorBoundary>
+        </Layout>
+        <ChatWidget />
+      </Router>
+    </HelmetProvider>
   );
 }
 

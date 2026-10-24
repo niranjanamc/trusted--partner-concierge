@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from '../components/common/SEO';
 import styles from './PrivacyPolicy.module.css';
 
 const sections = [
@@ -326,6 +327,11 @@ const PrivacyPolicy = () => {
 
     return (
         <div className={styles.page}>
+            <SEO
+                title="Privacy Policy"
+                description="VoyageMonk Privacy Policy - learn how we collect, handle, and protect your personal information in compliance with data privacy regulations."
+                canonicalPath="/privacy"
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={styles.heroBadge}>Legal</div>

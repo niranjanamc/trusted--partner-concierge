@@ -196,13 +196,15 @@ const Destinations = () => {
             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
 
             if (diffDays > 0 && diffDays <= 30) { // Limit to 30 days reasonable
-                const newItinerary = {};
-                for (let i = 1; i <= diffDays; i++) {
-                    const dayId = `day-${i}`;
-                    // Preserve existing items if day exists
-                    newItinerary[dayId] = itinerary[dayId] || { id: dayId, title: `Day ${i}`, items: [] };
-                }
-                setItinerary(newItinerary);
+                // eslint-disable-next-line react-hooks/set-state-in-effect
+                setItinerary(prevItinerary => {
+                    const newItinerary = {};
+                    for (let i = 1; i <= diffDays; i++) {
+                        const dayId = `day-${i}`;
+                        newItinerary[dayId] = prevItinerary[dayId] || { id: dayId, title: `Day ${i}`, items: [] };
+                    }
+                    return newItinerary;
+                });
             }
         }
     }, [startDate, endDate]);

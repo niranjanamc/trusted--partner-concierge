@@ -1,6 +1,8 @@
 import React from 'react';
 import { AlertTriangle, CheckCircle, Clock, Headphones, DollarSign, RefreshCw, Plane, Search, Ticket, MessageSquare } from 'lucide-react';
 import styles from './Visa.module.css';
+import SEO from '../components/common/SEO';
+import { serviceSchemas } from '../data/seoSchemas';
 import heroImage from '../assets/images/flight_booking_hero.png';
 import iconFares from '../assets/images/icon_flight_fares.png';
 import iconPricing from '../assets/images/icon_flight_pricing.png';
@@ -11,10 +13,16 @@ import iconTeam from '../assets/images/icon_flight_team.png';
 const FlightBooking = () => {
     return (
         <div className={styles.visaPage}>
+            <SEO
+                title="Corporate Flight Booking & Air Travel Concierge Bangalore"
+                description="Dedicated corporate flight booking concierge. Negotiated corporate airfares, fast re-issuance, group delegate booking, and 24/7 air travel support."
+                canonicalPath="/flight-booking"
+                schema={serviceSchemas.flightBooking}
+            />
             {/* Hero Section */}
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
-                    <h1 className={styles.heroTitle}>Seamless Air Travel.<br />Zero Hassle.</h1>
+                    <h1 className={styles.heroTitle}>Corporate Flight Booking &<br />Seamless Air Travel Concierge</h1>
                 </div>
             </section>
 

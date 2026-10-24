@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from '../components/common/SEO';
 import styles from './Terms.module.css';
 
 const sections = [
@@ -430,6 +431,11 @@ const Terms = () => {
 
     return (
         <div className={styles.page}>
+            <SEO
+                title="Terms & Conditions"
+                description="VoyageMonk Terms & Conditions - booking policies, cancellations, payment terms, and user agreements for corporate and personal travel."
+                canonicalPath="/terms"
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={styles.heroBadge}>Legal</div>

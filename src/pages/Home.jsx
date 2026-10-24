@@ -2,6 +2,8 @@ import React from 'react';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
+import SEO from '../components/common/SEO';
+import { organizationSchema } from '../data/seoSchemas';
 import heritageImage from '../assets/images/heritage_walk.png';
 import iconSafety from '../assets/images/icon_safety.png';
 import iconTrusted from '../assets/images/icon_trusted.png';
@@ -12,12 +14,18 @@ import iconCustom from '../assets/images/icon_custom.png';
 const Home = () => {
     return (
         <div className={styles.home}>
+            <SEO
+                title="Corporate Travel Concierge & MICE Services Bangalore"
+                description="Bengaluru’s premier B2B travel concierge for corporate delegates and global citizens. Bespoke experiences, luxury logistics, and 17 years of trusted hospitality."
+                canonicalPath="/"
+                schema={organizationSchema}
+            />
             {/* Hero Section */}
             <section className={styles.hero}>
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
                     <h1 className={styles.heroTitle}>
-                        Bespoke Travel & MICE Services in Karnataka
+                        Bespoke Corporate Travel & MICE Services in Karnataka
                     </h1>
                     <p className={styles.heroSubtitle}>
                         Curated tours and seamless logistics delivered by seasoned hospitality professionals. Your trusted travel partner.

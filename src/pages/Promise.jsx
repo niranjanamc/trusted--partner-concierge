@@ -1,6 +1,7 @@
 import React from 'react';
 import { Shield, Clock, Heart, Users, CheckCircle, MessageCircle, Smile, Car, UserCheck, HeartPulse, MapPin } from 'lucide-react';
 import styles from './Promise.module.css';
+import SEO from '../components/common/SEO';
 import heroImage from '../assets/images/promise_hero.png';
 import womanSafetyImage from '../assets/images/safe_travel_women.png';
 import iconFleet from '../assets/images/icon_promise_fleet.png';
@@ -10,6 +11,11 @@ import iconMedical from '../assets/images/icon_promise_medical.png';
 const Promise = () => {
     return (
         <div className={styles.promise}>
+            <SEO
+                title="The Promise & Safety Protocol | VoyageMonk Bangalore"
+                description="Our safety commitment: Vetted chauffeurs, GPS-tracked fleet, women traveler safety standards, and 24/7 emergency response protocols."
+                canonicalPath="/promise"
+            />
             {/* Hero */}
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.container}>
@@ -56,7 +62,8 @@ const Promise = () => {
                         <div className={styles.imageWrapper}>
                             <img
                                 src={womanSafetyImage}
-                                alt="Safe Travel for Women"
+                                alt="VoyageMonk safe and secure corporate travel standards for women business delegates"
+                                loading="lazy"
                             />
                         </div>
                     </div>

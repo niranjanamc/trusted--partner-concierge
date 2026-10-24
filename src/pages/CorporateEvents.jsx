@@ -2,6 +2,8 @@ import React from 'react';
 import { Music, CheckCircle, Wine, Star, Users, Briefcase, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from './CorporateEvents.module.css';
+import SEO from '../components/common/SEO';
+import { serviceSchemas } from '../data/seoSchemas';
 import heroImage from '../assets/images/corporate_event_hero.png';
 import rnrImage from '../assets/images/rnr_party_event.png';
 import cocktailImage from '../assets/images/cocktail_dinner_setup.png';
@@ -14,10 +16,16 @@ import iconVip from '../assets/images/icon_ce_vip.png';
 const CorporateEvents = () => {
     return (
         <div className={styles.page}>
+            <SEO
+                title="Corporate Offsites, Retreats & MICE Event Organizers Bangalore"
+                description="End-to-end MICE event solutions, corporate offsite planning, executive leadership retreats, and conference logistics across Karnataka and India."
+                canonicalPath="/corporate-events"
+                schema={serviceSchemas.corporateEvents}
+            />
             {/* Hero Section */}
             <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
                 <div className={styles.heroContainer}>
-                    <h1 className={styles.heroTitle}>MICE — Meetings, Incentives, Conferences & Exhibitions</h1>
+                    <h1 className={styles.heroTitle}>MICE — Corporate Offsites, Conferences & Events Planning</h1>
                     <p className={styles.heroSubtitle}>
                         End-to-end MICE solutions covering venue selection, travel, accommodation, logistics, and on-site coordination—executed with precision for corporates across India.
                     </p>
