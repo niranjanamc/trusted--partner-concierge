@@ -1,0 +1,6 @@
+# robots.txt for https://voyagemonk.com
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://voyagemonk.com/sitemap.xml
